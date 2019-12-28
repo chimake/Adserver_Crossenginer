@@ -1,65 +1,109 @@
-  <div  id="login" class="w3-margin-top w3-padding-jumbo">
+<!DOCTYPE html>
+<html lang="en">
 
-    <form class='w3-center w3-margin-top' method='POST' action='<?php echo site_url('login'); ?>'>
- <h4 class='w3-text-blue'><b>Sign In</b></h4>
+<head>
+    <title><?php echo $title; ?></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="<?php echo base_url('assets/media/images/favicon.png'); ?>" rel="shortcut icon">
 
- <div class='w3-text-red'><?php echo validation_errors();
- if(isset($_SESSION['err_msg']))
- {
+    <meta name="description" content="<?php echo $description; ?>">
+    <meta name="keywords" content="<?php
+    echo $keywords;
+    ?>">
+    <meta property="og:image" content="<?php
 
-  echo $_SESSION['err_msg'];
+    echo base_url('assets/media/images/faviconsocial.png');
+    ?>
+" />
+    <meta property="og:description" content="<?php echo $description; ?>" />
+    <meta property="og:url"content="<?php echo current_url(); ?>" />
+    <meta property="og:title" content="<?php echo $title; ?>" />
+    <meta name="author" content="<?php echo $author;?>">
+    <link rel="stylesheet"  href="<?php echo base_url('assets/mdi/css/materialdesignicons.min.css'); ?>"/>
 
- }
-  ?></div>
-<div><?php if(isset($_SESSION['action_status_report']))
- {
+    <link rel="stylesheet"  href="<?php echo base_url('assets/cj/css/vendor.bundle.base.css'); ?>"/>
 
-  echo $_SESSION['action_status_report'];
+    <link href="<?php echo base_url('assets/cj/css/style.css'); ?>" rel="stylesheet">
+    <!-- End layout styles -->
+</head>
+<body>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth">
+            <div class="row flex-grow">
+                <div class="col-lg-4 mx-auto">
+                    <div class="auth-form-light text-left p-5">
+                        <div class="brand-logo">
+                            <img src="<?=base_url("assets/media/images/logo.png") ?>">
+                        </div>
+                        <h4>Hello! let's get started</h4>
+                        <h6 class="font-weight-light">Sign in to continue.</h6>
+                        <div class="text-danger">
+                            <?php echo validation_errors();
+                                 if(isset($_SESSION['err_msg']))
+                                 {
 
- }
-  ?></div>
+                                  echo $_SESSION['err_msg'];
 
+                                 }
+                                 ?>
+                        </div>
+                        <div>
+                            <?php if(isset($_SESSION['action_status_report']))
+                            {
 
- <div class='w3-row'>
-     <i  style='margin-right:3%' class="fa fa-at
-      w3-large w3-text-blue w3-center"></i>
-      <input class='w3-center w3-padding' type='email' name='email' placeholder='Email'/>
- </div>
+                                echo $_SESSION['action_status_report'];
 
- <br>
+                            }
+                            ?>
+                        </div>
+                        <form class="pt-3" method="post" action="<?php echo site_url('login'); ?>">
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-lg" id="inputEmail1" name="email" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control form-control-lg" id="inputPassword" name="password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
 
- <div class='w3-row'>
-     <i  style='margin-right:3%' class="fa fa-unlock-alt
-      w3-large w3-text-blue w3-center"></i>
-      <input class='w3-center w3-padding' type='password' name='password' placeholder='Password'/>
- </div>
+                                <select name="accounttype" class="form-control form-control-lg">
+                                    <option value="Advertiser">Advertiser</option>
+                                    <option value="Publisher">Publisher</option>
+                                </select>
+                            </div>
+                            <div class="mt-3">
+                                <input class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" type='submit' name='submit' value="Sign In">
+                            </div>
+                            <div class="my-2 d-flex justify-content-between align-items-center">
 
+                                <a href="<?=site_url('forget_password') ?>" class="auth-link text-black">Forgot password?</a>
+                            </div>
 
-<span class="w3-text-blue w3-small">Account Type</span>
-   <div class='w3-row'>
-       <i  style='margin-right:3%' class="fa fa-dash
-        w3-large w3-text-blue w3-center"></i>
-  <select name="accounttype" class="w3-padding">
-          <option value="Advertiser">Advertiser</option><option value="Publisher">Publisher</option>
-        </select>
-   </div><br>
-
-
- <input class='w3-center w3-button w3-blue w3-margin-top w3-margin-bottom w3-hover-white w3-hover-text-blue w3-border w3-border-blue' type='submit' name='submit' value='Sign In'/>
-
-
-</form>
-
-
- <center>
-  <span><a class="w3-text-blue" href="<?=site_url('forget_password') ?>">Forget Password?</a> </span>
-    <div class="w3-text- w3-small w3-margin-bottom w3-margin-bottom">Don't have account yet? <span class="w3-text-blue"><?php
- echo "<a href='";
- echo site_url('register');
- echo "'>Create New Account Here</a>";
-
-      ?></span></div>
- </center>
-
-
+                            <div class="text-center mt-4 font-weight-light"> Don't have an account? <a href="<?=site_url('register') ?>" class="text-primary">Create</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
 </div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="<?php echo base_url('assets/js/vendor.bundle.base.js'); ?>"></script>
+<script src="<?php echo base_url('assets/js/off-canvas.js'); ?>"></script>
+<script src="<?php echo base_url('assets/js/hoverable-collapse.js'); ?>"></script>
+<script src="<?php echo base_url('assets/js/misc.js'); ?>"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+
+<!-- endinject -->
+</body>
+</html>
+
+

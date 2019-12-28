@@ -2,8 +2,8 @@
 <html>
 <title><?php echo $title; ?></title>
 <meta charset="UTF-8">
-<link rel="icon" href="<?php echo base_url('assets/media/images/favicon.png'); ?>" type="image/x-icon"/>
-<link href="<?php echo base_url('assets/media/images/favicon.png'); ?>" rel="apple-touch-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="<?php echo base_url('assets/media/images/favicon.png'); ?>" rel="shortcut icon">
 
 <meta name="description" content="<?php echo $description; ?>">
 <meta name="keywords" content="<?php
@@ -18,15 +18,10 @@ echo base_url('assets/media/images/faviconsocial.png');
 <meta property="og:url"content="<?php echo current_url(); ?>" />
 <meta property="og:title" content="<?php echo $title; ?>" />
 <meta name="author" content="<?php echo $author;?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<link rel="stylesheet"  href="<?php echo base_url('assets/cj/fontawesome-4.6.3.min.css'); ?>"/>
+<!--<link rel="stylesheet"  href="<?php echo base_url('assets/mdi/css/materialdesignicons.min.css'); ?>"/>
 -->
-<link rel="stylesheet"  href="<?php echo base_url('assets/cj/w3mobile.css'); ?>"/>
-
-
-<link rel="stylesheet"  href="<?php echo base_url('assets/cj/w3.css'); ?>"/>
-
-<!--<link rel="stylesheet"  href="<?php echo base_url('assets/cj/w3mobile.css'); ?>">-->
+<link rel="stylesheet"  href="<?php echo base_url('assets/cj/css/vendor.bundle.base.css'); ?>"/>
+<link href="<?php echo base_url('assets/cj/css/style.css'); ?>" rel="stylesheet">
 
     <!--apple 180X180-->
 
@@ -44,7 +39,7 @@ echo base_url('assets/media/images/faviconsocial.png');
   <link href="<?php echo base_url('assets/cj/lib/lightbox/css/lightbox.min.css'); ?>" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="<?php echo base_url('assets/cj/css/style.css'); ?>" rel="stylesheet">
+
 
 <style>
 

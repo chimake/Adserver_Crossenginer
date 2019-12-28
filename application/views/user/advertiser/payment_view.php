@@ -1,30 +1,66 @@
-<div class="w3-container w3-center">
-<span class="w3-text-indigo w3-large w3-serif">Account Deposit</span><br>
-<?php
-if(isset($_SESSION['action_status_report']))
-{
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                  <i class="mdi mdi-home"></i>
+                </span> <?php echo $title; ?> </h3>
+        </div>
+        <?php
+        if(isset($_SESSION['action_status_report']))
+        {
+            ?>
+            <div class="row" id="proBanner">
+                <div class="col-12">
+                                 <span class="d-flex align-items-center purchase-popup">
+                                     <?=$_SESSION['action_status_report']."<br>"?>
+                                     <i class="mdi mdi-close float-right" id="bannerClose"></i>
+                                 </span>
+                </div>
+            </div>
+        <?php } ?>
+        <div class="row">
 
-	echo $_SESSION['action_status_report']."<br>";
-}
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Account Deposit</h4>
 
-?>
-<?= form_open('advertiser_dashboard/payment') ?>
-<span class="w3-medium">Please choose currency you want to be bill in</span><br>
-<select name="currency" class="w3-padding">
-	<option value="usd">US Dollar</option>
-		<option value="zar">South African Rand</option>
-	<option value="NGN">Nigerian Naira</option>
-	<option value="ugx">Ughanda Shilling</option>
-		<option value="kes">Kenya Shilling</option>
-		<option value="ghs">Ghana Cedi</option>
-		<option value="tzs">Tanzanian Shilling</option>
+                        <form class="form_pay" method="post" action="<?= ('payment') ?>" >
+                            <div class="form-group">
+                                <label for="exampleInputName1">Please choose currency you want to be bill in</label>
+                                <select name="currency" class="form-control">
+                                    <option value="usd">US Dollar</option>
+                                    <option value="zar">South African Rand</option>
+                                    <option value="NGN">Nigerian Naira</option>
+                                    <option value="ugx">Ughanda Shilling</option>
+                                    <option value="kes">Kenya Shilling</option>
+                                    <option value="ghs">Ghana Cedi</option>
+                                    <option value="tzs">Tanzanian Shilling</option>
 
 
-</select><br><br>
-<span>Amount in Chosen Currency</span><br>
-<input type="number" name="amount" min="<?=$general_details['minimum_deposit'] ?>" class="w3-padding"/>
-<br>
-<input type="submit" name="submit" class="w3-btn w3-indigo w3-margin" value="Next" />
-<br>
-<span class="w3-small">Please if your currency is not in the Dropdown choose US Dollar</span>
-</div>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">Amount</label>
+                                <input type="number" name="amount" min="<?=$general_details['minimum_deposit'] ?>" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">Payment Method</label>
+                                <select class="form-control" name="payment_opt">
+                                    <option>Select Preferred Method</option>
+                                    <option value="paymt_gate">Debit/Credit Card</option>
+                                    <option value="coupon">Coupon</option>
+                                </select>
+                            </div>
+
+
+                            <button type="submit" name="submit" class="btn btn-gradient-primary mr-2">Next</button>
+                            <button class="btn btn-light">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>

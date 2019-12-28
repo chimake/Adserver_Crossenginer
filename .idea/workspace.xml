@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b816df83-1ebb-4b2e-968c-c60a36255e80" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Advertiser_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Advertiser_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/common/advertiser_header_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/common/advertiser_header_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/common/advertiser_top_tiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/common/advertiser_top_tiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/common/header_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/common/header_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/common/users_footer_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/common/users_footer_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/public/first_reg_page_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/public/first_reg_page_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/public/login_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/public/login_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/public/next_reg_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/public/next_reg_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/public/register_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/public/register_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/user/advertiser/campaigns_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/advertiser/campaigns_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/user/advertiser/dashboard_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/advertiser/dashboard_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/user/advertiser/payment_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/advertiser/payment_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/user/advertiser/pre_pay_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/advertiser/pre_pay_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cj/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cj/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cj/fontawesome-4.6.3.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cj/fontawesome-4.6.3.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cj/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cj/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cj/logo.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cj/logo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cj/w3-theme-teal.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cj/w3-theme-teal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cj/w3.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cj/w3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cj/w3mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cj/w3mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/media/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/media/images/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contributing.md" beforeDir="false" afterPath="$PROJECT_DIR$/contributing.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fbfeature.html" beforeDir="false" afterPath="$PROJECT_DIR$/fbfeature.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/license.txt" beforeDir="false" afterPath="$PROJECT_DIR$/license.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.rst" beforeDir="false" afterPath="$PROJECT_DIR$/readme.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin_skin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin_skin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin_skin/pages/samples/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin_skin/pages/samples/login.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2036674922">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.36" value="2" />
+          <entry key="project.open.time.38" value="3" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.opened" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="html" value="12" />
+          <entry key="js" value="1" />
+          <entry key="php" value="50" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="12" />
+          <entry key="JavaScript" value="1" />
+          <entry key="PHP" value="50" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="1" />
+          <entry key="php" value="3586" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="1" />
+          <entry key="PHP" value="3586" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ad_network_server" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/Advertiser_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="69" column="47" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-212">
+              <caret line="1409" column="50" selection-start-line="1409" selection-start-column="50" selection-end-line="1409" selection-end-column="50" />
+              <folding>
+                <element signature="n#index#0;n#Advertiser_dashboard#0;n#!!top" />
+                <element signature="n#settings#0;n#Advertiser_dashboard#0;n#!!top" />
+                <element signature="n#change_password#0;n#Advertiser_dashboard#0;n#!!top" />
+                <element signature="n#change_email#0;n#Advertiser_dashboard#0;n#!!top" />
+                <element signature="n#affilate#0;n#Advertiser_dashboard#0;n#!!top" />
+                <element signature="n#choose_campaign_type#0;n#Advertiser_dashboard#0;n#!!top" />
+                <element signature="n#add_banner_campaign#0;n#Advertiser_dashboard#0;n#!!top" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/pre_pay_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="27" column="281" lean-forward="true" selection-start-line="27" selection-start-column="281" selection-end-line="27" selection-end-column="281" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/User_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="35" column="6" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/common/advertiser_header_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/constants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1275">
+              <caret line="85" column="27" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/payment_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/Admin_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-45" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/migration.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Install.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5130" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Personal info</find>
+      <find>count_advertisers_campaigns</find>
+      <find>active</find>
+      <find>visit-sale-chart</find>
+      <find>get_general_details</find>
+      <find>Dropdown</find>
+      <find>count_advertiser_blocked_campaigns</find>
+      <find>Campaign</find>
+      <find>get_advertisers_cpa</find>
+      <find>items</find>
+      <find>campaigns_view</find>
+      <find>payment</find>
+      <find>adver</find>
+      <find>get_currency_det_by_shortcode</find>
+      <find>currency</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/views/common/footer_view.php" />
+        <option value="$PROJECT_DIR$/../admin_skin/pages/samples/login.html" />
+        <option value="$PROJECT_DIR$/application/views/common/header_view.php" />
+        <option value="$PROJECT_DIR$/application/views/public/login_view.php" />
+        <option value="$PROJECT_DIR$/application/views/public/first_reg_page_view.php" />
+        <option value="$PROJECT_DIR$/application/views/public/register_view.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Page.php" />
+        <option value="$PROJECT_DIR$/application/views/public/next_reg_view.php" />
+        <option value="$PROJECT_DIR$/../admin_skin/index.html" />
+        <option value="$PROJECT_DIR$/application/views/common/advertiser_top_tiles.php" />
+        <option value="$PROJECT_DIR$/application/views/common/users_footer_view.php" />
+        <option value="$PROJECT_DIR$/application/views/user/advertiser/dashboard_view.php" />
+        <option value="$PROJECT_DIR$/application/models/Advertiser_model.php" />
+        <option value="$PROJECT_DIR$/application/views/user/advertiser/campaigns_view.php" />
+        <option value="$PROJECT_DIR$/application/config/constants.php" />
+        <option value="$PROJECT_DIR$/application/views/user/advertiser/pre_pay_view.php" />
+        <option value="$PROJECT_DIR$/application/views/user/advertiser/payment_view.php" />
+        <option value="$PROJECT_DIR$/application/views/common/advertiser_header_view.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/../admin_skin/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/../admin_skin/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="47" />
+    <option name="width" value="1336" />
+    <option name="height" value="676" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ad_network_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ad_network_server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ad_network_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ad_network_server" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ad_network_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ad_network_server" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../admin_skin" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b816df83-1ebb-4b2e-968c-c60a36255e80" name="Default Changelist" comment="" />
+      <created>1577409748198</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577409748198</updated>
+      <workItem from="1577409749580" duration="4617000" />
+      <workItem from="1577434407927" duration="2107000" />
+      <workItem from="1577437174429" duration="2351000" />
+      <workItem from="1577440156113" duration="11380000" />
+      <workItem from="1577463779931" duration="3529000" />
+      <workItem from="1577472060448" duration="1762000" />
+      <workItem from="1577474637396" duration="792000" />
+      <workItem from="1577478361757" duration="6490000" />
+      <workItem from="1577487891615" duration="1045000" />
+      <workItem from="1577508178618" duration="14505000" />
+      <workItem from="1577547845061" duration="4818000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="53396000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="24" width="1342" height="720" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4862069" visible="true" weight="0.25928792" />
+      <window_info id="Structure" order="1" sideWeight="0.5137931" side_tool="true" weight="0.25928792" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.32972136" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32931036" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/views/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/user_agents.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/hooks.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="43" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17190">
+          <caret line="1146" column="45" selection-start-line="1146" selection-start-column="45" selection-end-line="1146" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../admin_skin/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29475" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/public/home_view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/public/advertisers_view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../admin_skin/pages/samples/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/common/public_header_plate_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/public/login_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="90" column="10" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/public/register_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="68" selection-end-line="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/public/next_reg_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="78" column="106" selection-start-line="78" selection-start-column="106" selection-end-line="78" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Campaign_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/common/footer_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="88" column="2" selection-start-line="88" selection-start-column="2" selection-end-line="88" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5805">
+          <caret line="387" column="6" selection-start-line="387" selection-start-column="6" selection-end-line="387" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/public/first_reg_page_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="28" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../admin_skin/assets/js/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3045">
+          <caret line="203" column="40" selection-start-line="203" selection-start-column="40" selection-end-line="203" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/dashboard_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/common/advertiser_top_tiles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/campaign_target_view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../admin_skin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="351" column="12" selection-start-line="351" selection-start-column="12" selection-end-line="414" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../admin_skin/pages/ui-features/buttons.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8220">
+          <caret line="548" column="34" selection-start-line="541" selection-start-column="28" selection-end-line="548" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../admin_skin/pages/forms/basic_elements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4185">
+          <caret line="279" column="12" selection-start-line="279" selection-start-column="12" selection-end-line="808" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/campaigns_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/common/users_footer_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/common/header_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="83" column="15" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/helpers/url_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="85" column="27" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Admin_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/migration.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Install.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5130" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Advertiser_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="69" column="47" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/payment_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/pre_pay_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="281" lean-forward="true" selection-start-line="27" selection-start-column="281" selection-end-line="27" selection-end-column="281" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/User_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/common/advertiser_header_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-212">
+          <caret line="1409" column="50" selection-start-line="1409" selection-start-column="50" selection-end-line="1409" selection-end-column="50" />
+          <folding>
+            <element signature="n#index#0;n#Advertiser_dashboard#0;n#!!top" />
+            <element signature="n#settings#0;n#Advertiser_dashboard#0;n#!!top" />
+            <element signature="n#change_password#0;n#Advertiser_dashboard#0;n#!!top" />
+            <element signature="n#change_email#0;n#Advertiser_dashboard#0;n#!!top" />
+            <element signature="n#affilate#0;n#Advertiser_dashboard#0;n#!!top" />
+            <element signature="n#choose_campaign_type#0;n#Advertiser_dashboard#0;n#!!top" />
+            <element signature="n#add_banner_campaign#0;n#Advertiser_dashboard#0;n#!!top" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

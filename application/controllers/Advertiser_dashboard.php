@@ -19,7 +19,7 @@ class Advertiser_dashboard extends CI_Controller {
 public function __construct()
 {
      parent::__construct();
-     $this->load->model(array('blog_model','advertiser_model','campaign_model','publisher_model'));
+     $this->load->model(array('user_model','blog_model','advertiser_model','campaign_model','publisher_model'));
     $this->load->library(array('session','form_validation','user_agent'));
      $this->load->helper(array('url','form','page_helper','blog_helper'));
 
@@ -34,6 +34,9 @@ public function __construct()
       $this->description= $this->advertiser_model->get_system_variable("description");
       $this->noindex = '<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
       $this->user =  $this->advertiser_model->get_advertiser_by_id();
+    $user=$this->advertiser_model->get_advertiser_by_id($_SESSION['id']);
+    $this->account_balance = $user['account_bal'];
+
 
 }
 public function index()
@@ -46,6 +49,7 @@ public function index()
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
       $data['user'] =$this->user;
+      $data['account_bal'] = $this->account_balance;
 
 
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
@@ -56,6 +60,8 @@ $data["inactive_campaigns"] = $this->advertiser_model->count_advertiser_inactive
 $data['no_clicks'] = $this->advertiser_model->get_no_affilate_clicks("advertiser");
 $data['no_reg'] = $this->advertiser_model->get_no_affilate_reg("advertiser");
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
+$data["blocked_campaigns_list"] = $this->advertiser_model->get_all_blocked_campaigns();
+$data["incomplete_campaign_list"] = $this->advertiser_model->get_all_incomplete_campaigns();
 
 //get country details by user's country
 
@@ -64,8 +70,8 @@ $data['general_details'] = $this->advertiser_model->get_general_details();
 
     $this->load->view('/common/advertiser_header_view',$data);
       $this->load->view('/common/advertiser_top_tiles',$data);
-    $this->load->view('/user/advertiser/dashboard_view',$data);
-     $this->load->view('/common/users_footer_view',$data);
+//    $this->load->view('/user/advertiser/dashboard_view',$data);
+     //$this->load->view('/common/users_footer_view',$data);
 
 
 }
@@ -80,6 +86,7 @@ public function settings()
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
+    $data['account_bal'] = $this->account_balance;
 $data['user'] =$this->user;
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
@@ -111,6 +118,7 @@ $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
+       $data['account_bal'] = $this->account_balance;
 $data['user'] =$this->user;
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
@@ -249,7 +257,7 @@ show_page('advertiser_dashboard/view_details/'.$ref_id);
 $data['user'] =$this->user;
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
-
+       $data['account_bal'] = $this->account_balance;
 
 
     $this->load->view('/common/advertiser_header_view',$data);
@@ -321,7 +329,7 @@ public function affilate()
 $data['user'] =$this->user;
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
-
+    $data['account_bal'] = $this->account_balance;
 
 
     $this->load->view('/common/advertiser_header_view',$data);
@@ -346,7 +354,7 @@ $data['user'] =$this->user;
 
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
-
+    $data['account_bal'] = $this->account_balance;
 
     $this->load->view('/common/advertiser_header_view',$data);
       $this->load->view('/common/advertiser_top_tiles',$data);
@@ -379,6 +387,7 @@ if(!$this->form_validation->run())
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
 $data['user'] =$this->user;
+    $data['account_bal'] = $this->account_balance;
 
 if(!empty($cpa_ref_id))
 {
@@ -431,7 +440,7 @@ if(!$this->form_validation->run())
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
 $data['user'] =$this->user;
-
+    $data['account_bal'] = $this->account_balance;
 if(!empty($cpa_ref_id))
 {
 //set campaign name and disable text input
@@ -493,6 +502,7 @@ if(!$this->form_validation->run())
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
 $data['user'] =$this->user;
+    $data['account_bal'] = $this->account_balance;
 
 if(!empty($cpa_ref_id))
 {
@@ -556,6 +566,7 @@ if(!$this->form_validation->run())
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
 $data['user'] =$this->user;
+    $data['account_bal'] = $this->account_balance;
 
 if(!empty($cpa_ref_id))
 {
@@ -601,6 +612,7 @@ public function campaign_target($ref_id = NULL)
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
 $data['user'] =$this->user;
+    $data['account_bal'] = $this->account_balance;
 
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
@@ -662,6 +674,7 @@ if(!$this->form_validation->run())
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
+    $data['account_bal'] = $this->account_balance;
 
 //get country details by user's country
 
@@ -741,17 +754,19 @@ $this->advertiser_model->insert_campaign_step_three($ref_id,$data['user']);
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
 $data['user'] =$this->user;
+     $data['account_bal'] = $this->account_balance;
 
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
+$data["campaigns_list"] = $this->advertiser_model->get_all_campaigns();
 
 
 
     $this->load->view('/common/advertiser_header_view',$data);
-      $this->load->view('/common/advertiser_top_tiles',$data);
+      //$this->load->view('/common/advertiser_top_tiles',$data);
 
     $this->load->view('/user/advertiser/campaigns_view',$data);
-     $this->load->view('/common/users_footer_view',$data);
+    // $this->load->view('/common/users_footer_view',$data);
 
 
  }
@@ -779,6 +794,7 @@ show_page('advertiser_dashboard/campaign_budget/'.$ref_id);
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
 $data['user'] =$this->user;
+    $data['account_bal'] = $this->account_balance;
 
 //get country details by user's country
 
@@ -850,6 +866,7 @@ if(!$this->form_validation->run())
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
+    $data['account_bal'] = $this->account_balance;
 $data['user'] =$this->user;
 $data['country_details'] = $this->advertiser_model->get_country_details($data['user']['country']);
 $data['general_details'] = $this->advertiser_model->get_general_details();
@@ -860,13 +877,13 @@ $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
 
 
     $this->load->view('/common/advertiser_header_view',$data);
-      $this->load->view('/common/advertiser_top_tiles',$data);
+      //$this->load->view('/common/advertiser_top_tiles',$data);
    $this->load->view('/user/advertiser/payment_view',$data);
-     $this->load->view('/common/users_footer_view',$data);
+    // $this->load->view('/common/users_footer_view',$data);
 
 }else{
 
-  $data['title'] = $this->siteName." | Advertiser Affilate";
+  $data['title'] = $this->siteName." | Payment Preview";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
@@ -884,12 +901,17 @@ $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns(
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
 //when we get usd account we rewrite this logic
 $data['amount'] = $this->input->post('amount');
+$data['payment_option'] = $this->input->post('payment_opt');
 $data['currency_code'] = $this->input->post('currency');
+    $bytes = 10;
+    $reference_rand = bin2hex(random_bytes($bytes));
+$_SESSION['trans_details'] = array('amount' => $data['amount'], 'currency_code' => $data['currency_code'], 'reference_id' => $reference_rand);
+
 
     $this->load->view('/common/advertiser_header_view',$data);
-      $this->load->view('/common/advertiser_top_tiles',$data);
+      //$this->load->view('/common/advertiser_top_tiles',$data);
    $this->load->view('/user/advertiser/pre_pay_view',$data);
-     $this->load->view('/common/users_footer_view',$data);
+     //$this->load->view('/common/users_footer_view',$data);
 
 
 
@@ -899,92 +921,149 @@ $data['currency_code'] = $this->input->post('currency');
 
 }
 
-
-public function confirm_pay_payment()
+public function advertiser_online_gateway_payment()
 {
+    $advertiser_id = $_SESSION['id'];
+    $user_details = $this->user_model->get_user_by_its_id($advertiser_id,'advertisers');
+    $advertiser_email = $user_details['email'];
+    $amount = $_SESSION['trans_details']['amount'];
+    $reference_rand = $_SESSION['trans_details']['reference_id'];
+//    print_r($_SESSION['trans_details']['reference_id']);
 
- /* $_SESSION['hold'] = array('ref' => $ref,'amount'=>$amount,'currency_code'=>$currency_code); as saved from frontend*/
+    $curl = curl_init();
 
-  if(!isset($_SESSION['hold']['ref']))
-  {
+    $amount = $amount * 100;  //the amount in kobo. This value is actually NGN 300
 
-$_SESSION['action_status_report'] ="<span class='w3-text-red'>Unknown Error Occurred</span>";
-$this->session->mark_as_flash('action_status_report');
-show_page("advertiser_dashboard/payment");
-  }
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => "https://api.paystack.co/transaction/initialize",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => json_encode([
+            'amount'=>$amount,
+            'email'=>$advertiser_email,
+            'callback_url'=>site_url('advertiser_dashboard/advertiser_online_payment_confirmation'),
+            'reference'=>$reference_rand,
+        ]),
+        CURLOPT_HTTPHEADER => [
+            "authorization: Bearer ".PAYMENT_SECRET_KEY, //replace this with your own test key
+            "content-type: application/json",
+            "cache-control: no-cache"
+        ],
+    ));
 
-    if (isset($_SESSION['hold']['ref'])) {
-        $ref = $_SESSION['hold']['ref'];
-        $amount = $_SESSION['hold']['amount']; //Correct Amount from Server
-        $currency = $_SESSION['hold']['currency_code'];
-        //Correct Currency from Server
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
 
-        $query = array(
-            "SECKEY" => "secret key here",
-            "txref" => $ref
-        );
-         /* $query = array(
-            "SECKEY" => "FLWSECK-cc257ca2f7854658a8d5ab2880253f3d-X",
-            "txref" => $ref
-        );//test*/
-
-        $data_string = json_encode($query);
-
-         $ch = curl_init('https://api.ravepay.co/flwv3-pug/getpaidx/api/v2/verify ');
-        /*$ch = curl_init("https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/v2/verify"); test */
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-
-        $response = curl_exec($ch);
-
-        $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-        $header = substr($response, 0, $header_size);
-        $body = substr($response, $header_size);
-
-        curl_close($ch);
-
-        $resp = json_decode($response, true);
-
-        $paymentStatus = $resp['data']['status'];
-        $chargeResponsecode = $resp['data']['chargecode'];
-        $chargeAmount = $resp['data']['amount'];
-        $chargeCurrency = $resp['data']['currency'];
-
-        if (($chargeResponsecode == "00" || $chargeResponsecode == "0") && ($chargeAmount == $amount)  && ($chargeCurrency == $currency)) {
-          //Give Value and return to Success page
-//get exchange rate by currency code returned
-//divided the returned amount by the xchange rate
-//unset ref,$_SESSION['ref']
-          //redirect to home
-          //later send email
-$exchange_rate = $this->advertiser_model->get_currency_det_by_shortcode($chargeCurrency)['xchange_rate'];
-//get previous balance
-$user=$this->advertiser_model->get_advertiser_by_id($_SESSION['id']);
-$previous_bal = $user['account_bal'];
-$new_bal = ($chargeAmount/$exchange_rate)+$previous_bal;
-//credit user account
-$this->advertiser_model->credit_balance(array('account_bal' =>$new_bal ));
-//alert admin about payment
-
-$this->advertiser_model->insert_to_payment_record(array('method'=>'flutterwave','payment_type'=>'deposit','amount'=> ($chargeAmount/$exchange_rate),'user_type'=>'advertiser','user_id' => $_SESSION['id'], 'time'=>time()));
-unset($ref);
-//unset session variable here
-unset($_SESSION['hold']);
-$_SESSION['action_status_report'] ="<span class='w3-text-green'>Payment Successfully Processed</span>";
-$this->session->mark_as_flash('action_status_report');
-show_page("advertiser_dashboard/payment");
-        } else {
-            //Dont Give Value and return to Failure page
-          $_SESSION['action_status_report'] ="<span class='w3-text-red'>Payment Failed</span>";
-$this->session->mark_as_flash('action_status_report');
-show_page("advertiser_dashboard/payment");
-        }
+    if($err){
+        // there was an error contacting the Paystack API
+        die('Curl returned error: ' . $err);
     }
 
+    $tranx = json_decode($response, true);
 
+    if(!$tranx['status']){
+        // there was an error from the API
+        print_r('API returned error: ' . $tranx['message']);
+    }
+
+// comment out this line if you want to redirect the user to the payment page
+    //print_r($tranx);
+
+
+// redirect to page so User can pay
+// uncomment this line to allow the user redirect to the payment page
+header('Location: ' . $tranx['data']['authorization_url']);
+
+}
+
+
+public function advertiser_online_payment_confirmation()
+{
+
+  $amount = $_SESSION['trans_details']['amount'];
+  $currency = $_SESSION['trans_details']['currency_code'];
+    $reference = isset($_GET['reference']) ? $_GET['reference'] : '';
+    if (!isset($_SESSION['trans_details']['reference_id']))
+    {
+        $_SESSION['action_status_report'] = "Unknown Error Occurred";
+        $this->session->mark_as_flash('action_status_report');
+        show_page("advertiser_dashboard/payment");
+    }
+    if(!$reference){
+        $_SESSION['action_status_report'] = "Unknown Error Occurred";
+        $this->session->mark_as_flash('action_status_report');
+        show_page("advertiser_dashboard/payment");
+    }
+    if ($_SESSION['trans_details']['reference_id'] != $reference)
+    {
+        $_SESSION['action_status_report'] = "Unknown Error Occurred";
+        $this->session->mark_as_flash('action_status_report');
+        show_page("advertiser_dashboard/payment");
+    }
+$curl = curl_init();
+
+
+curl_setopt_array($curl, array(
+    CURLOPT_URL => "https://api.paystack.co/transaction/verify/" . rawurlencode($reference),
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_HTTPHEADER => [
+        "accept: application/json",
+        "authorization: Bearer ".PAYMENT_SECRET_KEY,
+        "cache-control: no-cache"
+    ],
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+if($err){
+    // there was an error contacting the Paystack API
+    die('Curl returned error: ' . $err);
+}
+
+$tranx = json_decode($response);
+//print_r($tranx);
+//die();
+
+if(!$tranx->status){
+    // there was an error from the API
+    die('API returned error: ' . $tranx->message);
+}
+
+if('success' == $tranx->data->status || $reference == $tranx->data->reference || $amount == $tranx->data->amount){
+    //$exchange_rate = $this->advertiser_model->get_currency_det_by_shortcode($currency)['xchange_rate'];
+//get previous balance
+    $user=$this->advertiser_model->get_advertiser_by_id($_SESSION['id']);
+    $previous_bal = $user['account_bal'];
+    $new_bal = $amount + $previous_bal;
+
+//credit user account
+    $this->advertiser_model->credit_balance(array('account_bal' =>$new_bal ));
+
+    $this->advertiser_model->insert_to_payment_record(array('method'=>'online_gateway','payment_type'=>'deposit','amount'=> $amount,'user_type'=>'advertiser','user_id' => $_SESSION['id'], 'time'=>time()));
+    $ref = $_SESSION['trans_details']['reference_id'];
+    unset($ref);
+//unset session variable here
+    unset($_SESSION['trans_details']);
+    $_SESSION['action_status_report'] ="<span class='text-success'>Payment Success</span>";
+    $this->session->mark_as_flash('action_status_report');
+    show_page("advertiser_dashboard/payment");
+    // transaction was successful...
+    // please check other things like whether you already gave value for this ref
+    // if the email matches the customer who owns the product etc
+    // Give value
+}else{
+    $_SESSION['action_status_report'] ="<span class='text-danger'>Payment Failed</span>";
+    $this->session->mark_as_flash('action_status_report');
+    show_page("advertiser_dashboard/payment");
+}
+
+
+
+}
+
+public function reference_number_verification()
+{
 
 }
 public function edit_cpa_form_first_section($ref_id)
@@ -1055,6 +1134,7 @@ if(!$this->form_validation->run())
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
+    $data['account_bal'] = $this->account_balance;
 $data['user'] =$this->user;
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
@@ -1128,6 +1208,7 @@ $data['user'] =$this->user;
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
 $data['form'] = $this->advertiser_model->get_cpa_form_by_ref_id($ref_id);
+    $data['account_bal'] = $this->account_balance;
 
 //get country details by user's country
 
@@ -1163,7 +1244,7 @@ public function post_form_addition($ref_id)
 $data['user'] =$this->user;
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
-
+      $data['account_bal'] = $this->account_balance;
 
 
     $this->load->view('/common/advertiser_header_view',$data);
@@ -1201,7 +1282,7 @@ $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns(
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
 $data['cpa_elements'] =  $this->advertiser_model->get_cpa_form_by_ref_id($ref_id);
 
-
+      $data['account_bal'] = $this->account_balance;
     $this->load->view('/common/advertiser_header_view',$data);
       $this->load->view('/common/advertiser_top_tiles',$data);
    $this->load->view('/user/advertiser/edit_post_form_view',$data);
@@ -1265,7 +1346,7 @@ $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns(
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
 
 
-
+    $data['account_bal'] = $this->account_balance;
     $this->load->view('/common/advertiser_header_view',$data);
       $this->load->view('/common/advertiser_top_tiles',$data);
    $this->load->view('/user/advertiser/cpa_list_view',$data);
@@ -1326,7 +1407,7 @@ $data['user'] =$this->user;
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
 $data['cpa'] = $this->advertiser_model->get_cpa_form_by_ref_id($ref_id);
-
+    $data['account_bal'] = $this->account_balance;
 //$data['data_list']= json_decode($cpa['form_data'],true);
 $data_list= json_decode($data['cpa']['form_data'],true);
 

@@ -613,4 +613,22 @@ show_page("advertiser_dashboard/campaign_budget/".$ref_id);
 
 }
 
+public function get_all_blocked_campaigns()
+{
+    $query = $this->db->get_where("adv_story",array('user_id' => $_SESSION['id'],'approval' => 'disapproved'));
+    return $query->result_array();
+}
+
+public function get_all_incomplete_campaigns()
+{
+    $query = $this->db->get_where("adv_story",array('user_id' => $_SESSION['id'],'status' => 'incomplete'));
+    return $query->result_array();
+}
+
+public function get_all_campaigns()
+{
+    $query = $this->db->get_where("adv_story",array('user_id' => $_SESSION['id']));
+    return $query->result_array();
+}
+
 }

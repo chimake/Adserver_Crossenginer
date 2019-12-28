@@ -26,20 +26,20 @@ public function __construct()
 
   public function index()
   {
+    $this->login();
 
 
-
-      $data['title'] = $this->siteName." | ".$this->tagLine;
-       $data['author'] = $this->author;
-      $data['keywords'] = $this->keywords;
-      $data['description'] = $this->description;
-
-
-  
-    $this->load->view('/common/header_view',$data);
-$this->load->view('/common/public_header_plate_view',$data);
-  $this->load->view('public/advertisers_view',$data);
-    $this->load->view('common/footer_view');
+//      $data['title'] = $this->siteName." | ".$this->tagLine;
+//       $data['author'] = $this->author;
+//      $data['keywords'] = $this->keywords;
+//      $data['description'] = $this->description;
+//
+//
+//
+//    $this->load->view('/common/header_view',$data);
+//$this->load->view('/common/public_header_plate_view',$data);
+//  $this->load->view('public/advertisers_view',$data);
+//    $this->load->view('common/footer_view');
  }
   
   
@@ -268,13 +268,13 @@ public function register()
       $data['keywords'] = $this->keywords;
       $data['description'] = $this->description;
 
-    $this->load->view('/common/header_view',$data);
+    //$this->load->view('/common/header_view',$data);
 
    
-    $this->load->view('/common/header_view',$data);
-$this->load->view('/common/public_header_plate_view',$data);
+    //$this->load->view('/common/header_view',$data);
+//$this->load->view('/common/public_header_plate_view',$data);
   $this->load->view('public/first_reg_page_view',$data);
-    $this->load->view('common/footer_view');
+    //$this->load->view('common/footer_view');
 
 }else{
 $_SESSION['reg_account_type'] = $this->input->post('accounttype');
@@ -316,10 +316,10 @@ if (!isset($_SESSION['reg_account_type']))
       $data['keywords'] = $this->keywords;
       $data['description'] = $this->description;
     
-    $this->load->view('/common/header_view',$data);
-$this->load->view('/common/public_header_plate_view',$data);
+    //$this->load->view('/common/header_view',$data);
+//$this->load->view('/common/public_header_plate_view',$data);
   $this->load->view('public/register_view',$data);
-    $this->load->view('common/footer_view');
+  //  $this->load->view('common/footer_view');
 
     }
     else
@@ -382,10 +382,10 @@ $data['contents'] = $this->pages_model->get_how_it_works() ;
       $data['keywords'] = $this->keywords;
       $data['description'] = $this->description;
 $data['terms'] = $this->pages_model->get_terms() ;
-    $this->load->view('/common/header_view',$data);
-    $this->load->view('/common/public_header_plate_view',$data);
+    //$this->load->view('/common/header_view',$data);
+    //$this->load->view('/common/public_header_plate_view',$data);
     $this->load->view('/public/next_reg_view',$data);
-    $this->load->view('/common/footer_view',$data);
+    //$this->load->view('/common/footer_view',$data);
   }else
     {
 
@@ -455,14 +455,14 @@ if (!$this->form_validation->run())
       $data['author'] = $this->author;
       $data['keywords'] = $this->keywords;
       $data['description'] = $this->description;
-    $this->load->view('/common/header_view',$data);
+//    $this->load->view('/common/header_view',$data);
 
     
   
-    $this->load->view('/common/header_view',$data);
-$this->load->view('/common/public_header_plate_view',$data);
+//    $this->load->view('/common/header_view',$data);
+//$this->load->view('/common/public_header_plate_view',$data);
   $this->load->view('public/login_view',$data);
-    $this->load->view('common/footer_view');
+//    $this->load->view('common/footer_view');
  }else{
         if(!$this->user_model->login_check())
         {

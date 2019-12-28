@@ -1,66 +1,43 @@
-<br><div class="w3-margin-top">
-
-<br>
-
-  <div class="w3-row-padding w3-margin-bottom">
-    <div class="w3-quarter"><a href="<?= site_url("advertiser_dashboard/Campaign") ?>">
-      <div class="w3-container w3-red w3-padding-16">
-        <div class="w3-left"><i class="fa fa-file-text w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3><?= $count_campaigns ?></h3>
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                  <i class="mdi mdi-home"></i>
+                </span> <?php echo $title; ?> </h3>
         </div>
-        <div class="w3-clear"></div>
-        <h4>Campaigns</h4>
-      </div></a>
-    </div>
-    <div class="w3-quarter"><a href="<?= site_url("advertiser_dashboard/cpa_forms_list") ?>">
-      <div class="w3-container w3-blue w3-padding-16">
-        <div class="w3-left"><i class="fa fa-caret-right w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3><?=$count_cpa ?></h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Forms</h4>
-      </div></a>
 
-      <!--<a href="<?= site_url("advertiser_dashboard/Affilate") ?>">
-      <div class="w3-container w3-blue w3-padding-16">
-        <div class="w3-left"><i class="fa fa-user-plus w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>1</h3>
+        <div class="row">
+            <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-danger card-img-holder text-white">
+                    <div class="card-body">
+                        <img src="<?= base_url('assets/media/images/dashboard/circle.svg'); ?>" class="card-img-absolute" alt="circle-image" />
+                        <h4 class="font-weight-normal mb-3">Total Campaigns <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                        </h4>
+                        <h2 class="mb-5"><?= $count_campaigns ?></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-info card-img-holder text-white">
+                    <div class="card-body">
+                        <img src="<?= base_url('assets/media/images/dashboard/circle.svg'); ?>" class="card-img-absolute" alt="circle-image" />
+                        <h4 class="font-weight-normal mb-3">Active Campaigns <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+                        </h4>
+                        <h2 class="mb-5"><?= $active_campaigns ?></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-success card-img-holder text-white">
+                    <div class="card-body">
+                        <img src="<?= base_url('assets/media/images/dashboard/circle.svg'); ?>" class="card-img-absolute" alt="circle-image" />
+                        <h4 class="font-weight-normal mb-3">Inactive Campaigns <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                        </h4>
+                        <h2 class="mb-5"><?= $inactive_campaigns ?></h2>
+                    </div>
+                </div>
+            </div>
         </div>
-        ''
-        <div class="w3-clear"></div>
-        <h4>Affilate</h4>
-      </div></a>-->
-    </div>
-    <div class="w3-quarter"><a href="<?= site_url("advertiser_dashboard/payment") ?>">
-      <div class="w3-container w3-teal w3-padding-16">
-        <div class="w3-left"><i class="fa fa-money w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>1</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Payments</h4>
-      </div></a>
-    </div>
-    <div class="w3-quarter"><a href="<?= site_url('advertiser_dashboard/settings') ?>">
-      <div class="w3-container w3-orange w3-text-white w3-padding-16">
-        <div class="w3-left"><i class="fa fa-gears w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>2</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h5>Settings</h5>
-      </div></a>
-    </div>
-  </div>
-
-
-</div>
-<div class="w3-center">
-  
-<span class="w3-large w3-serif"><a class="w3-btn w3-white w3-large w3-serif w3-text-indigo " href="<?= site_url("advertiser_dashboard/choose_campaign_type") ?>">Start New Campaign</a></span><br>
-<span class="w3-large w3-serif"><a class="w3-btn w3-white w3-large w3-serif w3-text-indigo" href="<?= site_url("advertiser_dashboard/cpa_form") ?>">Create Form</a></span></div>
 
 

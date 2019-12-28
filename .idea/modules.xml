@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ad_network_server.iml" filepath="$PROJECT_DIR$/.idea/ad_network_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../admin_skin/.idea/admin_skin.iml" filepath="$PROJECT_DIR$/../admin_skin/.idea/admin_skin.iml" />
+    </modules>
+  </component>
+</project>
