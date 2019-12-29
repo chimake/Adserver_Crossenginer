@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,22 +44,11 @@
             </button>
 
             <ul class="navbar-nav navbar-nav-right">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Account Balance : <b><?= $account_bal ?></b>
+
+                <li class="navbar-nav navbar-nav-right">
+                    <a class="nav-link" href="#" >
+                        <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
                     </a>
-                </li>
-                <li class="nav-item nav-profile dropdown">
-                    <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                        <div class="nav-profile-img">
-                            <img src="<?= base_url('assets/media/images/faces/face1.jpg'); ?>" alt="image">
-                            <span class="availability-status online"></span>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                        <a class="dropdown-item" href="<?= site_url("Logout"); ?>">
-                            <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
-                    </div>
                 </li>
 
 
@@ -120,48 +112,61 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
-                <li class="nav-item nav-profile">
-                    <a href="#" class="nav-link">
-                        <div class="nav-profile-image">
-                            <img src="<?= base_url('assets/media/images/faces/face1.jpg'); ?>" alt="profile">
-                            <span class="login-status online"></span>
-                            <!--change to offline or busy as needed-->
-                        </div>
-                        <div class="nav-profile-text d-flex flex-column">
-                            <span class="font-weight-bold mb-2"><?= $user['firstname']." ".$user['lastname']; ?></span>
-                            <span class="text-secondary text-small"><?= $user['account_status'];?></span>
-                        </div>
-                        <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url("/");?>">
+                        <span class="menu-title">Go Home</span>
+                        <i class="mdi mdi-home menu-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('advertiser_dashboard');?>">
+                    <a class="nav-link" href="<?php echo site_url("/admin");?>">
                         <span class="menu-title">Dashboard</span>
                         <i class="mdi mdi-home menu-icon"></i>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url("advertiser_dashboard/Campaign") ?>">
-                        <span class="menu-title">Campaign</span>
+                    <a class="nav-link" href="<?php echo site_url("/admin/publishers_list");?>">
+                        <span class="menu-title">Publishers</span>
                         <i class="mdi mdi-bell-ring-outline menu-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url("advertiser_dashboard/cpa_forms_list") ?>">
-                        <span class="menu-title">Forms</span>
+                    <a class="nav-link" href="<?php echo site_url("/admin/advertisers_list");?>">
+                        <span class="menu-title">Advertisers</span>
                         <i class="mdi mdi-clipboard-text menu-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url("advertiser_dashboard/payment") ?>"">
-                    <span class="menu-title">Payments</span>
+                    <a class="nav-link" href="<?php echo site_url("/admin/Campaigns");?>"">
+                    <span class="menu-title">Campaigns</span>
                     <i class="mdi mdi-wallet menu-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('advertiser_dashboard/settings') ?>">
-                        <span class="menu-title">Settings</span>
+                    <a class="nav-link" href="<?php echo site_url("/admin/Spaces");?>">
+                        <span class="menu-title">Spaces</span>
+                        <i class="mdi mdi-settings menu-icon"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url("/admin/Payments");?>">
+                        <span class="menu-title">Payments</span>
+                        <i class="mdi mdi-settings menu-icon"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url("/admin/withdrawal");?>">
+                        <span class="menu-title">Withdrawals</span>
+                        <i class="mdi mdi-settings menu-icon"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url("/admin/site_settings");?>">
+                        <span class="menu-title">Site Settings</span>
                         <i class="mdi mdi-settings menu-icon"></i>
                     </a>
                 </li>
@@ -172,3 +177,6 @@
 
 
         <noscript>Pls turn on JavaScript!</noscript>
+
+
+

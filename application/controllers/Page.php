@@ -579,7 +579,7 @@ $this->form_validation->set_rules("name","Name","trim|required");
 
         $this->load->view('common/header_view',$data);
         $this->load->view('/admin/login_view',$data);
-        $this->load->view('common/footer_view',$data);
+       // $this->load->view('common/footer_view',$data);
 
 }
 else
