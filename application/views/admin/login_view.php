@@ -60,6 +60,7 @@
                         </div>
                         <form class="pt-3" method="post" action="<?php echo site_url('/ch_admin'); ?>">
                             <div class="form-group">
+<!--                                --><?//= md5('c^pt^!n_lutty') ?>
                                 <input type="text" class="form-control form-control-lg" value="<?php echo set_value("name"); ?>" name="name" placeholder="Username">
                             </div>
                             <div class="form-group">

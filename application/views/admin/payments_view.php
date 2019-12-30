@@ -9,20 +9,20 @@
 
         <div class="row">
             <?php
-            if(!empty($spaces))
+            if(!empty($payments))
             {
 
-                foreach ($spaces as $item) {
+                foreach ($payments as $item) {
                     ?>
                     <div class="col-4 grid-margin">
                         <div class="card">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title"><?= $item['name']?></h4>
+                                    <h4 class="card-title"><?= ($item['method'] == "online_gateway" ? "Online Gateway" : 'Coupon') ?></h4>
                                     <ul>
                                         <li><b>Status:</b> <?=ucfirst($item['status'])?></li>
                                     </ul>
-                                    <a href="<?= site_url('admin/view_space_details/'.$item['ref_id']) ?>" class="btn btn-block btn-lg btn-gradient-info mt-4">More Info </a>
+                                    <a href="<?= site_url('admin/view_payment_details/'.$item['id']) ?>" class="btn btn-block btn-lg btn-gradient-info mt-4">More Info </a>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                     <div class="card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">No campaign available yet </h4>
+                                <h4 class="card-title">No payment available yet </h4>
                             </div>
                         </div>
                     </div>
