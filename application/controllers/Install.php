@@ -378,8 +378,13 @@ class Install extends CI_Controller {
  ('author','Adnetwork Inc','' ),
  ('tagline','','Your Network tagline' ),
  ('keywords','','Your site SEO keywords separed by comma' ),
- ('description','','Your Site SEO keywords' );"
+ ('description','','Your Site SEO keywords' );",
+ "INSERT INTO team (firstname, lastname, username, perm, email, password)
+VALUES ('Black','Beard','black_beard','1','tester@test.com','c7284ad394a26911bd432679b3adf355');"
+
+
  );
+
   
 
 

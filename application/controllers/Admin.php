@@ -270,6 +270,11 @@ public function publishers_list($offset = 0) {
   $config['last_link'] = 'Last';
   $config['display_pages'] = false;
 
+    $data["title"] =$this->siteName." | Admin Dashboard";
+    $data["keywords"] = $this->keywords;
+    $data["author"] = $this->author;
+    $data["description"] = $this->description;
+
 $data["noindex"] = $this->noindex;
 
   	   $this->pagination->initialize($config);
@@ -279,10 +284,10 @@ $data['title'] = "Publishers List | Admin Area";
 
 $this->load->view('/admin/header_view',$data);
 
-  		$this->load->view('admin/sidebar_view',$data);
+  		//$this->load->view('admin/sidebar_view',$data);
 
   		$this->load->view('admin/publishers_list_view',$data);
-  		$this->load->view('admin/footer_view');
+  		//$this->load->view('admin/footer_view');
 
 
 
@@ -336,15 +341,18 @@ public function advertisers_list($offset = 0) {
 
 $data["noindex"] = $this->noindex;
 
-$data['title'] = "Advertisers List | Admin Area";
+$data['title'] = "Advertisers List | Advertiser List";
+    $data["keywords"] = $this->keywords;
+    $data["author"] = $this->author;
+    $data["description"] = $this->description;
 
 
 $this->load->view('/admin/header_view',$data);
 
-      $this->load->view('admin/sidebar_view',$data);
+     // $this->load->view('admin/sidebar_view',$data);
 
       $this->load->view('admin/advertisers_list_view',$data);
-      $this->load->view('admin/footer_view');
+      //$this->load->view('admin/footer_view');
 
 
 
@@ -396,6 +404,8 @@ $data['items'] = $this->admin_model->get_withdrawal($cond,$offset,$limit);
 $data['title'] =$this->siteName." | Admin Payment Page";
 $data['description'] = $this->description;
 $data["noindex"] = $this->noindex;
+    $data["keywords"] = $this->keywords;
+    $data["author"] = $this->author;
 $limit = NULL;
 $data['payment_items'] = $this->user_model->get_payment_items($offset,$limit);
 $cond = array(
@@ -411,10 +421,10 @@ $cond = array(
 
   $this->load->view('/admin/header_view',$data);
 
-  $this->load->view('admin/sidebar_view',$data);
+  //$this->load->view('admin/sidebar_view',$data);
 
   $this->load->view('admin/admin_withdrawal_view',$data);
-  $this->load->view('admin/footer_view');
+  //$this->load->view('admin/footer_view');
 
 }
 
@@ -991,25 +1001,25 @@ public function Campaigns($offset=0)
     $config['per_page'] = $limit;
 
    //$config['uri_segment'] = 4;
-  $config['first_tag_open'] = '<span class="w3-btn w3-blue w3-text-white">';
-  $config['first_tag_close'] = '</span>';
-  $config['last_tag_open'] = '<br><span class="w3-btn w3-blue w3-text-white">';
-  $config['last_tag_close'] = '</span>';
-  $config['first_link'] = 'First';
+    $config['first_tag_open'] = '<span class="btn-group">';
+    $config['first_tag_close'] = '</span>';
+    $config['last_tag_open'] = '<br><span class="btn btn-outline-secondary">';
+    $config['last_tag_close'] = '</span>';
+    $config['first_link'] = 'First';
 
 
 
-  $config['prev_link'] = 'Prev';
-  $config['next_link'] = 'Next';
-  $config['next_tag_open'] = '<span style="margin-left:20%" class="w3-btn w3-blue w3-text-white">';
-  $config['next_tag_close'] = '</span><br>';
-  $config['prev_tag_open'] = '<span style="" class="w3-btn w3-blue w3-text-white">';
-  $config['prev_tag_close'] = '</span>';
-  $config['last_link'] = 'Last';
-  $config['display_pages'] = false;
+    $config['prev_link'] = 'Prev';
+    $config['next_link'] = 'Next';
+    $config['next_tag_open'] = '<span style="margin-left:20%" class="btn btn-outline-secondary">';
+    $config['next_tag_close'] = '</span><br>';
+    $config['prev_tag_open'] = '<span style="" class="btn-group">';
+    $config['prev_tag_close'] = '</span>';
+    $config['last_link'] = 'Last';
+    $config['display_pages'] = false;
 
-       $this->pagination->initialize($config);
-  $data['pagination'] = $this->pagination->create_links();
+    $this->pagination->initialize($config);
+    $data['pagination'] = $this->pagination->create_links();
 
 
 
@@ -1026,10 +1036,10 @@ public function Campaigns($offset=0)
 $data["noindex"] = $this->noindex;
       $this->load->view('/admin/header_view',$data);
 
-      $this->load->view('admin/sidebar_view',$data);
+      //$this->load->view('admin/sidebar_view',$data);
 
               $this->load->view('admin/campaigns_view',$data);
-      $this->load->view('admin/footer_view');
+      //$this->load->view('admin/footer_view');
 
 }
 
@@ -1051,25 +1061,25 @@ public function spaces($offset=0)
     $config['per_page'] = $limit;
 
    //$config['uri_segment'] = 4;
-  $config['first_tag_open'] = '<span class="w3-btn w3-blue w3-text-white">';
-  $config['first_tag_close'] = '</span>';
-  $config['last_tag_open'] = '<br><span class="w3-btn w3-blue w3-text-white">';
-  $config['last_tag_close'] = '</span>';
-  $config['first_link'] = 'First';
+    $config['first_tag_open'] = '<span class="btn-group">';
+    $config['first_tag_close'] = '</span>';
+    $config['last_tag_open'] = '<br><span class="btn btn-outline-secondary">';
+    $config['last_tag_close'] = '</span>';
+    $config['first_link'] = 'First';
 
 
 
-  $config['prev_link'] = 'Prev';
-  $config['next_link'] = 'Next';
-  $config['next_tag_open'] = '<span style="margin-left:20%" class="w3-btn w3-blue w3-text-white">';
-  $config['next_tag_close'] = '</span><br>';
-  $config['prev_tag_open'] = '<span style="" class="w3-btn w3-blue w3-text-white">';
-  $config['prev_tag_close'] = '</span>';
-  $config['last_link'] = 'Last';
-  $config['display_pages'] = false;
+    $config['prev_link'] = 'Prev';
+    $config['next_link'] = 'Next';
+    $config['next_tag_open'] = '<span style="margin-left:20%" class="btn btn-outline-secondary">';
+    $config['next_tag_close'] = '</span><br>';
+    $config['prev_tag_open'] = '<span style="" class="btn-group">';
+    $config['prev_tag_close'] = '</span>';
+    $config['last_link'] = 'Last';
+    $config['display_pages'] = false;
 
-       $this->pagination->initialize($config);
-  $data['pagination'] = $this->pagination->create_links();
+    $this->pagination->initialize($config);
+    $data['pagination'] = $this->pagination->create_links();
 
 
 
@@ -1086,12 +1096,72 @@ public function spaces($offset=0)
 $data["noindex"] = $this->noindex;
       $this->load->view('/admin/header_view',$data);
 
-      $this->load->view('admin/sidebar_view',$data);
+      //$this->load->view('admin/sidebar_view',$data);
 
               $this->load->view('admin/spaces_view',$data);
-      $this->load->view('admin/footer_view');
+      //$this->load->view('admin/footer_view');
 
 }
+
+    public function payments($offset=0)
+    {
+        $limit = 8;
+
+
+        $data['payments']= $this->admin_model->get_payments($limit,$offset);
+        $this->load->library('pagination');
+
+        $config['base_url'] = site_url("admin/payments");
+
+
+
+        $config['total_rows'] = $this->db->count_all('payments');
+
+        $config['per_page'] = $limit;
+
+
+        //$config['uri_segment'] = 4;
+        $config['first_tag_open'] = '<span class="btn-group">';
+        $config['first_tag_close'] = '</span>';
+        $config['last_tag_open'] = '<br><span class="btn btn-outline-secondary">';
+        $config['last_tag_close'] = '</span>';
+        $config['first_link'] = 'First';
+
+
+
+        $config['prev_link'] = 'Prev';
+        $config['next_link'] = 'Next';
+        $config['next_tag_open'] = '<span style="margin-left:20%" class="btn btn-outline-secondary">';
+        $config['next_tag_close'] = '</span><br>';
+        $config['prev_tag_open'] = '<span style="" class="btn-group">';
+        $config['prev_tag_close'] = '</span>';
+        $config['last_link'] = 'Last';
+        $config['display_pages'] = false;
+
+        $this->pagination->initialize($config);
+        $data['pagination'] = $this->pagination->create_links();
+
+
+
+
+
+
+        //check login for admin here later
+
+        $data["title"] =$this->siteName." | Payments Overview";
+        $data["keywords"] = $this->keywords;
+        $data["author"] = $this->author;
+        $data["description"] = $this->description;
+
+        $data["noindex"] = $this->noindex;
+        $this->load->view('/admin/header_view',$data);
+
+        //$this->load->view('admin/sidebar_view',$data);
+
+        $this->load->view('admin/payments_view',$data);
+        //$this->load->view('admin/footer_view');
+
+    }
 
   public function messages($offset=0)
   {

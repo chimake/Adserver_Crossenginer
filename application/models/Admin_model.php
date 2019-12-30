@@ -29,7 +29,7 @@ public function login_check()
 
  $this->db->select('password');
 $query = $this->db->get_where('team',array("username" => $this->input->post("name")));
-$_pass = $this->input->post('pass');
+$_pass = md5($this->input->post('pass'));
 
 if(empty($query->row_array()))
 {
@@ -218,6 +218,11 @@ return $query->result_array();
 
 }
 
+public function get_payments($limit,$offset)
+{
+    $query = $this->db->get("payments",$limit,$offset);
+    return $query->result_array();
+}
 
 public function delete_item($type,$id)
 {

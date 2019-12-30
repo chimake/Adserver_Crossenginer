@@ -1030,17 +1030,21 @@ if(!$tranx->status){
     die('API returned error: ' . $tranx->message);
 }
 
+    $user=$this->advertiser_model->get_advertiser_by_id($_SESSION['id']);
+    $previous_bal = $user['account_bal'];
+    $phone = $user['phone'];
+    $status = $tranx->data->status;
 if('success' == $tranx->data->status || $reference == $tranx->data->reference || $amount == $tranx->data->amount){
     //$exchange_rate = $this->advertiser_model->get_currency_det_by_shortcode($currency)['xchange_rate'];
 //get previous balance
-    $user=$this->advertiser_model->get_advertiser_by_id($_SESSION['id']);
-    $previous_bal = $user['account_bal'];
+
+
     $new_bal = $amount + $previous_bal;
 
 //credit user account
     $this->advertiser_model->credit_balance(array('account_bal' =>$new_bal ));
 
-    $this->advertiser_model->insert_to_payment_record(array('method'=>'online_gateway','payment_type'=>'deposit','amount'=> $amount,'user_type'=>'advertiser','user_id' => $_SESSION['id'], 'time'=>time()));
+    $this->advertiser_model->insert_to_payment_record(array('method'=>'online_gateway','phone'=>$phone,'status'=>$status,'payment_type'=>'deposit','amount'=> $amount,'user_type'=>'advertiser','user_id' => $_SESSION['id'], 'time'=>time()));
     $ref = $_SESSION['trans_details']['reference_id'];
     unset($ref);
 //unset session variable here
@@ -1053,6 +1057,7 @@ if('success' == $tranx->data->status || $reference == $tranx->data->reference ||
     // if the email matches the customer who owns the product etc
     // Give value
 }else{
+    $this->advertiser_model->insert_to_payment_record(array('method'=>'online_gateway','phone'=>$phone,'status'=>$status,'payment_type'=>'deposit','amount'=> $amount,'user_type'=>'advertiser','user_id' => $_SESSION['id'], 'time'=>time()));
     $_SESSION['action_status_report'] ="<span class='text-danger'>Payment Failed</span>";
     $this->session->mark_as_flash('action_status_report');
     show_page("advertiser_dashboard/payment");
