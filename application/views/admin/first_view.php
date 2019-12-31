@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 stretch-card grid-margin">
+            <div class="col-md-6 stretch-card grid-margin">
                 <div class="card bg-gradient-success card-img-holder text-white">
                     <div class="card-body">
                         <img src="<?= base_url('assets/media/images/dashboard/circle.svg'); ?>" class="card-img-absolute" alt="circle-image" />
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 stretch-card grid-margin">
+            <div class="col-md-6 stretch-card grid-margin">
                 <div class="card bg-gradient-success card-img-holder text-white">
                     <div class="card-body">
                         <img src="<?= base_url('assets/media/images/dashboard/circle.svg'); ?>" class="card-img-absolute" alt="circle-image" />
@@ -107,3 +107,4 @@
         <?php } ?>
 
 
+        
