@@ -158,6 +158,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url("/admin/coupons");?>">
+                        <span class="menu-title">Coupons</span>
+                        <i class="mdi mdi-settings menu-icon"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo site_url("/admin/withdrawal");?>">
                         <span class="menu-title">Withdrawals</span>
                         <i class="mdi mdi-settings menu-icon"></i>

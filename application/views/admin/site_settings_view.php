@@ -1,42 +1,46 @@
-<div class="w3-twothird w3-center w3-padding w3-center">
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                  <i class="mdi mdi-home"></i>
+                </span> <?php echo $title; ?> </h3>
+        </div>
 
-	<span class="w3-xlarge w3-text-blue-grey">
-    SITE & SEO Settings
-	</span>
-<div class="w3-padding">
-<?= form_open("admin/site_settings") ?>
+        <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">SITE & SEO Settings</h4>
+                        <form class="forms-sample" method="post" action="<?= site_url("admin/site_settings") ?>">
+                            <span class="text-danger"><?= $_SESSION['action_status_report'] ?></span>
+                            <div class="form-group">
+                                <label for="InputTag1">Site Name</label>
+                                <input type="text" class="form-control" id="InputTag1" name="site_name" value="<?=$site_name ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputTag2">Site Tag Line</label>
+                                <input type="text" class="form-control" id="InputTag2" name="site_tagline" value="<?=$site_tagline ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputTag3">Site Author</label>
+                                <input type="text" class="form-control" id="InputTag3" name="site_author" value="<?=$site_author ?>">
+                            </div>
 
-<?=isset($_SESSION['action_status_report'])?$_SESSION['action_status_report']:"" ?>
-<br>
-<span class="w3-label w3-large">Site Name: </span><br>
-<input type="text" placeholder="Site Name" class="w3-padding w3-margin" name="site_name"
- value="<?=$site_name ?>"/>
-<br>
-<span class="w3-label w3-large">Site Tag Line:<span class="w3-small">
-	or Motto</span> </span><br>
-<input type="text" placeholder="Site Tagline"  class="w3-padding w3-margin" name="site_tagline"
- value="<?=$site_tagline ?>"/>
-<br>
-<span class="w3-label w3-large">Site Author: </span><br>
-<input type="text" placeholder="Site Author"  class="w3-padding w3-margin" name="site_author"
- value="<?=$site_author ?>"/>
-<br>
-<span
-<span class="w3-label w3-large">Site keywords:<span class="w3-small">
-	Each separated comma ','</span> </span><br>
-<input type="text" placeholder="Site Keywords"  class="w3-padding w3-margin" name="site_keywords"
- value="<?=$site_keywords ?>"/>
-<br>
-<span
-<span class="w3-label w3-large">Site Descriptions: </span><br>
-<textarea placeholder="Descriptions here" cols="20" rows="10" name="site_descriptions">
-	<?= $site_descriptions?></textarea><br>
-
-<input type="submit" class="w3-button w3-blue w3-margin w3-padding" name="submit" value="Change Site Details"/>
-
-</div>
-
-
+                            <div class="form-group">
+                                <label for="InputTag4">Site Keywords</label>
+                                <input type="text" class="form-control" id="InputTag4" name="site_keywords" value="<?=$site_keywords ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleTextarea1">Site Descriptions</label>
+                                <textarea class="form-control" id="InputTag5" rows="10" cols="20" name="site_descriptions"><?= $site_descriptions?></textarea>
+                            </div>
+                            <button type="submit" name="submit" class="btn btn-gradient-primary mr-2">Change Site Details</button>
+                            <button class="btn btn-light">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-</div>
