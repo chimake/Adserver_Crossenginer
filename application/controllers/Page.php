@@ -259,27 +259,10 @@ $this->load->view('common/footer_view');
 }
 public function register()
 {
-   
-    $this->form_validation->set_rules("accounttype","Account Type","required");
-    if (!$this->form_validation->run())
-    {
-      $data['title'] = $this->siteName." | Register";
-    $data['author'] = $this->author;
-      $data['keywords'] = $this->keywords;
-      $data['description'] = $this->description;
 
-    //$this->load->view('/common/header_view',$data);
-
-   
-    //$this->load->view('/common/header_view',$data);
-//$this->load->view('/common/public_header_plate_view',$data);
-  $this->load->view('public/first_reg_page_view',$data);
-    //$this->load->view('common/footer_view');
-
-}else{
-$_SESSION['reg_account_type'] = $this->input->post('accounttype');
+$_SESSION['reg_account_type'] = "Advertiser";
 show_page('page/first_next');
-}
+
 }
 
 public function check_password($input_pass)
