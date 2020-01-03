@@ -121,12 +121,13 @@ $this->db->insert('publishers',$reg);
 public function login_check()
 {
 
-$query = $this->db->get_where(strtolower($this->input->post('accounttype').'s'),array("email" => $this->input->post("email"),"password" => md5(md5($this->input->post('password')))))->row_array();
+
+$query = $this->db->get_where(strtolower('advertisers'),array("email" => $this->input->post("email"),"password" => md5(md5($this->input->post('password')))))->row_array();
 
 if(!empty($query))
 {
 $datab  = array('lastlog' => time() );
-$this->db->update(strtolower($this->input->post('accounttype').'s'),$datab,array('email' => $this->input->post("email")));
+$this->db->update(strtolower('advertisers'),$datab,array('email' => $this->input->post("email")));
   return true;
 }else
    {

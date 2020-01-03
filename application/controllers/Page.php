@@ -464,14 +464,14 @@ if (!$this->form_validation->run())
 
         //show dash
 
-    $_SESSION["id"] = $this->user_model->get_user_id_by_email($this->input->post('email'),strtolower($this->input->post('accounttype')));
-    $_SESSION["accounttype"] = ucfirst($this->input->post('accounttype'));
+    $_SESSION["id"] = $this->user_model->get_user_id_by_email($this->input->post('email'),strtolower('Advertiser'));
+    $_SESSION["accounttype"] = "Advertiser";
 //log login time
     $this->user_model->insert_login_time($_SESSION['accounttype']);
-    $_SESSION['account_status'] =$this->user_model->get_user_by_its_id($_SESSION['id'],"publishers")['account_status'];
+    $_SESSION['account_status'] =$this->user_model->get_user_by_its_id($_SESSION['id'],"advertisers")['account_status'];
 
     $_SESSION["logged_in"] = true;
-    show_page($this->input->post('accounttype')."_dashboard");
+    show_page($_SESSION["accounttype"]."_dashboard");
 
         }
 

@@ -65,13 +65,13 @@
                             <div class="form-group">
                                 <input type="password" class="form-control form-control-lg" id="inputPassword" name="password" placeholder="Password">
                             </div>
-                            <div class="form-group">
-
-                                <select name="accounttype" class="form-control form-control-lg">
-                                    <option value="Advertiser">Advertiser</option>
-                                    <option value="Publisher">Publisher</option>
-                                </select>
-                            </div>
+<!--                            <div class="form-group">-->
+<!---->
+<!--                                <select name="accounttype" class="form-control form-control-lg">-->
+<!--                                    <option value="Advertiser">Advertiser</option>-->
+<!--                                    <option value="Publisher">Publisher</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
                             <div class="mt-3">
                                 <input class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" type='submit' name='submit' value="Sign In">
                             </div>
