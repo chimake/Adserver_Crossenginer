@@ -589,7 +589,8 @@ if($this->admin_model->login_check())
 //success page
 //session_start();
 $this->session->admin_name = $this->input->post("name");
-
+$acct_type = "admin";
+    $_SESSION["id"] = $this->user_model->get_user_id_by_email($this->input->post('username'),strtolower($acct_type));
 
 $this->session->admin_logged_in = true;
         show_page("admin");

@@ -91,7 +91,7 @@ $data['countries'] = $this->admin_model->get_supported_countries();
   $this->load->view('/admin/header_view',$data);
 	//$this->load->view('admin/sidebar_view',$data);
 	$this->load->view('admin/first_view',$data);
-	//$this->load->view('admin/footer_view');
+	$this->load->view('admin/footer_view');
 
 
 
@@ -287,7 +287,7 @@ $this->load->view('/admin/header_view',$data);
   		//$this->load->view('admin/sidebar_view',$data);
 
   		$this->load->view('admin/publishers_list_view',$data);
-  		//$this->load->view('admin/footer_view');
+  		$this->load->view('admin/footer_view');
 
 
 
@@ -352,7 +352,7 @@ $this->load->view('/admin/header_view',$data);
      // $this->load->view('admin/sidebar_view',$data);
 
       $this->load->view('admin/advertisers_list_view',$data);
-      //$this->load->view('admin/footer_view');
+      $this->load->view('admin/footer_view');
 
 
 
@@ -424,7 +424,7 @@ $cond = array(
   //$this->load->view('admin/sidebar_view',$data);
 
   $this->load->view('admin/admin_withdrawal_view',$data);
-  //$this->load->view('admin/footer_view');
+  $this->load->view('admin/footer_view');
 
 }
 
@@ -720,7 +720,7 @@ $data['campaign'] = $this->admin_model->get_campaign_by_ref_id($ref_id);
 
  $this->load->view('/admin/header_view',$data);
 
-  $this->load->view('admin/sidebar_view',$data);
+  //$this->load->view('admin/sidebar_view',$data);
 
   $this->load->view('admin/campaign_details_view',$data);
   $this->load->view('admin/footer_view');
@@ -1159,16 +1159,94 @@ $data["noindex"] = $this->noindex;
         //$this->load->view('admin/sidebar_view',$data);
 
         $this->load->view('admin/payments_view',$data);
-        //$this->load->view('admin/footer_view');
+        $this->load->view('admin/footer_view');
 
+    }
+
+    public function coupons($offset=0)
+    {
+        $limit = 8;
+
+
+        $data['coupons']= $this->admin_model->get_coupons($limit,$offset);
+        $this->load->library('pagination');
+
+
+
+
+        $config['total_rows'] = $this->db->count_all('coupons');
+
+        $config['per_page'] = $limit;
+
+
+        //$config['uri_segment'] = 4;
+        $config['first_tag_open'] = '<span class="btn-group">';
+        $config['first_tag_close'] = '</span>';
+        $config['last_tag_open'] = '<br><span class="btn btn-outline-secondary">';
+        $config['last_tag_close'] = '</span>';
+        $config['first_link'] = 'First';
+
+
+
+        $config['prev_link'] = 'Prev';
+        $config['next_link'] = 'Next';
+        $config['next_tag_open'] = '<span style="margin-left:20%" class="btn btn-outline-secondary">';
+        $config['next_tag_close'] = '</span><br>';
+        $config['prev_tag_open'] = '<span style="" class="btn-group">';
+        $config['prev_tag_close'] = '</span>';
+        $config['last_link'] = 'Last';
+        $config['display_pages'] = false;
+
+        $this->pagination->initialize($config);
+        $data['pagination'] = $this->pagination->create_links();
+
+
+
+
+
+
+        //check login for admin here later
+
+        $data["title"] =$this->siteName." | Coupons Overview";
+        $data["keywords"] = $this->keywords;
+        $data["author"] = $this->author;
+        $data["description"] = $this->description;
+
+        $data["noindex"] = $this->noindex;
+        $this->load->view('/admin/header_view',$data);
+
+        //$this->load->view('admin/sidebar_view',$data);
+
+        $this->load->view('admin/coupons_view',$data);
+        //$this->load->view('admin/footer_view');
+    }
+
+    public function add_coupon()
+    {
+        if (!isset($_POST['submit'])) {
+            $data["title"] =$this->siteName." | Add Coupon";
+            $data["keywords"] = $this->keywords;
+            $data["author"] = $this->author;
+            $data["description"] = $this->description;
+
+            $data["noindex"] = $this->noindex;
+            $this->load->view('/admin/header_view',$data);
+            $this->load->view('admin/add_coupon_view',$data);
+            $this->load->view('admin/footer_view');
+        }else{
+            if ($this->admin_model->add_coupon_details()){
+                $_SESSION['action_status_report']="<span class='text-success'>Coupon Saved</span>";
+                $this->session->mark_as_flash("action_status_report");
+            }else{
+                $_SESSION['action_status_report']="<span class='text-danger'>Unknown Error Occurred</span>";
+                $this->session->mark_as_flash("action_status_report");
+            }
+            show_page("admin/coupons");
+        }
     }
 
   public function messages($offset=0)
   {
-
-
-
-
 
 
 
@@ -1233,8 +1311,14 @@ $data['site_keywords']=$this->keywords;
 $data['site_author']=$this->author;
 $data['site_tagline']=$this->tagLine;
 $data['site_descriptions']= $this->description;
+    $data["title"] =$this->siteName." | Site Settings";
+    $data["keywords"] = $this->keywords;
+    $data["author"] = $this->author;
+    $data["description"] = $this->description;
+
+    $data["noindex"] = $this->noindex;
   $this->load->view('/admin/header_view',$data);
-  $this->load->view('admin/sidebar_view',$data);
+  //$this->load->view('admin/sidebar_view',$data);
   $this->load->view('admin/site_settings_view',$data);
   $this->load->view('admin/footer_view');
 }else{

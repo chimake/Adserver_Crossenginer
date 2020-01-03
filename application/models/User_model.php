@@ -148,10 +148,15 @@ if(strtolower($acct_type) == "advertiser")
 {
     $query = $this->db->get_where("publishers",array("email" => $email));
 
+}elseif (strtolower($acct_type) == "admin")
+{
+    $query = $this->db->get_where("team",array("username" => $email));
 }
   return $query->row_array()['id'];
 
 }
+
+
 
 //new
 public function get_user_by_id()

@@ -224,6 +224,32 @@ public function get_payments($limit,$offset)
     return $query->result_array();
 }
 
+public function get_coupons($limit,$offset)
+{
+    $query = $this->db->get("coupons",$limit,$offset);
+    return $query->result_array();
+}
+
+public function add_coupon_details()
+{
+    date_default_timezone_set('Africa/Lagos'); # add your city to set local time zone
+    $now = date('Y-m-d H:i:s');
+    $coup_details = array(
+
+        'coupon_title' => $this->input->post('title'),
+        'coupon_string' => $this->input->post('voucher_value'),
+        'amount' => $this->input->post('amount'),
+        'status' => true,
+        'expires_on' => '',
+        'created_on' => $now,
+    );
+
+
+    $this->db->insert('coupons',$coup_details);
+}
+
+
+
 public function delete_item($type,$id)
 {
 
