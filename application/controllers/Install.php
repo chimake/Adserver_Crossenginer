@@ -373,6 +373,17 @@ class Install extends CI_Controller {
         time varchar(128),
           PRIMARY KEY (id)
 );",
+"CREATE TABLE `coupons` (
+  `coupon_id` int(11) NOT NULL AUTO_INCREMENT,
+  `coupon_title` varchar(20) NOT NULL,
+  `coupon_string` varchar(50) NOT NULL,
+  `amount` decimal(10,0) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  `expires_on` date DEFAULT NULL,
+  `created_on` datetime NOT NULL,
+  PRIMARY KEY (coupon_id)
+);
+",
 "INSERT INTO system_var (variable_name, variable_value, long_value)
  VALUES ('site_name','Adnetwork','' ),
  ('author','Adnetwork Inc','' ),
