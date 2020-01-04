@@ -1,111 +1,94 @@
-<div class="w3-container w3-center">
-    <span class="w3-text-indigo w3-xlarge w3-serif">Payment & Budget</span><br>
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                  <i class="mdi mdi-home"></i>
+                </span> <?php echo $title; ?> </h3>
+        </div>
 
-<?= form_open("advertiser_dashboard/campaign_budget/".$this->uri->segment(3)) ?>
+        <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Payment & Budget</h4>
+                        <form class="forms-sample" method="post" action="<?= site_url("advertiser_dashboard/campaign_budget/".$this->uri->segment(3)) ?>">
+                            <?php
+                            if(isset($_SESSION['action_status_report']))
+                            {
+                                echo $_SESSION['action_status_report'];
+                            }
+                            ?>
+                            <div class="form-group">
+                                <label for="budget">Budget( ex:Total Amount  you want to spend on this campaign in NGN)</label>
+                                <input type="number" id="budget" min='<?=$general_details['minimum_budget'] ?>' placeholder="Budget" value="<?php echo set_value('budget'); ?>" name="budget" class="form-control">
+                            </div>
 
-<?php
-if(isset($_SESSION['action_status_report']))
-{
-echo $_SESSION['action_status_report'];
-}
-?>
+                            <div class="form-group">
+                                <label for="startdate">Starting Date</label>
+                                <select class="form-control" id="startdate" name="sdate">
+                                    <option value="now">Now</option>
+                                    <option value="Next Sunday">Next Sunday (12.00 AM)</option>
+                                    <option value="Next Monday">Next Monday (12.00 AM)</option>
+                                    <option value="Next Tuesday">Next Tuesday (12.00 AM)</option>
+                                    <option value="Next Wednesday">Next Wednesday (12.00 AM)</option>
+                                    <option value="Next Thursday">Next Thursday (12.00 AM)</option>
+                                    <option value="Next Friday">Next Friday (12.00 AM)</option>
+                                    <option value="Next Saturday">Next Saturday (12.00 AM)</option>
+                                </select>
+                            </div>
 
-<div class="w3-container">
-	<div class="w3-half">
-		<span class="w3-label w3-small">Budget( ex:Total Amount  you want to spend on this campaign in <?=$general_details['currency_code'] ?>)<sup><b class="w3-text-red w3-large">*</b></sup>:</span><br>
+                            <div class="form-group">
+                                <label for="billingtype">Billing Type</label>
+                                <select onchange="toggleInputDiv(this.value)" class="form-control" id="billingtype" name="billing">
+                                    <?php
+                                    if(!empty($cpa_form_data))
+                                    {
+                                        echo '<option value="cpa">Click Per Action </option>';
+                                    }else{
+                                        echo '<option value="ppc">Pay Per Click</option>
+	                                         <option value="cpm">Pay Per View</option>
+	                                         <option value="both">Click & View </option>';
+                                    }
 
-<input class="w3-padding w3-border w3-border-indigo" type="number" min='<?=$general_details['minimum_budget'] ?>' placeholder="Budget" value="<?php echo set_value('budget'); ?>" name="budget"  ><br><br>
+                                    ?>
+                                </select>
+                            </div>
 
-<span class="w3-label w3-small">Starting Date:</span><br>
+                            <div class="form-group <?= (!empty($cpa_form_data)) ? 'hidden' : '' ?>" id="ppc_div">
+                                <label for="budget">Cost Per Click-CPC( ex:Total Amount  you want to pay per click in NGN)</label>
+                                <span class="text-danger">min: <?=$general_details['currency_code']." ".$general_details['minimum_cpc'] ?>  </span>
+                                <input type="number" step="0.001" min="<?=$general_details['minimum_cpc'] ?>" placeholder="Cost Per Click" value="<?php echo set_value('cpc'); ?>" name="cpc" class="form-control">
+                            </div>
 
-<select class="w3-padding w3-border w3-border-indigo" name="sdate">
-	<option value="now">Now</option>
-	<option value="Next Sunday">Next Sunday (12.00 AM)</option>
-	<option value="Next Monday">Next Monday (12.00 AM)</option>
-  	<option value="Next Tuesday">Next Tuesday (12.00 AM)</option>
-  	<option value="Next Wednesday">Next Wednesday (12.00 AM)</option>
-  	<option value="Next Thursday">Next Thursday (12.00 AM)</option>
-    <option value="Next Friday">Next Friday (12.00 AM)</option>
-  	<option value="Next Saturday">Next Saturday (12.00 AM)</option>
-</select>
+                            <div class="form-group <?= (!empty($cpa_form_data)) ? 'hidden' : '' ?>" id="cpa_div">
+                                <label for="budget">Cost Per Action-CPA( ex:Total Amount  you want to pay per Action in NGN)</label>
+                                <span class="text-danger">min: <?=$general_details['currency_code']." ".($cpa_form_data['access_type'] == 'free') ? $general_details['minimum_cpa'] : $general_details['minimum_paid_cpa'] ?>  </span>
+                                <input type="number" step="0.001" min="<?= ($cpa_form_data['access_type'] == 'free') ? $general_details['minimum_cpa'] : $general_details['minimum_paid_cpa'] ?> ?>" placeholder="Cost Per Action" value="<?php echo set_value('cpa'); ?>" name="cpa" class="form-control">
+                            </div>
 
-	</div>
-		<div class="w3-half">
-			<br>
-<span class="w3-label">Billing Type:</span><br>
-<select onchange="toggleInputDiv(this.value)" class="w3-padding" name="billing">
-	<?php
-if(!empty($cpa_form_data))
-{
-	echo '<option value="cpa">Click Per Action </option>
-';
-}else{
-	echo '<option value="ppc">Pay Per Click</option>
-	<option value="cpm">Pay Per View</option>
-	<option value="both">Click & View </option>';
-}
+                            <div class="form-group hidden" id="cpm_div">
+                                <label for="budget">Cost Per View( ex:Total Amount  you want to pay per View in NGN)</label>
+                                <span class="text-danger">min: <?=$general_details['currency_code']." ".$general_details['minimum_cpm'] ?>  </span>
+                                <input type="number" step="0.001" min="<?= $general_details['minimum_cpm'] ?>" placeholder="Cost Per View" value="<?php echo set_value('cpv'); ?>" name="cpv" class="form-control">
+                            </div>
 
-	?>
-	
-</select><BR>
-<br>
+                            <div class="form-group">
+                                <button type="submit" name="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                                <button class="btn btn-light">Cancel</button>
+                            </div>
 
-<div class="<?php
-if(!empty($cpa_form_data))
-{
-	echo 'w3-hide';
-}
-
-	?>" id="ppc_div">
-  <span class="w3-label w3-small">Cost Per Click-CPC( ex:Total Amount  you want to pay per click in <?=$general_details['currency_code'] ?>)<sup><b class="w3-text-red w3-large">*</b></sup>:</span><br>
-<span class="w3-text-red">min: <?=$general_details['currency_code']." ".$general_details['minimum_cpc'] ?>  </span><br>
-
-       <input  class="w3-padding w3-border w3-border-indigo" type="number" step="0.001" min="<?=$general_details['minimum_cpc'] ?>" placeholder="Cost Per Click" value="<?php echo set_value('cpc'); ?>" name="cpc"  /><br>
-   </div>
-		
-<div  class="<?php
-if(empty($cpa_form_data))
-{
-	echo 'w3-hide';
-}
-
-	?>" id="cpa_div">
-  <span class="w3-label w3-small">Cost Per Action-CPA( ex:Total Amount  you want to pay per Action in  <?=$general_details['currency_code'] ?>)<sup><b class="w3-text-red w3-large">*</b></sup>:</span><br>
-<span class="w3-text-red">min: <?=$general_details['currency_code']." "?><?php
-//check if free if not use paid_action minimum
-if($cpa_form_data['access_type'] == 'free')
-{
-	echo $general_details['minimum_cpa'];
-}else{
-		echo $general_details['minimum_paid_cpa'];
-
-}
-        ?>  </span><br>
-
-       <input  class="w3-padding w3-border w3-border-indigo" type="number" step="0.001" min="<?php
-//check if free if not use paid_action minimum
-if($cpa_form_data['access_type'] == 'free')
-{
-	echo $general_details['minimum_cpa'];
-}else{
-		echo $general_details['minimum_paid_cpa'];
-
-}
-        ?>" placeholder="Cost Per Action" value="<?php echo set_value('cpa'); ?>" name="cpa"  /><br>
-   </div>
-		
+                                </div>
+                            </div>
 
 
-	<div class="w3-hide" id="cpm_div">		
-<span class="w3-label w3-small">Cost Per View( ex:Total Amount  you want to pay per View in <?=$general_details['currency_code'] ?>)<sup><b class="w3-text-red w3-large">*</b></sup>:</span><br>
-<span class="w3-text-red">min: <?=$general_details['currency_code']." ".$general_details['minimum_cpm'] ?> </span><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-       <input  class="w3-padding w3-border w3-border-indigo" type="number" step="0.001" min="<?= $general_details['minimum_cpm'] ?>" placeholder="Cost Per View" value="<?php echo set_value('cpv'); ?>" name="cpv"  /><br><br>
-  </div>   
-</div>
-<br>
-<input class="w3-btn w3-indigo w3-margin" type="submit" name="submit" value="Submit">
-</form>
+
 <script type="text/javascript">
 	function toggleInputDiv(input_value) {
 		var cpm_div = document.getElementById('cpm_div');
@@ -113,24 +96,20 @@ if($cpa_form_data['access_type'] == 'free')
 
 if (input_value == "ppc")
 {//hide cpm 
- cpm_div.className = " w3-hide";
-ppc_div.className = " w3-show";
+ cpm_div.className = " hidden";
+ppc_div.className = " show";
 }else if(input_value == "cpm"){
 
-ppc_div.className = " w3-hide";
-cpm_div.className = " w3-show";
+ppc_div.className = " hidden";
+cpm_div.className = " show";
 	}else{
-cpm_div.className = " w3-show";
-ppc_div.className = " w3-show";
+cpm_div.className = " show";
+ppc_div.className = " show";
 	}
 }
 
 
-</script><!--
-<div class="w3-container">
-Need Help? Please read this page documentation <a class="w3-text-indigo" href="<?= site_url('blog/page-documentation-payment-and-budget') ?>">HERE</a>
-
-</div>-->
+</script>
 
 
-</div>
+

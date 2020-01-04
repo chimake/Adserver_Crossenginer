@@ -13,7 +13,7 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Campaigns</h4>
-                <a href="#" class="btn btn-outline-secondary btn-sm btn-gradient-success float-right">Add New</a>
+                <a href="<?= site_url('advertiser_dashboard/add_campaign/') ?>" class="btn btn-outline-secondary btn-sm btn-gradient-success float-right">Add New</a>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -45,9 +45,9 @@
 
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-outline-secondary btn-sm btn-gradient-info">
+                                    <a href="<?= site_url('advertiser_dashboard/view_details/'.$campaign_val['ref_id']) ?>" class="btn btn-outline-secondary btn-sm btn-gradient-info">
                                         <i class=" mdi mdi-table-edit"></i>
-                                    </button>
+                                    </a>
                                     <button type="button" class="btn btn-outline-secondary btn-sm btn-gradient-danger">
                                         <i class="mdi mdi-delete"></i>
                                     </button>

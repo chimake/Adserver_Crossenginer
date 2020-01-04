@@ -582,9 +582,9 @@ $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
 
 
     $this->load->view('/common/advertiser_header_view',$data);
-      $this->load->view('/common/advertiser_top_tiles',$data);
+      //$this->load->view('/common/advertiser_top_tiles',$data);
     $this->load->view('/user/advertiser/add_campaign_view',$data);
-     $this->load->view('/common/users_footer_view',$data);
+     //$this->load->view('/common/users_footer_view',$data);
 
 
 
@@ -619,10 +619,10 @@ $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
 
 
     $this->load->view('/common/advertiser_header_view',$data);
-      $this->load->view('/common/advertiser_top_tiles',$data);
+     // $this->load->view('/common/advertiser_top_tiles',$data);
 
     $this->load->view('/user/advertiser/campaign_target_view',$data);
-     $this->load->view('/common/users_footer_view',$data);
+    // $this->load->view('/common/users_footer_view',$data);
 
 
 }
@@ -696,10 +696,10 @@ $data['cpa_form_data'] =NULL;
 
 
     $this->load->view('/common/advertiser_header_view',$data);
-    $this->load->view('/common/advertiser_top_tiles',$data);
+    //$this->load->view('/common/advertiser_top_tiles',$data);
 
     $this->load->view('/user/advertiser/campaign_budget_view',$data);
-    $this->load->view('/common/users_footer_view',$data);
+    //$this->load->view('/common/users_footer_view',$data);
 
 
 
@@ -787,8 +787,8 @@ show_page('advertiser_dashboard/campaign_target/'.$ref_id);
 show_page('advertiser_dashboard/campaign_budget/'.$ref_id);
 
   }
-
-      $data['title'] = $this->siteName." | Advertiser Settings";
+    $campaign_item = $this->advertiser_model->get_campaign_ref_id($ref_id);
+      $data['title'] = $this->siteName." | Campaign Details(".$campaign_item['name'].")";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
@@ -825,10 +825,10 @@ $data['campaign_item']['clicks'] = $this->advertiser_model->get_campaign_at_all_
 $data['campaign_item']['views'] = $this->advertiser_model->get_campaign_at_all_time_views($ref_id);
 
     $this->load->view('/common/advertiser_header_view',$data);
-      $this->load->view('/common/advertiser_top_tiles',$data);
+      //$this->load->view('/common/advertiser_top_tiles',$data);
 
     $this->load->view('/user/advertiser/details_view',$data);
-     $this->load->view('/common/users_footer_view',$data);
+    // $this->load->view('/common/users_footer_view',$data);
 
 
 

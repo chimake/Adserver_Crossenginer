@@ -24,6 +24,12 @@
     <link rel="stylesheet"  href="<?php echo base_url('assets/cj/css/vendor.bundle.base.css'); ?>"/>
 
     <link href="<?php echo base_url('assets/cj/css/style.css'); ?>" rel="stylesheet">
+
+    <style>
+        .hidden{
+            display: none !important;
+        }
+    </style>
     <!-- End layout styles -->
 </head>
 

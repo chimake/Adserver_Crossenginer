@@ -43,6 +43,10 @@ echo base_url('assets/media/images/faviconsocial.png');
 
 <style>
 
+    .hidden{
+        display: none !important;
+    }
+
 #intro {
   width: 100%;
   position: relative;
