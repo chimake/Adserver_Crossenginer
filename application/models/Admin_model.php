@@ -224,10 +224,22 @@ public function get_payments($limit,$offset)
     return $query->result_array();
 }
 
+public function get_payments_advertiser_id($id,$limit,$offset)
+{
+    $query = $this->db->get_where("payments",array("user_id" => $id),$limit,$offset);
+    return $query->row_array();
+}
+
 public function get_coupons($limit,$offset)
 {
     $query = $this->db->get("coupons",$limit,$offset);
     return $query->result_array();
+}
+
+public function get_coupon_by_its_id($id)
+{
+    $query = $this->db->get_where("coupons",array("coupon_id" => $id));
+    return $query->row_array();
 }
 
 public function add_coupon_details()
@@ -245,8 +257,43 @@ public function add_coupon_details()
     );
 
 
-    $this->db->insert('coupons',$coup_details);
+    $insert_stat = $this->db->insert('coupons',$coup_details);
+    if ($insert_stat)
+    {
+        return true;
+    }
+
 }
+
+public function edit_coupon_details($id)
+    {
+        $coup_details = array(
+
+            'coupon_title' => $this->input->post('title'),
+            'coupon_string' => $this->input->post('voucher_value'),
+            'amount' => $this->input->post('amount'),
+            'status' => true,
+            'expires_on' => ''
+        );
+
+        $update_stat = $this->db->update("coupons",$coup_details,array("coupon_id" => $id));
+
+        if ($update_stat)
+        {
+            return true;
+        }
+
+    }
+
+    public function delete_coupon_details($id)
+    {
+       $delete_stat = $this->db->delete("coupons",array("coupon_id" => $id));
+
+       if ($delete_stat)
+       {
+           return true;
+       }
+    }
 
 
 

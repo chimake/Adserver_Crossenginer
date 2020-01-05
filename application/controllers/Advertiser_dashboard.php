@@ -854,7 +854,66 @@ $this->advertiser_model->fund_campaign($ref_id,$this->advertiser_model->get_adve
 
 }
 
-public function payment()
+public function payments($offset=0)
+{
+    $limit = 8;
+
+
+    $data['payments']= $this->admin_model->get_payments_advertiser_id($this->user,$limit,$offset);
+    $this->load->library('pagination');
+
+    $config['base_url'] = site_url("advertiser_dashboard/payments");
+
+
+
+    $config['total_rows'] = count($data['payments']);
+
+    $config['per_page'] = $limit;
+
+
+    //$config['uri_segment'] = 4;
+    $config['first_tag_open'] = '<span class="btn-group">';
+    $config['first_tag_close'] = '</span>';
+    $config['last_tag_open'] = '<br><span class="btn btn-outline-secondary">';
+    $config['last_tag_close'] = '</span>';
+    $config['first_link'] = 'First';
+
+
+
+    $config['prev_link'] = 'Prev';
+    $config['next_link'] = 'Next';
+    $config['next_tag_open'] = '<span style="margin-left:20%" class="btn btn-outline-secondary">';
+    $config['next_tag_close'] = '</span><br>';
+    $config['prev_tag_open'] = '<span style="" class="btn-group">';
+    $config['prev_tag_close'] = '</span>';
+    $config['last_link'] = 'Last';
+    $config['display_pages'] = false;
+
+    $this->pagination->initialize($config);
+    $data['pagination'] = $this->pagination->create_links();
+
+
+
+
+
+
+    //check login for admin here later
+
+    $data["title"] =$this->siteName." | Payments Overview";
+    $data["keywords"] = $this->keywords;
+    $data["author"] = $this->author;
+    $data["description"] = $this->description;
+
+    $data["noindex"] = $this->noindex;
+    $this->load->view('/admin/header_view',$data);
+
+    //$this->load->view('admin/sidebar_view',$data);
+
+    $this->load->view('/user/advertiser/payment_view',$data);
+    $this->load->view('admin/footer_view');
+}
+
+public function add_payment()
 {
 
 
@@ -878,7 +937,7 @@ $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
 
     $this->load->view('/common/advertiser_header_view',$data);
       //$this->load->view('/common/advertiser_top_tiles',$data);
-   $this->load->view('/user/advertiser/payment_view',$data);
+   $this->load->view('/user/advertiser/add_payment_view',$data);
     // $this->load->view('/common/users_footer_view',$data);
 
 }else{

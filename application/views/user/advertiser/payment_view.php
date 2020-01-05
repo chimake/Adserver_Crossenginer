@@ -5,62 +5,54 @@
                 <span class="page-title-icon bg-gradient-primary text-white mr-2">
                   <i class="mdi mdi-home"></i>
                 </span> <?php echo $title; ?> </h3>
+
+            <span class="float-right page-title">
+                <a href="<?= site_url('advertiser_dashboard/add_payment') ?>" class="btn btn-block btn-lg btn-gradient-success mt-4">Fund Account</a>
+            </span>
         </div>
-        <?php
-        if(isset($_SESSION['action_status_report']))
-        {
-            ?>
-            <div class="row" id="proBanner">
-                <div class="col-12">
-                                 <span class="d-flex align-items-center purchase-popup">
-                                     <?=$_SESSION['action_status_report']."<br>"?>
-                                     <i class="mdi mdi-close float-right" id="bannerClose"></i>
-                                 </span>
-                </div>
-            </div>
-        <?php } ?>
+
         <div class="row">
+            <?php
+            if(!empty($payments))
+            {
 
-            <div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Account Deposit</h4>
-
-                        <form class="form_pay" method="post" action="<?= ('payment') ?>" >
-                            <div class="form-group">
-                                <label for="exampleInputName1">Please choose currency you want to be bill in</label>
-                                <select name="currency" class="form-control">
-                                    <option value="usd">US Dollar</option>
-                                    <option value="zar">South African Rand</option>
-                                    <option value="NGN">Nigerian Naira</option>
-                                    <option value="ugx">Ughanda Shilling</option>
-                                    <option value="kes">Kenya Shilling</option>
-                                    <option value="ghs">Ghana Cedi</option>
-                                    <option value="tzs">Tanzanian Shilling</option>
-
-
-                                </select>
+                foreach ($payments as $item) {
+                    ?>
+                    <div class="col-4 grid-margin">
+                        <div class="card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title"><?= ($item['method'] == "online_gateway" ? "Online Gateway" : 'Coupon') ?></h4>
+                                    <ul>
+                                        <li><b>Status:</b> <?=ucfirst($item['status'])?></li>
+                                        <li><b>Amount:</b> <?=$item['amount']?></li>
+                                        <li><b>Payment Date:</b> <?=$item['trans_date']?></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3">Amount</label>
-                                <input type="number" name="amount" min="<?=$general_details['minimum_deposit'] ?>" class="form-control">
+                        </div>
+                    </div>
+                <?php } ?>
+            <?php }else{ ?>
+                <div class="col-12 grid-margin">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">No payment available yet </h4>
                             </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail3">Payment Method</label>
-                                <select class="form-control" name="payment_opt">
-                                    <option>Select Preferred Method</option>
-                                    <option value="paymt_gate">Debit/Credit Card</option>
-                                    <option value="coupon">Coupon</option>
-                                </select>
-                            </div>
-
-
-                            <button type="submit" name="submit" class="btn btn-gradient-primary mr-2">Next</button>
-                            <button class="btn btn-light">Cancel</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            <?php  } ?>
+            <?= $pagination ?>
         </div>
+
+
+
+
+
+
+
+
+
+

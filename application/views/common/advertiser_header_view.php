@@ -160,7 +160,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url("advertiser_dashboard/payment") ?>"">
+                    <a class="nav-link" href="<?= site_url("advertiser_dashboard/payments") ?>"">
                         <span class="menu-title">Payments</span>
                         <i class="mdi mdi-wallet menu-icon"></i>
                     </a>

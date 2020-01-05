@@ -10,9 +10,16 @@
             <span class="float-right page-title">
                 <a href="<?= site_url('admin/add_coupon') ?>" class="btn btn-block btn-lg btn-gradient-primary mt-4">+ Add a Coupon</a>
             </span>
-        </div>
 
+        </div>
         <div class="row">
+            <div class="col-12">
+                <?= (isset($_SESSION['action_status_report'])) ? $_SESSION['action_status_report'] : '' ?>
+            </div>
+
+        </div>
+        <div class="row">
+
             <?php
             if(!empty($coupons))
             {
@@ -28,8 +35,13 @@
                                     <h4 class="card-title"><?= $item['coupon_title'] ?></h4>
                                     <ul>
                                         <li><b>Status:</b> <?=($item['status'] == true )  ? $active_label : $inactive_label ?></li>
+                                        <li><b>Amount:</b> NGN <?=$item['amount'] ?></li>
                                     </ul>
-                                    <a href="<?= site_url('admin/view_coupon_details/'.$item['coupon_id']) ?>" class="btn btn-block btn-lg btn-gradient-info mt-4">More Info </a>
+                                    <div class="row">
+                                        <a href="<?= site_url('admin/edit_coupon/'.$item['coupon_id']) ?>" class="btn btn-block btn-lg btn-gradient-info mt-6">Edit Details </a>
+                                        <a href="<?= site_url('admin/delete_coupon/'.$item['coupon_id']) ?>" class="btn btn-block btn-lg btn-gradient-danger mt-6">Delete </a>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

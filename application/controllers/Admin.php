@@ -1235,14 +1235,67 @@ $data["noindex"] = $this->noindex;
             $this->load->view('admin/footer_view');
         }else{
             if ($this->admin_model->add_coupon_details()){
-                $_SESSION['action_status_report']="<span class='text-success'>Coupon Saved</span>";
+                $_SESSION['action_status_report']='<div class="alert alert-success alert-dismissible">
+                                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                                    Coupon Saved
+                                                    </div>';
                 $this->session->mark_as_flash("action_status_report");
             }else{
-                $_SESSION['action_status_report']="<span class='text-danger'>Unknown Error Occurred</span>";
+                $_SESSION['action_status_report']='<div class="alert alert-danger alert-dismissible">
+                                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                                Unknown Error Occurred
+                                                </div>';
                 $this->session->mark_as_flash("action_status_report");
             }
             show_page("admin/coupons");
         }
+    }
+
+    public function edit_coupon($coupon_id = null)
+    {
+        if (!isset($_POST['submit'])) {
+            $data["title"] =$this->siteName." | Edit Coupon";
+            $data["keywords"] = $this->keywords;
+            $data["author"] = $this->author;
+            $data["description"] = $this->description;
+
+            $data["noindex"] = $this->noindex;
+            $data['coupon'] = $this->admin_model->get_coupon_by_its_id($coupon_id);
+            $data['coupon_id'] = $coupon_id;
+            $this->load->view('/admin/header_view',$data);
+            $this->load->view('admin/edit_coupon_view',$data);
+            $this->load->view('admin/footer_view');
+        }else{
+            if ($this->admin_model->edit_coupon_details($coupon_id)){
+                $_SESSION['action_status_report']='<div class="alert alert-success alert-dismissible">
+                                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                                    Updated Successfully
+                                                    </div>';
+                $this->session->mark_as_flash("action_status_report");
+            }else{
+                $_SESSION['action_status_report']='<div class="alert alert-danger alert-dismissible">
+                                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                                    Unknown error occurred
+                                                    </div>';
+                $this->session->mark_as_flash("action_status_report");
+            }
+            show_page("admin/coupons");
+        }
+    }
+
+    public function delete_coupon($coupon_id = null)
+    {
+        if($this->admin_model->delete_coupon_details($coupon_id))
+        {
+
+            $_SESSION['action_status_report']='<div class="alert alert-success alert-dismissible">
+                                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                                    Deleted Successfully
+                                                    </div>';
+            $this->session->mark_as_flash("action_status_report");
+
+        }
+        show_page("admin/coupons");
     }
 
   public function messages($offset=0)
