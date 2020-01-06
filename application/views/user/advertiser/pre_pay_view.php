@@ -13,19 +13,22 @@
                         <table class="table table-bordered">
                             <thead>
                             <tr>
+                                <?= ($payment_option == 'coupon') ? '<th>Coupon Code</th>' : '' ?>
                                 <th> Currency </th>
                                 <th> Amount </th>
                                 <th> Payment Option </th>
                                 <th> Action </th>
+
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
+                                <?= ($payment_option == 'coupon') ? '<td>'.$coupon_code.'</td>' : '' ?>
                                 <td> <?= strtoupper($currency_code) ?> </td>
-                                <td> <?= $amount ?> </td>
+                                <td> <?= $amount['amount'] ?> </td>
 
                                 <td><?= ($payment_option == 'paymt_gate') ? "Debit/Credit" : "Coupon" ?> </td>
-                                <td><a href="" class="btn btn-gradient-danger btn-sm">Cancel</a> <a href="<?= ($payment_option == 'paymt_gate') ? site_url('advertiser_dashboard/advertiser_online_gateway_payment/') : site_url('advertiser_dashboard/advertiser_online_coupon_payment/') ?>" class="btn btn-gradient-success btn-sm">Pay</a> </td>
+                                <td><a href="<?= site_url('advertiser_dashboard/add_payment/') ?>" class="btn btn-gradient-danger btn-sm">Cancel</a> <a href="<?= ($payment_option == 'paymt_gate') ? site_url('advertiser_dashboard/advertiser_online_gateway_payment/') : site_url('advertiser_dashboard/advertiser_online_coupon_payment/') ?>" class="btn btn-gradient-success btn-sm">Pay</a> </td>
                             </tr>
                             </tbody>
                         </table>

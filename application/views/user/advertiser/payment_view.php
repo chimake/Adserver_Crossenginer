@@ -15,24 +15,22 @@
             <?php
             if(!empty($payments))
             {
-
-                foreach ($payments as $item) {
                     ?>
                     <div class="col-4 grid-margin">
                         <div class="card">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title"><?= ($item['method'] == "online_gateway" ? "Online Gateway" : 'Coupon') ?></h4>
+                                    <h4 class="card-title"><?= ($payments->method == "online_gateway" ? "Online Gateway" : 'Coupon') ?></h4>
                                     <ul>
-                                        <li><b>Status:</b> <?=ucfirst($item['status'])?></li>
-                                        <li><b>Amount:</b> <?=$item['amount']?></li>
-                                        <li><b>Payment Date:</b> <?=$item['trans_date']?></li>
+                                        <li><b>Status:</b> <?=ucfirst($payments->status)?></li>
+                                        <li><b>Amount:</b> <?=$payments->amount?></li>
+                                        <li><b>Payment Date:</b> <?=$payments->trans_date?></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                <?php } ?>
+
             <?php }else{ ?>
                 <div class="col-12 grid-margin">
                     <div class="card">

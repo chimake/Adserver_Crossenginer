@@ -857,16 +857,19 @@ $this->advertiser_model->fund_campaign($ref_id,$this->advertiser_model->get_adve
 public function payments($offset=0)
 {
     $limit = 8;
+    $user = $_SESSION['id'];
 
+    $data['payments']= $this->advertiser_model->get_payments_advertiser_id($user,$limit,$offset);
+//    var_dump($data['payments']);
+//    die;
 
-    $data['payments']= $this->admin_model->get_payments_advertiser_id($this->user,$limit,$offset);
     $this->load->library('pagination');
 
     $config['base_url'] = site_url("advertiser_dashboard/payments");
 
 
 
-    $config['total_rows'] = count($data['payments']);
+    $config['total_rows'] = $this->db->where(['user_id'=>$user])->from("payments")->count_all_results();
 
     $config['per_page'] = $limit;
 
@@ -903,21 +906,25 @@ public function payments($offset=0)
     $data["keywords"] = $this->keywords;
     $data["author"] = $this->author;
     $data["description"] = $this->description;
-
+    $data['account_bal'] = $this->account_balance;
+    $data['user'] =$this->user;
     $data["noindex"] = $this->noindex;
-    $this->load->view('/admin/header_view',$data);
+//    var_dump($data);
+//    die;
 
-    //$this->load->view('admin/sidebar_view',$data);
 
+
+    $this->load->view('/common/advertiser_header_view',$data);
     $this->load->view('/user/advertiser/payment_view',$data);
-    $this->load->view('admin/footer_view');
 }
 
 public function add_payment()
 {
 
 
-$this->form_validation->set_rules('amount','Amount','required');
+$this->form_validation->set_rules('payment_opt','Payment Option','required');
+
+
 if(!$this->form_validation->run())
 {
   $data['title'] = $this->siteName." | Advertiser Affilate";
@@ -937,18 +944,18 @@ $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
 
     $this->load->view('/common/advertiser_header_view',$data);
       //$this->load->view('/common/advertiser_top_tiles',$data);
-   $this->load->view('/user/advertiser/add_payment_view',$data);
+   $this->load->view('/user/advertiser/select_payment_option',$data);
     // $this->load->view('/common/users_footer_view',$data);
 
 }else{
 
-  $data['title'] = $this->siteName." | Payment Preview";
+
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
 $data['user'] =$this->user;
-
+    $data['account_bal'] = $this->account_balance;
 //get country details by user's country
 
 $data['country_details'] = $this->advertiser_model->get_country_details($data['user']['country']);
@@ -958,19 +965,18 @@ $data['general_details'] = $this->advertiser_model->get_general_details();
 
 $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
-//when we get usd account we rewrite this logic
-$data['amount'] = $this->input->post('amount');
-$data['payment_option'] = $this->input->post('payment_opt');
-$data['currency_code'] = $this->input->post('currency');
-    $bytes = 10;
-    $reference_rand = bin2hex(random_bytes($bytes));
-$_SESSION['trans_details'] = array('amount' => $data['amount'], 'currency_code' => $data['currency_code'], 'reference_id' => $reference_rand);
 
-
+if ($this->input->post('payment_opt') == "coupon")
+{
+    $data['title'] = $this->siteName." | Coupon Payment";
     $this->load->view('/common/advertiser_header_view',$data);
-      //$this->load->view('/common/advertiser_top_tiles',$data);
-   $this->load->view('/user/advertiser/pre_pay_view',$data);
-     //$this->load->view('/common/users_footer_view',$data);
+    $this->load->view('/user/advertiser/add_coupon_pay_view',$data);
+}elseif ($this->input->post('payment_opt') == "paymt_gate")
+{
+    $data['title'] = $this->siteName." | Online Payment";
+    $this->load->view('/common/advertiser_header_view',$data);
+    $this->load->view('/user/advertiser/add_online_payment_view',$data);
+}
 
 
 
@@ -978,6 +984,117 @@ $_SESSION['trans_details'] = array('amount' => $data['amount'], 'currency_code' 
 
 
 
+}
+
+public function coupon_payment()
+{
+    $this->form_validation->set_rules('coupon_code','Coupon Code','required');
+    if (!$this->form_validation->run())
+    {
+        $data['title'] = $this->siteName." |  Coupon Payment";
+        $data['author'] =  $this->author;
+        $data['keywords'] =  $this->keywords;
+        $data['description'] =  $this->description;
+        $data["noindex"] =  $this->noindex;
+        $data['account_bal'] = $this->account_balance;
+        $data['user'] =$this->user;
+        $data['country_details'] = $this->advertiser_model->get_country_details($data['user']['country']);
+        $data['general_details'] = $this->advertiser_model->get_general_details();
+
+        $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
+        $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
+
+
+
+        $this->load->view('/common/advertiser_header_view',$data);
+        //$this->load->view('/common/advertiser_top_tiles',$data);
+        $this->load->view('/user/advertiser/add_coupon_pay_view',$data);
+        // $this->load->view('/common/users_footer_view',$data);
+    }else{
+        $data['title'] = $this->siteName." | Payment Preview";
+        $data['author'] =  $this->author;
+        $data['keywords'] =  $this->keywords;
+        $data['description'] =  $this->description;
+        $data["noindex"] =  $this->noindex;
+        $data['user'] =$this->user;
+        $data['account_bal'] = $this->account_balance;
+//when we get usd account we rewrite this logic
+        $data['coupon_code'] = $this->input->post('coupon_code');
+        $data['payment_option'] = 'coupon';
+        $data['currency_code'] = 'NGN';
+        $data['amount'] = $this->advertiser_model->get_coupon_value($data['coupon_code']);
+
+        $bytes = 10;
+        $reference_rand = bin2hex(random_bytes($bytes));
+        $_SESSION['trans_details'] = array('amount' => $data['amount']['amount'], 'currency_code' => $data['currency_code'], 'reference_id' => $reference_rand, 'payment_opt' => $data['payment_option']);
+
+
+        $this->load->view('/common/advertiser_header_view',$data);
+        //$this->load->view('/common/advertiser_top_tiles',$data);
+        $this->load->view('/user/advertiser/pre_pay_view',$data);
+        //$this->load->view('/common/users_footer_view',$data);
+    }
+}
+
+public function online_payment()
+{
+    if(!$this->form_validation->run())
+    {
+        $data['title'] = $this->siteName." | Advertiser Affilate";
+        $data['author'] =  $this->author;
+        $data['keywords'] =  $this->keywords;
+        $data['description'] =  $this->description;
+        $data["noindex"] =  $this->noindex;
+        $data['account_bal'] = $this->account_balance;
+        $data['user'] =$this->user;
+        $data['country_details'] = $this->advertiser_model->get_country_details($data['user']['country']);
+        $data['general_details'] = $this->advertiser_model->get_general_details();
+
+        $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
+        $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
+
+
+
+        $this->load->view('/common/advertiser_header_view',$data);
+        //$this->load->view('/common/advertiser_top_tiles',$data);
+        $this->load->view('/user/advertiser/add_payment_view',$data);
+        // $this->load->view('/common/users_footer_view',$data);
+
+    }else{
+
+        $data['title'] = $this->siteName." | Payment Preview";
+        $data['author'] =  $this->author;
+        $data['keywords'] =  $this->keywords;
+        $data['description'] =  $this->description;
+        $data["noindex"] =  $this->noindex;
+        $data['user'] =$this->user;
+
+//get country details by user's country
+
+        $data['country_details'] = $this->advertiser_model->get_country_details($data['user']['country']);
+        $data['general_details'] = $this->advertiser_model->get_general_details();
+
+
+
+        $data["count_campaigns"] = $this->advertiser_model->count_advertisers_campaigns();
+        $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
+//when we get usd account we rewrite this logic
+        $data['amount'] = $this->input->post('amount');
+        $data['payment_option'] = $this->input->post('payment_opt');
+        $data['currency_code'] = $this->input->post('currency');
+        $bytes = 10;
+        $reference_rand = bin2hex(random_bytes($bytes));
+        $_SESSION['trans_details'] = array('amount' => $data['amount'], 'currency_code' => $data['currency_code'], 'reference_id' => $reference_rand);
+
+
+        $this->load->view('/common/advertiser_header_view',$data);
+        //$this->load->view('/common/advertiser_top_tiles',$data);
+        $this->load->view('/user/advertiser/pre_pay_view',$data);
+        //$this->load->view('/common/users_footer_view',$data);
+
+
+
+    }
 }
 
 public function advertiser_online_gateway_payment()
@@ -1046,18 +1163,18 @@ public function advertiser_online_payment_confirmation()
     {
         $_SESSION['action_status_report'] = "Unknown Error Occurred";
         $this->session->mark_as_flash('action_status_report');
-        show_page("advertiser_dashboard/payment");
+        show_page("advertiser_dashboard/payments");
     }
     if(!$reference){
         $_SESSION['action_status_report'] = "Unknown Error Occurred";
         $this->session->mark_as_flash('action_status_report');
-        show_page("advertiser_dashboard/payment");
+        show_page("advertiser_dashboard/payments");
     }
     if ($_SESSION['trans_details']['reference_id'] != $reference)
     {
         $_SESSION['action_status_report'] = "Unknown Error Occurred";
         $this->session->mark_as_flash('action_status_report');
-        show_page("advertiser_dashboard/payment");
+        show_page("advertiser_dashboard/payments");
     }
 $curl = curl_init();
 
@@ -1102,15 +1219,17 @@ if('success' == $tranx->data->status || $reference == $tranx->data->reference ||
 
 //credit user account
     $this->advertiser_model->credit_balance(array('account_bal' =>$new_bal ));
+    date_default_timezone_set('Africa/Lagos'); # add your city to set local time zone
+    $now = date('Y-m-d H:i:s');
 
-    $this->advertiser_model->insert_to_payment_record(array('method'=>'online_gateway','phone'=>$phone,'status'=>$status,'payment_type'=>'deposit','amount'=> $amount,'user_type'=>'advertiser','user_id' => $_SESSION['id'], 'time'=>time()));
+    $this->advertiser_model->insert_to_payment_record(array('method'=>'online_gateway','phone'=>$phone,'status'=>$status,'payment_type'=>'deposit','amount'=> $amount,'user_type'=>'advertiser','user_id' => $_SESSION['id'], 'time'=>time(), 'trans_date'=>$now));
     $ref = $_SESSION['trans_details']['reference_id'];
     unset($ref);
 //unset session variable here
     unset($_SESSION['trans_details']);
     $_SESSION['action_status_report'] ="<span class='text-success'>Payment Success</span>";
     $this->session->mark_as_flash('action_status_report');
-    show_page("advertiser_dashboard/payment");
+    show_page("advertiser_dashboard/payments");
     // transaction was successful...
     // please check other things like whether you already gave value for this ref
     // if the email matches the customer who owns the product etc
@@ -1119,11 +1238,58 @@ if('success' == $tranx->data->status || $reference == $tranx->data->reference ||
     $this->advertiser_model->insert_to_payment_record(array('method'=>'online_gateway','phone'=>$phone,'status'=>$status,'payment_type'=>'deposit','amount'=> $amount,'user_type'=>'advertiser','user_id' => $_SESSION['id'], 'time'=>time()));
     $_SESSION['action_status_report'] ="<span class='text-danger'>Payment Failed</span>";
     $this->session->mark_as_flash('action_status_report');
-    show_page("advertiser_dashboard/payment");
+    show_page("advertiser_dashboard/payments");
 }
 
 
 
+}
+
+public function advertiser_online_coupon_payment()
+{
+    $amount = $_SESSION['trans_details']['amount'];
+    $currency = $_SESSION['trans_details']['currency_code'];
+
+    if (!isset($_SESSION['trans_details']['reference_id']))
+    {
+        $_SESSION['action_status_report'] = "Unknown Error Occurred";
+        $this->session->mark_as_flash('action_status_report');
+        show_page("advertiser_dashboard/payments");
+    }
+
+    if (!isset($amount))
+    {
+        $_SESSION['action_status_report'] = "Unknown Error Occurred";
+        $this->session->mark_as_flash('action_status_report');
+        show_page("advertiser_dashboard/add_payments");
+    }
+
+    if (!isset($currency))
+    {
+        $_SESSION['action_status_report'] = "Unknown Error Occurred";
+        $this->session->mark_as_flash('action_status_report');
+        show_page("advertiser_dashboard/payments");
+    }
+
+    $user=$this->advertiser_model->get_advertiser_by_id($_SESSION['id']);
+    $previous_bal = $user['account_bal'];
+    $amount = implode(" ",$amount);
+//    var_dump($amount);
+//    die;
+    $new_bal = $amount + $previous_bal;
+    $phone = $user['phone'];
+    $status = "success";
+    $this->advertiser_model->credit_balance(array('account_bal' =>$new_bal ));
+    date_default_timezone_set('Africa/Lagos'); # add your city to set local time zone
+    $now = date('Y-m-d H:i:s');
+
+    $this->advertiser_model->insert_to_payment_record(array('method'=>'coupon','phone'=>$phone,'status'=>$status,'payment_type'=>'deposit','amount'=> $amount,'user_type'=>'advertiser','user_id' => $_SESSION['id'], 'time'=>time(), 'trans_date'=>$now));
+    $ref = $_SESSION['trans_details']['reference_id'];
+    unset($ref);
+    unset($_SESSION['trans_details']);
+    $_SESSION['action_status_report'] ="<span class='text-success'>Payment Success</span>";
+    $this->session->mark_as_flash('action_status_report');
+    show_page("advertiser_dashboard/payments");
 }
 
 public function reference_number_verification()

@@ -40,7 +40,7 @@ $data_db =array(
 'ref_id' => $ref_id,
 'form_slug' => url_title($this->input->post('form_name'),"dash",TRUE),
 'time' => time()
-); 
+);
 
 $this->db->insert('cpa_forms',$data_db);
 
@@ -73,7 +73,7 @@ $data_db =array(
 'ref_id' => $ref_id,
 'form_slug' => url_title($this->input->post('form_name'),"dash",TRUE),
 'time' => time()
-); 
+);
 
 $this->db->update('cpa_forms',$data_db,array('ref_id' => $ref_id));
 
@@ -86,7 +86,7 @@ $data_db =array(
 
 "form_makeup_data" => json_encode($form_makeup_data_array,true),
 'time' => time()
-); 
+);
 
 $this->db->update('cpa_forms',$data_db,array('ref_id' => $ref_id));
 
@@ -208,6 +208,19 @@ public function insert_to_payment_record($arr)
   $this->db->insert('payments',$arr);
 }
 
+    public function get_payments_advertiser_id($id,$limit,$offset)
+    {
+        $query = $this->db->get_where("payments",array("user_id" => $id),$limit,$offset);
+        return $query->row();
+    }
+
+    public function get_coupon_value($coupon_code)
+    {
+
+        $query =  $this->db->query("SELECT amount FROM coupons WHERE coupon_string = '$coupon_code'");
+        return $query->row_array();
+    }
+
 public function insert_campaign_step_two($ref_id){
 if(is_array($this->input->post("platform")))
 {
@@ -281,24 +294,24 @@ if($this->input->post('billing') == "cpc")
 {
 $cpc = 0.000;
   $cpm = $this->input->post('cpc');
-  
+
 
 }elseif($this->input->post('billing') == "ppc")
 {
   $cpc = $this->input->post('cpc');
   $cpm = 0.000;
-  
+
 }elseif($this->input->post('billing') == "both")
 {
   $cpc = $this->input->post('cpc');
   $cpm = $this->input->post('cpv');
-  
+
 }elseif($this->input->post('billing') == "cpa")
 {
   $cpa = $this->input->post('cpa');
   $cpc = 0.000;
   $cpm = 0.000;
-  
+
 }
 
 $datab2 = array(

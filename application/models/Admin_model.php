@@ -224,17 +224,15 @@ public function get_payments($limit,$offset)
     return $query->result_array();
 }
 
-public function get_payments_advertiser_id($id,$limit,$offset)
-{
-    $query = $this->db->get_where("payments",array("user_id" => $id),$limit,$offset);
-    return $query->row_array();
-}
+
 
 public function get_coupons($limit,$offset)
 {
     $query = $this->db->get("coupons",$limit,$offset);
     return $query->result_array();
 }
+
+
 
 public function get_coupon_by_its_id($id)
 {

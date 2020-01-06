@@ -12,7 +12,7 @@
             if(!empty($payments))
             {
 
-                foreach ($payments as $item) {
+                foreach ($data['payments'] as $item) {
                     ?>
                     <div class="col-4 grid-margin">
                         <div class="card">
