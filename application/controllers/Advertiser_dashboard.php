@@ -1038,6 +1038,7 @@ public function coupon_payment()
 
 public function online_payment()
 {
+    $this->form_validation->set_rules('amount','Amount','required');
     if(!$this->form_validation->run())
     {
         $data['title'] = $this->siteName." | Advertiser Affilate";
@@ -1057,7 +1058,7 @@ public function online_payment()
 
         $this->load->view('/common/advertiser_header_view',$data);
         //$this->load->view('/common/advertiser_top_tiles',$data);
-        $this->load->view('/user/advertiser/add_payment_view',$data);
+        $this->load->view('/user/advertiser/add_online_payment_view',$data);
         // $this->load->view('/common/users_footer_view',$data);
 
     }else{
@@ -1068,6 +1069,7 @@ public function online_payment()
         $data['description'] =  $this->description;
         $data["noindex"] =  $this->noindex;
         $data['user'] =$this->user;
+        $data['account_bal'] = $this->account_balance;
 
 //get country details by user's country
 
@@ -1080,7 +1082,7 @@ public function online_payment()
         $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
 //when we get usd account we rewrite this logic
         $data['amount'] = $this->input->post('amount');
-        $data['payment_option'] = $this->input->post('payment_opt');
+        $data['payment_option'] = "paymt_gate";
         $data['currency_code'] = $this->input->post('currency');
         $bytes = 10;
         $reference_rand = bin2hex(random_bytes($bytes));

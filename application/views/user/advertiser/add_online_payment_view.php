@@ -26,7 +26,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Account Deposit</h4>
 
-                        <form class="form_pay" method="post" action="<?= ('payment') ?>" >
+                        <form class="form_pay" method="post" action="<?= ('online_payment') ?>" >
                             <div class="form-group">
                                 <label for="exampleInputName1">Please choose currency you want to be bill in</label>
                                 <select name="currency" class="form-control">
@@ -46,14 +46,7 @@
                                 <input type="number" name="amount" min="<?=$general_details['minimum_deposit'] ?>" class="form-control">
                             </div>
 
-                            <div class="form-group">
-                                <label for="exampleInputEmail3">Payment Method</label>
-                                <select class="form-control" name="payment_opt">
-                                    <option>Select Preferred Method</option>
-                                    <option value="paymt_gate">Debit/Credit Card</option>
-                                    <option value="coupon">Coupon</option>
-                                </select>
-                            </div>
+
 
 
                             <button type="submit" name="submit" class="btn btn-gradient-primary mr-2">Next</button>
