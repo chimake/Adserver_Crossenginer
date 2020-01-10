@@ -425,6 +425,9 @@ if ($_SESSION['reg_account_type'] == "Advertiser")
 }
 	public function login($slug = null)
 	{
+//	    $pass = "default";
+//	    echo md5($pass);
+//	    die;
 
 $this->form_validation->set_rules("password","Password","trim|required");
 $this->form_validation->set_rules("email","Email","trim|required|valid_email",array("valid_email" => "Please Provide a valid Email"));

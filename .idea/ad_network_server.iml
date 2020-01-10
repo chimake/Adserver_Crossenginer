@@ -5,5 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="admin_skin" />
+    <orderEntry type="module" module-name="binaryfxpro.com" />
+    <orderEntry type="module" module-name="westernfield" />
   </component>
 </module>
