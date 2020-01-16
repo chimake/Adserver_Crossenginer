@@ -20,101 +20,140 @@
     <meta property="og:url"content="<?php echo current_url(); ?>" />
     <meta property="og:title" content="<?php echo $title; ?>" />
     <meta name="author" content="<?php echo $author;?>">
-    <link rel="stylesheet"  href="<?php echo base_url('assets/mdi/css/materialdesignicons.min.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>"/>
 
-    <link rel="stylesheet"  href="<?php echo base_url('assets/cj/css/vendor.bundle.base.css'); ?>"/>
-
-    <link href="<?php echo base_url('assets/cj/css/style.css'); ?>" rel="stylesheet">
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/typography.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/style.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/responsive.css'); ?>"/>
     <!-- End layout styles -->
 </head>
+
+
 <body>
-<div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper">
-        <div class="content-wrapper d-flex align-items-center auth">
-            <div class="row flex-grow">
-                <div class="col-lg-4 mx-auto">
-                    <div class="auth-form-light text-left p-5">
-                        <div class="brand-logo text-center">
-                            <img src="<?=base_url("assets/media/images/logo.png") ?>">
+<!-- loader Start -->
+<div id="loading">
+    <div id="loading-center">
+        <div class="loader">
+            <div class="cube">
+                <div class="sides">
+                    <div class="top"></div>
+                    <div class="right"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- loader END -->
+<!-- Sign in Start -->
+<section class="sign-in-page bg-white">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-sm-6 align-self-center">
+                <div class="sign-in-from">
+                    <h1 class="mb-0">Sign in</h1>
+                    <p class="font-weight-light text-danger">*All fields are compulsory.</p>
+                    <div class="text-danger">
+                        <?php
+                        echo validation_errors().'<br>';
+                        if(isset($_SESSION['err_msg']))
+                        {
+
+                            echo $_SESSION['err_msg'];
+
+                        }
+                        ?>
+                    </div>
+                    <div class="text-danger">
+                        <?php if(isset($_SESSION['action_status_report']))
+                        {
+
+                            echo $_SESSION['action_status_report'];
+
+                        }
+                        ?>
+                    </div>
+                    <form class="mt-4" action="<?php echo
+                    site_url('next_reg'); ?>" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">Website</label>
+                            <input type="text" class="form-control mb-0" name='website' value='<?= set_value('website') ?>' placeholder='Your Website URL' placeholder="Enter First Name">
                         </div>
-                        <div class="text-center">
-                            <h4>Hello! let's get started</h4>
-                            <h6 class="font-weight-light text-danger">*All fields are compulsory.</h6>
-                        </div>
-
-                        <div class="text-danger">
-                            <?php echo validation_errors();
-                            if(isset($_SESSION['err_msg']))
-                            {
-
-                                echo $_SESSION['err_msg'];
-
-                            }
-                            ?>
-                        </div>
 
 
-
-                        <form class="pt-3" method="post" action="<?php echo
-                        site_url('next_reg'); ?>">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <input type="text"name='website' value='<?= set_value('website') ?>' placeholder='Your Website URL' class="form-control form-control-lg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <select type="text" class="form-control form-control-lg" name="country" id="african-countries">
-                                            <option selected>Account Country</option> <option value="algeria">Algeria</option> <option value="angola">Angola</option> <option value="benin">Benin</option> <option value="botswana">Botswana</option> <option value="burkina Faso">Burkina Faso</option> <option value="burundi">Burundi</option> <option value="cameroon">Cameroon</option> <option value="cape-verde">Cape Verde</option> <option value="central-african-republic">Central African Republic</option> <option value="chad">Chad</option> <option value="comoros">Comoros</option> <option value="congo-brazzaville">Congo - Brazzaville</option> <option value="congo-kinshasa">Congo - Kinshasa</option> <option value="ivory-coast">Côte d’Ivoire</option> <option value="djibouti">Djibouti</option> <option value="egypt">Egypt</option> <option value="equatorial-guinea">Equatorial Guinea</option> <option value="eritrea">Eritrea</option> <option value="ethiopia">Ethiopia</option> <option value="gabon">Gabon</option> <option value="gambia">Gambia</option><option value="ghana">Ghana</option><option value="guinea">Guinea</option> <option value="guinea-bissau">Guinea-Bissau</option> <option value="kenya">Kenya</option> <option value="lesotho">Lesotho</option> <option value="liberia">Liberia</option> <option value="libya">Libya</option> <option value="madagascar">Madagascar</option> <option value="malawi">Malawi</option> <option value="mali">Mali</option> <option value="mauritania">Mauritania</option> <option value="mauritius">Mauritius</option> <option value="mayotte">Mayotte</option> <option value="morocco">Morocco</option> <option value="mozambique">Mozambique</option> <option value="namibia">Namibia</option> <option value="niger">Niger</option> <option value="nigeria">Nigeria</option><option value="rwanda">Rwanda</option>  <option value="reunion">Réunion</option> <option value="saint-helena">Saint Helena</option> <option value="senegal">Senegal</option> <option value="seychelles">Seychelles</option> <option value="sierra-leone">Sierra Leone</option> <option value="somalia">Somalia</option> <option value="south-africa">South Africa</option> <option value="sudan">Sudan</option> <option value="south-sudan">Sudan</option> <option value="swaziland">Swaziland</option> <option value="Sao-tome-príncipe">São Tomé and Príncipe</option> <option value="tanzania">Tanzania</option> <option value="togo">Togo</option> <option value="tunisia">Tunisia</option>--> <option value="uganda">Uganda</option><option value="western-sahara">Western Sahara</option> <option value="zambia">Zambia</option> <option value="zimbabwe">Zimbabwe</option> </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="exampleInputEmail2"Country</label>
+                            <div class="form-group">
+                                <div class="form-group">
                                        <textarea cols="30" rows="10" class="form-control form-control-lg">By Clicking the Register button you  agree to our terms and Condition as stated below.
 
                                            <?=$terms ?>
                                         </textarea>
-                                    </div>
                                 </div>
-
                             </div>
-
-                            <div class="mt-3">
-                                <input class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn"   type='submit' name='submit' value='Register'>
-                            </div>
+                        </div>
 
 
-                            <div class="text-center mt-4 font-weight-light"> Already have an account? <a href="<?=site_url('login') ?>" class="text-primary">Sign In</a>
-                            </div>
-                        </form>
+                        <div class="d-inline-block w-100">
+                            <button type="submit" class="btn btn-primary float-right" name="submit">Sign Up</button>
+                        </div>
+                        <div class="sign-info">
+                            <span class="dark-color d-inline-block line-height-2">Already Have Account ? <a href="<?=site_url('login') ?>">Log In</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-6 text-center">
+                <div class="sign-in-detail text-white" style="background: url(<?=base_url("assets/media/images/login/2.jpg") ?>) no-repeat 0 0; background-size: cover;">
+                    <a class="sign-in-logo mb-5" href="#"><img src="images/logo-white.png" class="img-fluid" alt="logo"></a>
+                    <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1" data-margin="0">
+                        <div class="item">
+                            <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">
+                            <h4 class="mb-1 text-white">Manage your orders</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                        </div>
+                        <div class="item">
+                            <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">
+                            <h4 class="mb-1 text-white">Manage your orders</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                        </div>
+                        <div class="item">
+                            <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">
+                            <h4 class="mb-1 text-white">Manage your orders</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- content-wrapper ends -->
     </div>
-    <!-- page-body-wrapper ends -->
-</div>
-<!-- container-scroller -->
-<!-- plugins:js -->
-<script src="<?php echo base_url('assets/js/vendor.bundle.base.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/off-canvas.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/hoverable-collapse.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/misc.js'); ?>"></script>
-<!-- endinject -->
-<!-- Plugin js for this page -->
-<!-- End plugin js for this page -->
-<!-- inject:js -->
+</section>
+<!-- Sign in END -->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/popper.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/jquery.appear.js') ?>"></script>
+<script src="<?= base_url('assets/js/countdown.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/waypoints.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/jquery.counterup.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/wow.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/apexcharts.js') ?>"></script>
+<script src="<?= base_url('assets/js/slick.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/select2.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/owl.carousel.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/jquery.magnific-popup.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/smooth-scrollbar.js') ?>"></script>
+<script src="<?= base_url('assets/js/chart-custom.js') ?>"></script>
+<script src="<?= base_url('assets/js/custom.js') ?>"></script>
 
-
-<!-- endinject -->
 </body>
+
+
 </html>
 
 

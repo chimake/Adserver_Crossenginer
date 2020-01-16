@@ -290,7 +290,6 @@ if (!isset($_SESSION['reg_account_type']))
     $this->form_validation->set_rules("lastname","Lastname","required");
     $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique['.strtolower($_SESSION['reg_account_type']).'s.email]',array("is_unique" => "This Email has been used by another user,Please use another email"));
     $this->form_validation->set_rules('password','Password','required');
-    $this->form_validation->set_rules("cpassword","Password","required|min_length[4]|matches[password]");
     $this->form_validation->set_rules('phone', 'Mobile Number', 'required|numeric',array("numeric" => "Please Provide a valid Phone Number"));
   if (!$this->form_validation->run())
     {

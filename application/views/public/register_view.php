@@ -20,140 +20,141 @@
     <meta property="og:url"content="<?php echo current_url(); ?>" />
     <meta property="og:title" content="<?php echo $title; ?>" />
     <meta name="author" content="<?php echo $author;?>">
-    <link rel="stylesheet"  href="<?php echo base_url('assets/mdi/css/materialdesignicons.min.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>"/>
 
-    <link rel="stylesheet"  href="<?php echo base_url('assets/cj/css/vendor.bundle.base.css'); ?>"/>
-
-    <link href="<?php echo base_url('assets/cj/css/style.css'); ?>" rel="stylesheet">
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/typography.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/style.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/responsive.css'); ?>"/>
     <!-- End layout styles -->
 </head>
+
 <body>
-<div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper">
-        <div class="content-wrapper d-flex align-items-center auth">
-            <div class="row flex-grow">
-                <div class="col-lg-6 mx-auto">
-                    <div class="auth-form-light text-left p-5">
-                        <div class="brand-logo text-center">
-                            <img src="<?=base_url("assets/media/images/logo.png") ?>">
+<!-- loader Start -->
+<div id="loading">
+    <div id="loading-center">
+        <div class="loader">
+            <div class="cube">
+                <div class="sides">
+                    <div class="top"></div>
+                    <div class="right"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- loader END -->
+<!-- Sign in Start -->
+<section class="sign-in-page bg-white">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-sm-6 align-self-center">
+                <div class="sign-in-from">
+                    <h1 class="mb-0">Sign in</h1>
+                    <p class="font-weight-light text-danger">*All fields are compulsory.</p>
+                    <div class="text-danger">
+                        <?php
+                        echo validation_errors().'<br>';
+                        if(isset($_SESSION['err_msg']))
+                        {
+
+                            echo $_SESSION['err_msg'];
+
+                        }
+                        ?>
+                    </div>
+                    <div class="text-danger">
+                        <?php if(isset($_SESSION['action_status_report']))
+                        {
+
+                            echo $_SESSION['action_status_report'];
+
+                        }
+                        ?>
+                    </div>
+                    <form class="mt-4" action="<?php echo site_url('page/first_next'); ?>" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">First Name</label>
+                            <input type="text" class="form-control mb-0" id="firstname" name="firstname" name="firstname" placeholder="Enter First Name">
                         </div>
-                        <div class="text-center">
-                            <h4>Hello! let's get started</h4>
-                            <h6 class="font-weight-light text-danger">*All fields are compulsory.</h6>
+
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">Last Name</label>
+                            <input type="text" class="form-control mb-0" id="firstname" name="lastname" value="<?= set_value('lastname') ?>" placeholder="Enter Last Name">
                         </div>
-
-                        <div class="text-danger">
-                            <?php echo validation_errors();
-                            if(isset($_SESSION['err_msg']))
-                            {
-
-                                echo $_SESSION['err_msg'];
-
-                            }
-                            ?>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Email</label>
+                            <input type="email" class="form-control mb-0" id="exampleInputPassword1" value="<?= set_value('email') ?>" name="email" placeholder="Enter Password">
                         </div>
-
-
-
-                        <form class="pt-3" method="post" action="<?php echo
-                        site_url('page/first_next'); ?>">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" name='firstname' value='<?= set_value('firstname') ?>' class="form-control form-control-lg" id="inputEmail1" placeholder="First Name">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" name='lastname' value='<?= set_value('lastname') ?>' class="form-control form-control-lg" id="inputEmail1" placeholder="Last Name">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input type="email"  name='email' value='<?= set_value('email') ?>'  placeholder='Email Address' class="form-control form-control-lg" >
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input type='tel' name='phone' value='<?= set_value('phone') ?>' placeholder='Phone Number' class="form-control form-control-lg">
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input id="password_box"  type='password' name='password' value='<?= set_value('password') ?>'   class="form-control form-control-lg"  placeholder="Password">
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input  id="password_box"  name='cpassword' value='<?= set_value('cpassword') ?>' placeholder='Confirm Password'  type='password'   class="form-control form-control-lg" >
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="mt-3">
-                                <input class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" type='submit' name='submit' value='Next'>
-                            </div>
-
-
-                            <div class="text-center mt-4 font-weight-light"> Already have an account? <a href="<?=site_url('login') ?>" class="text-primary">Sign In</a>
-                            </div>
-                        </form>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Phone</label>
+                            <input type="tel" class="form-control mb-0" id="exampleInputPassword1" value='<?= set_value('phone') ?>' name="phone" placeholder="Enter Phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control mb-0" id="exampleInputPassword1" name="password" placeholder="Password">
+                        </div>
+                        <div class="d-inline-block w-100">
+                            <button type="submit" class="btn btn-primary float-right">Sign Up</button>
+                        </div>
+                        <div class="sign-info">
+                            <span class="dark-color d-inline-block line-height-2">Already Have Account ? <a href="<?=site_url('login') ?>">Log In</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-6 text-center">
+                <div class="sign-in-detail text-white" style="background: url(<?=base_url("assets/media/images/login/2.jpg") ?>) no-repeat 0 0; background-size: cover;">
+                    <a class="sign-in-logo mb-5" href="#"><img src="images/logo-white.png" class="img-fluid" alt="logo"></a>
+                    <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1" data-margin="0">
+                        <div class="item">
+                            <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">
+                            <h4 class="mb-1 text-white">Manage your orders</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                        </div>
+                        <div class="item">
+                            <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">
+                            <h4 class="mb-1 text-white">Manage your orders</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                        </div>
+                        <div class="item">
+                            <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">
+                            <h4 class="mb-1 text-white">Manage your orders</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- content-wrapper ends -->
     </div>
-    <!-- page-body-wrapper ends -->
-</div>
-<!-- container-scroller -->
-<!-- plugins:js -->
-<script src="<?php echo base_url('assets/js/vendor.bundle.base.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/off-canvas.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/hoverable-collapse.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/misc.js'); ?>"></script>
-<!-- endinject -->
-<!-- Plugin js for this page -->
-<!-- End plugin js for this page -->
-<!-- inject:js -->
-<script type="text/javascript">
+</section>
+<!-- Sign in END -->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/popper.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/jquery.appear.js') ?>"></script>
+<script src="<?= base_url('assets/js/countdown.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/waypoints.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/jquery.counterup.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/wow.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/apexcharts.js') ?>"></script>
+<script src="<?= base_url('assets/js/slick.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/select2.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/owl.carousel.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/jquery.magnific-popup.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/smooth-scrollbar.js') ?>"></script>
+<script src="<?= base_url('assets/js/chart-custom.js') ?>"></script>
+<script src="<?= base_url('assets/js/custom.js') ?>"></script>
 
-    $('document').ready(function(){
-        var type = $('#password_box').attr('type');
-        $('#show_p').change(function(){
-                if (type == "password")
-                {
-
-                    $('#password_box').attr('type','text');
-
-                }
-                else
-                {
-
-                    $('#password_box').attr('type','password');
-
-                }
-//alert('reed');
-
-            }
-        );
-
-    });
-
-</script>
-
-<!-- endinject -->
 </body>
+
+
 </html>
 
 

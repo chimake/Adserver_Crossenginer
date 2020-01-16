@@ -19,11 +19,11 @@
     <meta property="og:url"content="<?php echo current_url(); ?>" />
     <meta property="og:title" content="<?php echo $title; ?>" />
     <meta name="author" content="<?php echo $author;?>">
-    <link rel="stylesheet"  href="<?php echo base_url('assets/mdi/css/materialdesignicons.min.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>"/>
 
-    <link rel="stylesheet"  href="<?php echo base_url('assets/cj/css/vendor.bundle.base.css'); ?>"/>
-
-    <link href="<?php echo base_url('assets/cj/css/style.css'); ?>" rel="stylesheet">
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/typography.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/style.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/responsive.css'); ?>"/>
 
     <style>
         .hidden{
@@ -50,6 +50,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         Account Balance : <b><?= $account_bal ?></b>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= site_url("Logout"); ?>">
+                        Logout
                     </a>
                 </li>
                 <li class="nav-item nav-profile dropdown">

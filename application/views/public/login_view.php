@@ -8,102 +8,135 @@
     <link href="<?php echo base_url('assets/media/images/favicon.png'); ?>" rel="shortcut icon">
 
     <meta name="description" content="<?php echo $description; ?>">
-    <meta name="keywords" content="<?php
-    echo $keywords;
-    ?>">
-    <meta property="og:image" content="<?php
-
-    echo base_url('assets/media/images/faviconsocial.png');
-    ?>
-" />
+    <meta name="keywords" content="<?php echo $keywords; ?>">
+    <meta property="og:image" content="<?php echo base_url('assets/media/images/faviconsocial.png'); ?>" />
     <meta property="og:description" content="<?php echo $description; ?>" />
     <meta property="og:url"content="<?php echo current_url(); ?>" />
     <meta property="og:title" content="<?php echo $title; ?>" />
     <meta name="author" content="<?php echo $author;?>">
-    <link rel="stylesheet"  href="<?php echo base_url('assets/mdi/css/materialdesignicons.min.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>"/>
 
-    <link rel="stylesheet"  href="<?php echo base_url('assets/cj/css/vendor.bundle.base.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/typography.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/style.css'); ?>"/>
+    <link rel="stylesheet"  href="<?php echo base_url('assets/css/responsive.css'); ?>"/>
 
-    <link href="<?php echo base_url('assets/cj/css/style.css'); ?>" rel="stylesheet">
-    <!-- End layout styles -->
 </head>
+
 <body>
-<div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper">
-        <div class="content-wrapper d-flex align-items-center auth">
-            <div class="row flex-grow">
-                <div class="col-lg-4 mx-auto">
-                    <div class="auth-form-light text-left p-5">
-                        <div class="brand-logo">
-                            <img src="<?=base_url("assets/media/images/logo.png") ?>">
+<!-- loader Start -->
+<div id="loading">
+    <div id="loading-center">
+        <div class="loader">
+            <div class="cube">
+                <div class="sides">
+                    <div class="top"></div>
+                    <div class="right"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- loader END -->
+<!-- Sign in Start -->
+<section class="sign-in-page bg-white">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-sm-6 align-self-center">
+                <div class="sign-in-from">
+                    <h1 class="mb-0">Sign in</h1>
+                    <p>Enter your email address and password to access admin panel.</p>
+                    <div class="text-danger">
+                        <?php
+                        echo validation_errors().'<br>';
+                        if(isset($_SESSION['err_msg']))
+                        {
+
+                            echo $_SESSION['err_msg'];
+
+                        }
+                        ?>
+                    </div>
+                    <div class="text-danger">
+                        <?php if(isset($_SESSION['action_status_report']))
+                        {
+
+                            echo $_SESSION['action_status_report'];
+
+                        }
+                        ?>
+                    </div>
+                    <form class="mt-4" method="post" action="<?php echo site_url('login'); ?>">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control mb-0" id="inputEmail1" name="email" placeholder="Enter email">
                         </div>
-                        <h4>Hello! let's get started</h4>
-                        <h6 class="font-weight-light">Sign in to continue.</h6>
-                        <div class="text-danger">
-                            <?php echo validation_errors();
-                                 if(isset($_SESSION['err_msg']))
-                                 {
-
-                                  echo $_SESSION['err_msg'];
-
-                                 }
-                                 ?>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <a href="<?=site_url('forget_password') ?>" class="float-right">Forgot password?</a>
+                            <input type="password" class="form-control mb-0" id="inputPassword" name="password" placeholder="Password">
                         </div>
-                        <div>
-                            <?php if(isset($_SESSION['action_status_report']))
-                            {
-
-                                echo $_SESSION['action_status_report'];
-
-                            }
-                            ?>
+                        <div class="d-inline-block w-100">
+                            <button type="submit" class="btn btn-primary float-right" name='submit'>Sign in</button>
                         </div>
-                        <form class="pt-3" method="post" action="<?php echo site_url('login'); ?>">
-                            <div class="form-group">
-                                <input type="email" class="form-control form-control-lg" id="inputEmail1" name="email" placeholder="Username">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control form-control-lg" id="inputPassword" name="password" placeholder="Password">
-                            </div>
-<!--                            <div class="form-group">-->
-<!---->
-<!--                                <select name="accounttype" class="form-control form-control-lg">-->
-<!--                                    <option value="Advertiser">Advertiser</option>-->
-<!--                                    <option value="Publisher">Publisher</option>-->
-<!--                                </select>-->
-<!--                            </div>-->
-                            <div class="mt-3">
-                                <input class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" type='submit' name='submit' value="Sign In">
-                            </div>
-                            <div class="my-2 d-flex justify-content-between align-items-center">
-
-                                <a href="<?=site_url('forget_password') ?>" class="auth-link text-black">Forgot password?</a>
-                            </div>
-
-                            <div class="text-center mt-4 font-weight-light"> Don't have an account? <a href="<?=site_url('register') ?>" class="text-primary">Create</a>
-                            </div>
-                        </form>
+                        <div class="sign-info">
+                            <span class="dark-color d-inline-block line-height-2">Don't have an account? <a href="<?=site_url('register') ?>">Sign up</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-6 text-center">
+                <div class="sign-in-detail text-white" style="background: url(<?=base_url("assets/media/images/login/2.jpg") ?>) no-repeat 0 0; background-size: cover;">
+                    <a class="sign-in-logo mb-5" href="#"><img src="images/logo-white.png" class="img-fluid" alt="logo"></a>
+                    <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1" data-margin="0">
+                        <div class="item">
+                            <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">
+                            <h4 class="mb-1 text-white">Manage your orders</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                        </div>
+                        <div class="item">
+                            <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">
+                            <h4 class="mb-1 text-white">Manage your orders</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                        </div>
+                        <div class="item">
+                            <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">
+                            <h4 class="mb-1 text-white">Manage your orders</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- content-wrapper ends -->
     </div>
-    <!-- page-body-wrapper ends -->
-</div>
-<!-- container-scroller -->
-<!-- plugins:js -->
-<script src="<?php echo base_url('assets/js/vendor.bundle.base.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/off-canvas.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/hoverable-collapse.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/misc.js'); ?>"></script>
-<!-- endinject -->
-<!-- Plugin js for this page -->
-<!-- End plugin js for this page -->
-<!-- inject:js -->
+</section>
+<!-- Sign in END -->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/popper.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/jquery.appear.js') ?>"></script>
+<script src="<?= base_url('assets/js/countdown.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/waypoints.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/jquery.counterup.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/wow.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/apexcharts.js') ?>"></script>
+<script src="<?= base_url('assets/js/slick.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/select2.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/owl.carousel.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/jquery.magnific-popup.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/smooth-scrollbar.js') ?>"></script>
+<script src="<?= base_url('assets/js/chart-custom.js') ?>"></script>
+<script src="<?= base_url('assets/js/custom.js') ?>"></script>
 
-<!-- endinject -->
 </body>
+
+
+
 </html>
 
 

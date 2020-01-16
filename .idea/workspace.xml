@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b816df83-1ebb-4b2e-968c-c60a36255e80" name="Default Changelist" comment="Admin ui fix">
       <change afterPath="$PROJECT_DIR$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eswissfinance.comli.com/.idea/eswissfinance.comli.com.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eswissfinance.comli.com/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eswissfinance.comli.com/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eswissfinance.comli.com/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eswissfinance.comli.com/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../quicpick/form_process.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../quicpick/our_team.php" afterDir="false" />
     </list>
@@ -57,53 +62,68 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.34" value="2" />
-          <entry key="project.open.time.35" value="2" />
-          <entry key="project.open.time.36" value="2" />
+          <entry key="project.open.time.35" value="3" />
+          <entry key="project.open.time.36" value="3" />
           <entry key="project.open.time.37" value="3" />
           <entry key="project.open.time.38" value="3" />
           <entry key="project.open.time.39" value="4" />
           <entry key="project.open.time.40" value="2" />
-          <entry key="project.open.time.41" value="2" />
+          <entry key="project.open.time.41" value="3" />
           <entry key="project.open.time.42" value="3" />
+          <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.46" value="1" />
-          <entry key="project.open.time.50" value="2" />
-          <entry key="project.opened" value="28" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.50" value="3" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="coupons" value="1" />
-          <entry key="css" value="2" />
-          <entry key="html" value="17" />
-          <entry key="js" value="2" />
-          <entry key="php" value="171" />
+          <entry key="css" value="3" />
+          <entry key="gallery" value="1" />
+          <entry key="html" value="24" />
+          <entry key="ibank" value="1" />
+          <entry key="js" value="3" />
+          <entry key="login" value="1" />
+          <entry key="php" value="178" />
+          <entry key="services" value="1" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="2" />
+          <entry key="CSS" value="3" />
           <entry key="Database Element" value="1" />
-          <entry key="HTML" value="17" />
-          <entry key="JavaScript" value="2" />
-          <entry key="PHP" value="171" />
+          <entry key="HTML" value="24" />
+          <entry key="JavaScript" value="3" />
+          <entry key="PHP" value="178" />
+          <entry key="PLAIN_TEXT" value="4" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="109" />
-          <entry key="php" value="9964" />
+          <entry key="css" value="3" />
+          <entry key="gallery" value="29" />
+          <entry key="html" value="453" />
+          <entry key="js" value="203" />
+          <entry key="login" value="28" />
+          <entry key="php" value="10383" />
+          <entry key="services" value="39" />
           <entry key="txt" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="210" />
-          <entry key="PHP" value="9856" />
-          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="CSS" value="3" />
+          <entry key="HTML" value="554" />
+          <entry key="JavaScript" value="203" />
+          <entry key="PHP" value="10275" />
+          <entry key="PLAIN_TEXT" value="119" />
           <entry key="SQL" value="7" />
         </counts>
       </usages-collector>
@@ -115,19 +135,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/add_coupon_pay_view.php">
+        <entry file="file://$USER_HOME$/Documents/admin_dash/iqonic.design/themes/sofbox-admin/html/sign-in.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="68" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Publisher_dashboard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+            <state relative-caret-position="285">
+              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="130" selection-end-column="10" />
+              <folding>
+                <element signature="n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,69 +149,78 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6405">
-              <caret line="427" column="7" selection-start-line="427" selection-start-column="7" selection-end-line="429" selection-end-column="12" />
+            <state relative-caret-position="294">
+              <caret line="322" column="5" lean-forward="true" selection-start-line="322" selection-start-column="5" selection-end-line="322" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Install.php">
+        <entry file="file://$PROJECT_DIR$/application/views/public/login_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+            <state relative-caret-position="43">
+              <caret line="57" column="54" lean-forward="true" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../westernfield/index.php">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-360" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../westernfield/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-227" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../westernfield/portal/app/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../westernfield/portal/app/plugin/controls.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../westernfield/portal/app/plugin/dbconfig.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
+            <state relative-caret-position="-276">
+              <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Db_Alter.php">
+        <entry file="file://$PROJECT_DIR$/application/views/common/advertiser_header_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state relative-caret-position="282">
+              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/public/register_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="30" selection-start-line="30" selection-end-line="154" selection-end-column="7" />
               <folding>
-                <element signature="e#6#255#0#PHP" expanded="true" />
+                <element signature="n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Documents/admin_dash/iqonic.design/themes/sofbox-admin/html/sign-up.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="75" selection-end-column="35" />
+              <folding>
+                <element signature="n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/public/next_reg_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="853">
+              <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -207,13 +230,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>adver</find>
-      <find>get_currency_det_by_shortcode</find>
-      <find>currency</find>
-      <find>get_pending_campaigns</find>
-      <find>get_publishers</find>
-      <find>btn-icon</find>
-      <find>get_advertisers</find>
       <find>get_withdrawal</find>
       <find>get_payment_items</find>
       <find>register_publisher`</find>
@@ -237,6 +253,13 @@
       <find>token-sale</find>
       <find>advertiser</find>
       <find>campaign</find>
+      <find>powered</find>
+      <find>banner</find>
+      <find>banner.</find>
+      <find>customer_desk@etrustbankplc.com</find>
+      <find>team</find>
+      <find>e-</find>
+      <find>a comp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -246,18 +269,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/views/common/footer_view.php" />
-        <option value="$PROJECT_DIR$/../admin_skin/pages/samples/login.html" />
-        <option value="$PROJECT_DIR$/application/views/public/first_reg_page_view.php" />
-        <option value="$PROJECT_DIR$/application/views/public/register_view.php" />
-        <option value="$PROJECT_DIR$/application/views/public/next_reg_view.php" />
-        <option value="$PROJECT_DIR$/application/views/common/advertiser_top_tiles.php" />
-        <option value="$PROJECT_DIR$/application/views/common/users_footer_view.php" />
-        <option value="$PROJECT_DIR$/application/views/user/advertiser/dashboard_view.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/sidebar_view.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/login_view.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/publishers_list_view.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/advertisers_list_view.php" />
         <option value="$PROJECT_DIR$/application/views/admin/campaigns_view.php" />
         <option value="$PROJECT_DIR$/application/views/admin/spaces_view.php" />
         <option value="$PROJECT_DIR$/application/views/admin/admin_withdrawal_view.php" />
@@ -267,7 +278,6 @@
         <option value="$PROJECT_DIR$/application/views/admin/site_settings_view.php" />
         <option value="$PROJECT_DIR$/application/views/admin/add_coupon_view.php" />
         <option value="$PROJECT_DIR$/application/config/constants.php" />
-        <option value="$PROJECT_DIR$/application/views/public/login_view.php" />
         <option value="$PROJECT_DIR$/application/models/User_model.php" />
         <option value="$PROJECT_DIR$/application/views/user/advertiser/campaign_budget_view.php" />
         <option value="$PROJECT_DIR$/application/views/common/header_view.php" />
@@ -278,25 +288,38 @@
         <option value="$PROJECT_DIR$/application/views/admin/edit_coupon_view.php" />
         <option value="$PROJECT_DIR$/application/views/admin/coupons_view.php" />
         <option value="$PROJECT_DIR$/application/views/admin/payments_view.php" />
-        <option value="$PROJECT_DIR$/application/views/common/advertiser_header_view.php" />
         <option value="$PROJECT_DIR$/application/views/user/advertiser/select_payment_option.php" />
         <option value="$PROJECT_DIR$/application/views/user/advertiser/add_coupon_pay_view.php" />
         <option value="$PROJECT_DIR$/application/models/Admin_model.php" />
         <option value="$PROJECT_DIR$/../admin_skin/index.html" />
-        <option value="$USER_HOME$/Documents/binarypro/binaryfxpro.com/plans.html" />
-        <option value="$USER_HOME$/Documents/binarypro/binaryfxpro.com/index.html" />
         <option value="$PROJECT_DIR$/application/models/Advertiser_model.php" />
         <option value="$PROJECT_DIR$/application/views/user/advertiser/payment_view.php" />
         <option value="$PROJECT_DIR$/application/views/user/advertiser/add_online_payment_view.php" />
         <option value="$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/user/advertiser/pre_pay_view.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Page.php" />
         <option value="$PROJECT_DIR$/application/controllers/Install.php" />
         <option value="$PROJECT_DIR$/../westernfield/portal/app/plugin/dbconfig.php" />
         <option value="$PROJECT_DIR$/../westernfield/portal/app/plugin/controls.php" />
         <option value="$PROJECT_DIR$/../westernfield/portal/app/login.php" />
         <option value="$PROJECT_DIR$/application/controllers/Db_Alter.php" />
+        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/index.html" />
+        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/css/style.css" />
+        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/contact.html" />
+        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/about.html" />
+        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/services" />
+        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/login" />
+        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/gallery" />
+        <option value="$USER_HOME$/Documents/binarypro/binaryfxpro.com/plans.html" />
+        <option value="$USER_HOME$/Documents/binarypro/binaryfxpro.com/process.php" />
+        <option value="$USER_HOME$/Documents/binarypro/binaryfxpro.com/index.html" />
+        <option value="$USER_HOME$/Documents/binarypro/binaryfxpro.com/assets/js/custom.js" />
+        <option value="$USER_HOME$/Documents/admin_dash/iqonic.design/themes/sofbox-admin/html/sign-in.html" />
+        <option value="$PROJECT_DIR$/application/views/common/advertiser_header_view.php" />
+        <option value="$PROJECT_DIR$/application/views/public/login_view.php" />
+        <option value="$PROJECT_DIR$/application/views/public/register_view.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Page.php" />
+        <option value="$PROJECT_DIR$/application/views/public/next_reg_view.php" />
       </list>
     </option>
   </component>
@@ -328,18 +351,42 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ad_network_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="westernfield" type="462c0819:PsiDirectoryNode" />
+              <item name="ad_network_server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ad_network_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ad_network_server" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ad_network_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ad_network_server" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ad_network_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ad_network_server" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ad_network_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ad_network_server" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -347,7 +394,7 @@
     <property name="SearchEverywhereHistoryKey" value="ch_admin&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../westernfield" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eswissfinance.comli.com" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -408,6 +455,13 @@
       <workItem from="1578417810411" duration="755000" />
       <workItem from="1578475785436" duration="599000" />
       <workItem from="1578666467985" duration="2020000" />
+      <workItem from="1578686330313" duration="722000" />
+      <workItem from="1578740546337" duration="4796000" />
+      <workItem from="1579132102413" duration="3562000" />
+      <workItem from="1579166421173" duration="616000" />
+      <workItem from="1579169473905" duration="2804000" />
+      <workItem from="1579172785449" duration="431000" />
+      <workItem from="1579173807328" duration="3961000" />
     </task>
     <task id="LOCAL-00001" summary="Admin ui fix">
       <created>1577608118343</created>
@@ -511,7 +565,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147756000" />
+    <option name="totallyTimeSpent" value="164648000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -524,9 +578,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1342" height="720" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4775862" visible="true" weight="0.26857585" />
-      <window_info id="Structure" order="1" sideWeight="0.5224138" side_tool="true" visible="true" weight="0.26857585" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46551725" visible="true" weight="0.2987616" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5344828" side_tool="true" visible="true" weight="0.2987616" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32972136" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -590,91 +645,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/common/blog_sidebar_view.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/common/footer_view.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/common/upperlinks.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/common/build_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/public/latestblog_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/public/ad_format_view.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/common/blog_header_view.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Campaign_delivery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="363" column="16" selection-start-line="363" selection-start-column="16" selection-end-line="363" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/common/users_footer_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/campaign_budget_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/campaigns_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/common/header_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/details_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2730">
-          <caret line="182" column="30" selection-start-line="182" selection-start-column="30" selection-end-line="182" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2550">
-          <caret line="170" column="2" selection-start-line="170" selection-start-column="2" selection-end-line="194" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/add_campaign_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2985">
-          <caret line="199" selection-start-line="199" selection-end-line="199" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/campaign_target_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -783,38 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/common/advertiser_header_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="162" column="85" selection-start-line="162" selection-start-column="85" selection-end-line="162" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../admin_skin/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8205">
           <caret line="547" column="77" selection-start-line="547" selection-start-column="77" selection-end-line="547" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/binarypro/binaryfxpro.com/plans.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="152" column="52" selection-start-line="152" selection-start-column="52" selection-end-line="152" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/binarypro/binaryfxpro.com/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="172" column="41" selection-start-line="172" selection-start-column="41" selection-end-line="172" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5145">
-          <caret line="343" column="16" selection-start-line="343" selection-start-column="16" selection-end-line="343" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -867,21 +809,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Page.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Install.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6405">
-          <caret line="427" column="7" selection-start-line="427" selection-start-column="7" selection-end-line="429" selection-end-column="12" />
+        <state relative-caret-position="225">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../westernfield/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../westernfield/header.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../westernfield/portal/app/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-227" />
+        <state relative-caret-position="720">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../westernfield/portal/app/plugin/controls.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../westernfield/portal/app/plugin/dbconfig.php">
@@ -891,34 +843,166 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../westernfield/portal/app/plugin/controls.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../westernfield/portal/app/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Install.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Db_Alter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42600">
+          <caret line="2840" selection-start-line="2840" selection-end-line="2840" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="75" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="113" column="176" selection-start-line="113" selection-start-column="176" selection-end-line="113" selection-end-column="176" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5145">
+          <caret line="343" column="34" selection-start-line="343" selection-start-column="34" selection-end-line="343" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/gallery">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/services">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/login">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/ibank">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/binarypro/binaryfxpro.com/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2460">
+          <caret line="176" column="91" selection-start-line="176" selection-start-column="91" selection-end-line="176" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/binarypro/binaryfxpro.com/plans.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="110" column="51" selection-start-line="110" selection-start-column="51" selection-end-line="110" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/binarypro/binaryfxpro.com/process.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/binarypro/binaryfxpro.com/assets/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/admin_dash/iqonic.design/themes/sofbox-admin/html/sign-in.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="130" selection-end-column="10" />
           <folding>
-            <element signature="e#6#255#0#PHP" expanded="true" />
+            <element signature="n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="322" column="5" lean-forward="true" selection-start-line="322" selection-start-column="5" selection-end-line="322" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/public/login_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="57" column="54" lean-forward="true" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/admin_dash/iqonic.design/themes/sofbox-admin/html/sign-up.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="75" selection-end-column="35" />
+          <folding>
+            <element signature="n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/public/register_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="30" selection-start-line="30" selection-end-line="154" selection-end-column="7" />
+          <folding>
+            <element signature="n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/public/next_reg_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="853">
+          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-276">
+          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/common/advertiser_header_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
         </state>
       </provider>
     </entry>
