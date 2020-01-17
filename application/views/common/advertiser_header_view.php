@@ -4,7 +4,7 @@
     <title><?php echo $title; ?></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="<?php echo base_url('assets/media/images/favicon.png'); ?>" rel="shortcut icon">
+    <link href="<?php echo base_url('assets/media/images/favicon.ico'); ?>" rel="shortcut icon">
 
     <meta name="description" content="<?php echo $description; ?>">
     <meta name="keywords" content="<?php
@@ -34,153 +34,76 @@
 </head>
 
 <body>
-<div class="container-scroller">
-<!-- Navbar -->
-    <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo" href="<?= site_url('advertiser_dashboard');?> "><img src="<?= base_url('assets/media/images/logo.svg'); ?>" alt="logo" /></a>
-            <a class="navbar-brand brand-logo-mini" href="<?= site_url('advertiser_dashboard');?>"><img src="<?= base_url('assets/media/images/logo-mini.svg'); ?>" alt="logo" /></a>
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <div class="iq-sidebar">
+        <div class="iq-sidebar-logo d-flex justify-content-between">
+            <a href="<?= site_url('/') ?>">
+                <span>+Life</span>
+            </a>
+            <div class="iq-menu-bt align-self-center">
+                <div class="wrapper-menu">
+                    <div class="line-menu half start"></div>
+                    <div class="line-menu"></div>
+                    <div class="line-menu half end"></div>
+                </div>
+            </div>
         </div>
-        <div class="navbar-menu-wrapper d-flex align-items-stretch">
-            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-                <span class="mdi mdi-menu"></span>
-            </button>
+        <div id="sidebar-scrollbar">
+            <nav class="iq-sidebar-menu">
+                <ul class="iq-menu">
+                    <li class="iq-menu-title"><i class="ri-separator"></i><small>Account Balance: <b>NGN <?= $account_bal ?></b></small></li>
+                    <li class="iq-menu-title"><i class="ri-separator"></i><span>Navigation</span></li>
+                    <li class="active">
+                        <a href="<?= site_url('advertiser_dashboard');?>" class="iq-waves-effect"><i class="ri-home-4-line"></i><span>Dashboard</span></i></a>
+                    </li>
 
-            <ul class="navbar-nav navbar-nav-right">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Account Balance : <b><?= $account_bal ?></b>
-                    </a>
-                </li>
+                    <li><a href="<?= site_url("advertiser_dashboard/Campaign") ?>" class="iq-waves-effect"><i class="ri-calendar-2-line"></i><span>Campaigns</span></a></li>
+<!--                    <li><a href="--><?//= site_url("advertiser_dashboard/cpa_forms_list") ?><!--" class="iq-waves-effect"><i class="ri-message-line"></i><span>Forms</span></a></li>-->
+                    <li><a href="<?= site_url("advertiser_dashboard/payments") ?>" class="iq-waves-effect"><i class="ri-bank-card-fill"></i><span>Payments</span></a></li>
+                    <li><a href="<?= site_url("advertiser_dashboard/add_payment") ?>" class="iq-waves-effect"><i class="ri-add-circle-line"></i><span>Fund Account</span></a></li>
+                    <li><a href="<?= site_url("Logout") ?>" class="iq-waves-effect"><i class="ri-logout-circle-line"></i><span>Logout</span></a></li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url("Logout"); ?>">
-                        Logout
-                    </a>
-                </li>
-                <li class="nav-item nav-profile dropdown">
-                    <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                        <div class="nav-profile-img">
-                            <img src="<?= base_url('assets/media/images/faces/face1.jpg'); ?>" alt="image">
-                            <span class="availability-status online"></span>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                        <a class="dropdown-item" href="<?= site_url("Logout"); ?>">
-                            <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
-                    </div>
-                </li>
-
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-                        <i class="mdi mdi-bell-outline"></i>
-                        <span class="count-symbol bg-danger"></span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                        <h6 class="p-3 mb-0">Notifications</h6>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item preview-item">
-                            <div class="preview-thumbnail">
-                                <div class="preview-icon bg-success">
-                                    <i class="mdi mdi-calendar"></i>
-                                </div>
-                            </div>
-                            <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                                <h6 class="preview-subject font-weight-normal mb-1">Event today</h6>
-                                <p class="text-gray ellipsis mb-0"> Just a reminder that you have an event today </p>
-                            </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item preview-item">
-                            <div class="preview-thumbnail">
-                                <div class="preview-icon bg-warning">
-                                    <i class="mdi mdi-settings"></i>
-                                </div>
-                            </div>
-                            <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                                <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
-                                <p class="text-gray ellipsis mb-0"> Update dashboard </p>
-                            </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item preview-item">
-                            <div class="preview-thumbnail">
-                                <div class="preview-icon bg-info">
-                                    <i class="mdi mdi-link-variant"></i>
-                                </div>
-                            </div>
-                            <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                                <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
-                                <p class="text-gray ellipsis mb-0"> New admin wow! </p>
-                            </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <h6 class="p-3 mb-0 text-center">See all notifications</h6>
-                    </div>
-                </li>
-
-
-            </ul>
-            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-                <span class="mdi mdi-menu"></span>
-            </button>
+                </ul>
+            </nav>
+            <div class="p-3"></div>
         </div>
-    </nav>
-
-    <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
-            <ul class="nav">
-                <li class="nav-item nav-profile">
-                    <a href="#" class="nav-link">
-                        <div class="nav-profile-image">
-                            <img src="<?= base_url('assets/media/images/faces/face1.jpg'); ?>" alt="profile">
-                            <span class="login-status online"></span>
-                            <!--change to offline or busy as needed-->
-                        </div>
-                        <div class="nav-profile-text d-flex flex-column">
-                            <span class="font-weight-bold mb-2"><?= $user['firstname']." ".$user['lastname']; ?></span>
-                            <span class="text-secondary text-small"><?= $user['account_status'];?></span>
-                        </div>
-                        <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+    </div>
+    <!-- TOP Nav Bar -->
+    <div class="iq-top-navbar">
+        <div class="iq-navbar-custom">
+            <div class="iq-sidebar-logo">
+                <div class="top-logo">
+                    <a href="<?= site_url('advertiser_dashboard');?>" class="logo">
+                        <img src="<?= base_url('assets/media/images/logo.png'); ?>" class="img-fluid" alt="">
+                        <span><?= $title; ?></span>
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('advertiser_dashboard');?>">
-                        <span class="menu-title">Dashboard</span>
-                        <i class="mdi mdi-home menu-icon"></i>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url("advertiser_dashboard/Campaign") ?>">
-                        <span class="menu-title">Campaign</span>
-                        <i class="mdi mdi-bell-ring-outline menu-icon"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url("advertiser_dashboard/cpa_forms_list") ?>">
-                        <span class="menu-title">Forms</span>
-                        <i class="mdi mdi-clipboard-text menu-icon"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url("advertiser_dashboard/add_payment") ?>"">
-                        <span class="menu-title">Payments</span>
-                        <i class="mdi mdi-wallet menu-icon"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('advertiser_dashboard/settings') ?>">
-                        <span class="menu-title">Settings</span>
-                        <i class="mdi mdi-settings menu-icon"></i>
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
-        <!-- partial -->
+                </div>
+            </div>
+            <div class="navbar-breadcrumb">
+                <h5 class="mb-0">Dashboard</h5>
+                <nav aria-label="breadcrumb">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="<?= site_url('advertiser_dashboard');?>">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?= $title; ?></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="ri-menu-3-line"></i>
+                </button>
+                <div class="iq-menu-bt align-self-center">
+                    <div class="wrapper-menu">
+                        <div class="line-menu half start"></div>
+                        <div class="line-menu"></div>
+                        <div class="line-menu half end"></div>
+                    </div>
+                </div>
 
 
-<noscript>Pls turn on JavaScript!</noscript>
+            </nav>
+        </div>
+    </div>
+
+

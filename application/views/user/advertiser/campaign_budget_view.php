@@ -1,17 +1,16 @@
-<div class="main-panel">
-    <div class="content-wrapper">
-        <div class="page-header">
-            <h3 class="page-title">
-                <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                  <i class="mdi mdi-home"></i>
-                </span> <?php echo $title; ?> </h3>
-        </div>
-
+<div id="content-page" class="content-page">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Payment & Budget</h4>
+            <div class="col-sm-12 col-lg-12">
+                <div class="iq-card">
+                    <div class="iq-card-header d-flex justify-content-between">
+                        <div class="iq-header-title">
+                            <h4 class="card-title">Payment & Budget</h4>
+                        </div>
+                    </div>
+                    <div class="iq-card-body">
+
+
                         <form class="forms-sample" method="post" action="<?= site_url("advertiser_dashboard/campaign_budget/".$this->uri->segment(3)) ?>">
                             <?php
                             if(isset($_SESSION['action_status_report']))
@@ -74,19 +73,25 @@
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" name="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                                <button type="submit" name="submit" class="btn btn-success">Submit</button>
                                 <button class="btn btn-light">Cancel</button>
                             </div>
 
-                                </div>
-                            </div>
+                    </div>
 
-
-                        </form>
+                    </form>
                     </div>
                 </div>
+
             </div>
+
         </div>
+    </div>
+</div>
+
+
+
+
 
 
 <script type="text/javascript">

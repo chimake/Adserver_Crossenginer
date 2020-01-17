@@ -1,19 +1,16 @@
-<div class="main-panel">
-    <div class="content-wrapper">
-        <div class="page-header">
-            <h3 class="page-title">
-                <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                  <i class="mdi mdi-home"></i>
-                </span> <?php echo $title; ?> </h3>
-        </div>
-
+<div id="content-page" class="content-page">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Targeting options</h4>
-                        <a href="<?=site_url("advertiser_dashboard/skip_targeting/".$this->uri->segment(3)) ?>" class="card-description">Skip This</a>
-                        <p class="text-small">By skipping your Campaign will be mark as GENERAL CAMPAIGN(Visible in all category)</p>
+            <div class="col-sm-12 col-lg-12">
+                <div class="iq-card">
+                    <div class="iq-card-header d-flex justify-content-between">
+                        <div class="iq-header-title">
+                            <h4 class="card-title">Targeting options</h4>
+                        </div>
+                    </div>
+                    <div class="iq-card-body">
+
+                        <p class="text-small">By skipping your Campaign will be mark as GENERAL CAMPAIGN(Visible in all category). <a href="<?=site_url("advertiser_dashboard/skip_targeting/".$this->uri->segment(3)) ?>" class="card-description">Skip This</a></p>
                         <form method="post" action="<?=site_url("advertiser_dashboard/campaign_target_action/".$this->uri->segment(3))  ?>">
                             <div class="row">
                                 <div class="col-md-12">
@@ -121,7 +118,7 @@
                                                 <input  type="checkbox" name="tcountry[]" value="south-africa">South Africa
                                             </label>
                                         </div>
-                                        <button type="submit" name="submit" class="btn btn-gradient-primary mr-2">Nexr</button>
+                                        <button type="submit" name="submit" class="btn btn-success mr-2">Next</button>
 
                                     </div>
                                 </div>
@@ -129,8 +126,15 @@
                             </div>
                         </form>
                     </div>
-
                 </div>
+
             </div>
+
         </div>
+    </div>
+</div>
+
+
+
+
 

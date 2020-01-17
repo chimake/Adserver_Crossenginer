@@ -208,10 +208,14 @@ public function insert_to_payment_record($arr)
   $this->db->insert('payments',$arr);
 }
 
-    public function get_payments_advertiser_id($id,$limit,$offset)
+    public function get_payments_advertiser_id($limit,$offset)
     {
-        $query = $this->db->get_where("payments",array("user_id" => $id),$limit,$offset);
-        return $query->row();
+
+        $this->db->order_by("id","DESC");
+
+        $query = $this->db->get_where("payments",array('user_id' => $_SESSION['id']),$limit,$offset);
+        return $query->result_array();
+
     }
 
     public function get_coupon_value($coupon_code)
@@ -426,6 +430,38 @@ return count($query->result_array());
 
 
 }
+
+public function count_advertisers_campaigns_today()
+{
+    $currentdate= date('Y-m-d H:i:s');
+    $current_time_stamp = strtotime($currentdate);
+    $query = $this->db->get_where("adv_story",array('user_id' => $_SESSION['id'],'start_time' => $current_time_stamp));
+    return count($query->result_array());
+
+}
+
+public function count_advertisers_campaigns_two_days_ago(){
+
+    $two_days_ago = date('Y-m-d H:i:s ', strtotime('-2 days', strtotime(date('Y-m-d H:i:s'))));
+    $two_days_ago_time_stamp = strtotime($two_days_ago);
+    $query = $this->db->get_where("adv_story",array('user_id' => $_SESSION['id'],'start_time' => $two_days_ago_time_stamp));
+    return count($query->result_array());
+}
+
+public function get_campaign_percentage_change()
+{
+    $today_count = $this->count_advertisers_campaigns_today();
+    $two_days_count = $this->count_advertisers_campaigns_two_days_ago();
+    $decrease_value = $two_days_count -$today_count;
+    if ($two_days_count == 0)
+    {
+        return ($decrease_value) * 100;
+    }else{
+        return ($decrease_value / $two_days_count) * 100;
+    }
+
+}
+
 public function get_country_details($country)
 {
   $query = $this->db->get_where('countries',array('select_value'=> $country));
@@ -521,6 +557,37 @@ return count($query->result_array());
 
 }
 
+    public function count_advertisers_active_campaigns_today()
+    {
+        $currentdate= date('Y-m-d H:i:s');
+        $current_time_stamp = strtotime($currentdate);
+        $query = $this->db->get_where("adv_story",array('user_id' => $_SESSION['id'],'start_time' => $current_time_stamp,'status' => 'active'));
+        return count($query->result_array());
+
+    }
+
+    public function count_advertisers_active_campaigns_two_days_ago(){
+
+        $two_days_ago = date('Y-m-d H:i:s ', strtotime('-2 days', strtotime(date('Y-m-d H:i:s'))));
+        $two_days_ago_time_stamp = strtotime($two_days_ago);
+        $query = $this->db->get_where("adv_story",array('user_id' => $_SESSION['id'],'start_time' => $two_days_ago_time_stamp,'status' => 'active'));
+        return count($query->result_array());
+    }
+
+    public function get_active_campaign_percentage_change()
+    {
+        $today_count = $this->count_advertisers_active_campaigns_today();
+        $two_days_count = $this->count_advertisers_active_campaigns_two_days_ago();
+        $decrease_value = $two_days_count -$today_count;
+        if ($two_days_count == 0)
+        {
+            return ($decrease_value) * 100;
+        }else{
+            return ($decrease_value / $two_days_count) * 100;
+        }
+
+    }
+
 public function count_advertiser_inactive_campaigns()
 {
 
@@ -530,6 +597,38 @@ return count($query->result_array());
 
 
 }
+
+    public function count_advertisers_inactive_campaigns_today()
+    {
+        $currentdate= date('Y-m-d H:i:s');
+        $current_time_stamp = strtotime($currentdate);
+        $query = $this->db->get_where("adv_story",array('user_id' => $_SESSION['id'],'start_time' => $current_time_stamp,'approval' => 'inactive'));
+        return count($query->result_array());
+
+    }
+
+    public function count_advertisers_inactive_campaigns_two_days_ago(){
+
+        $two_days_ago = date('Y-m-d H:i:s ', strtotime('-2 days', strtotime(date('Y-m-d H:i:s'))));
+        $two_days_ago_time_stamp = strtotime($two_days_ago);
+        $query = $this->db->get_where("adv_story",array('user_id' => $_SESSION['id'],'start_time' => $two_days_ago_time_stamp,'approval' => 'inactive'));
+        return count($query->result_array());
+    }
+
+    public function get_inactive_campaign_percentage_change()
+    {
+        $today_count = $this->count_advertisers_inactive_campaigns_today();
+        $two_days_count = $this->count_advertisers_inactive_campaigns_two_days_ago();
+        $decrease_value = $two_days_count -$today_count;
+        if ($two_days_count == 0)
+        {
+            return ($decrease_value) * 100;
+        }else{
+            return ($decrease_value / $two_days_count) * 100;
+        }
+
+    }
+
 public function get_campaign_ref_id($ref_id)
 {
 $query = $this->db->get_where("adv_story",array('ref_id' => $ref_id));
@@ -578,6 +677,30 @@ public function get_campaign_clicks($ref_id,$today)
 
  return count($query->result_array());
 
+}
+
+public function get_latest_campaign_click()
+{
+    $currentdate= date('Y-m-d H:i:s');
+    $current_time_stamp = strtotime($currentdate);
+    $seven_days_ago = date('Y-m-d H:i:s ', strtotime('-7 days', strtotime(date('Y-m-d H:i:s'))));
+    $seven_days_ago_time_stamp = strtotime($seven_days_ago);
+//    $query = $this->db->query('SELECT * FROM clicks WHERE time >= '.$current_time_stamp.' AND'.$seven_days_ago.' AND story_aid = '.$_SESSION['id'].' ;');
+//    return count($query->result_array());
+}
+
+    public function get_weekly_campaign_clicks($ref_id,$week)
+{
+    $query = $this->db->query('SELECT * FROM clicks WHERE time >= '.$week.' AND story_id = "'.$ref_id.'" AND story_aid = '.$_SESSION['id'].' ;');
+
+    return count($query->result_array());
+}
+
+public function get_monthly_campaign_clicks($ref_id,$month)
+{
+    $query = $this->db->query('SELECT * FROM clicks WHERE time >= '.$month.' AND story_id = "'.$ref_id.'" AND story_aid = '.$_SESSION['id'].' ;');
+
+    return count($query->result_array());
 }
 public function fund_campaign($ref_id,$user,$campaign)
 {

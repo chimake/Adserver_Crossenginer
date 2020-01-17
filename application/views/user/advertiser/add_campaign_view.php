@@ -1,23 +1,21 @@
-<div class="main-panel">
-    <div class="content-wrapper">
-        <div class="page-header">
-            <h3 class="page-title">
-                <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                  <i class="mdi mdi-home"></i>
-                </span> <?php echo $title; ?> </h3>
-        </div>
-
+<div id="content-page" class="content-page">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="text-danger"> <?= validation_errors()."<br>".$error ?> </p>
+            <div class="col-sm-12 col-lg-12">
+                <div class="iq-card">
+                    <div class="iq-card-header d-flex justify-content-between">
+                        <div class="iq-header-title">
+                            <h4 class="card-title">Add Campaign</h4>
+                        </div>
+                    </div>
+                    <div class="iq-card-body">
+
                         <form class="forms-sample" enctype="multipart/form-data" method="post" action="<?= site_url("advertiser_dashboard/add_campaign/".$this->uri->segment(3)) ?>">
                             <input type="hidden" name="cpa_name" value="<?= (isset($campaign_name)) ? $campaign_name : "" ?>">
                             <div class="form-group">
                                 <label for="exampleInputName1">Campaign Name</label>
                                 <?php if(!empty($this->uri->segment(3))){?>
-                                <span class="text-white"><?= $campaign_name."--" ?></span>
+                                    <span class="text-white"><?= $campaign_name."--" ?></span>
                                 <?php } ?>
                                 <input type="text" class="form-control"  value="<?= set_value('campaign_name') ?>" name="campaign_name" required>
                             </div>
@@ -61,7 +59,7 @@
                                     <option value="banner_text">Create Banner & Text Campaign</option>
                                 </select>
                             </div>
-                            <div class="text_only">
+                            <div class="text_only" id="text_only">
                                 <div class="form-group">
                                     <label for="display_link">Display Link</label>
                                     <input type="text" class="form-control" name="display_link" id="display_link" value="<?= set_value("display_link") ?>" placeholder="www.example.com">
@@ -90,7 +88,7 @@
                                 </div>
                             </div>
 
-                            <div id="both_img" style="display: none;">
+                            <div id="both_img" class="hidden">
                                 <div id="banner_only">
                                     <div class="form-group">
                                         <label for="campaign_size">Campaign Size/Type</label>
@@ -101,7 +99,7 @@
                                     </div>
                                 </div>
 
-                                <div class="banner_text">
+                                <div class="banner_text" id="banner_text">
                                     <div class="form-group">
                                         <label for="exampleTextarea1">Campaign Text(Not > 140 characters)</label>
                                         <textarea class="form-control" maxlength="140" cols="15" rows="5" name="campaign_title" id="campaign_title">
@@ -148,39 +146,42 @@
 
                                 <div class="form-group">
                                     <label>Upload Banner</label>
-                                    <input type="file" name="banner" class="hide_file file-upload-default">
-                                    <div class="input-group col-xs-12">
-                                        <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
-                                        <span class="input-group-append">
-                                            <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
-                                        </span>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile" name="banner">
+                                        <label class="custom-file-label" for="customFile">Choose file</label>
                                     </div>
                                 </div>
+
                             </div>
 
                             <script>
+
                                 function typeContainer(id) {
+                                    //alert(id);
                                     var textDiv = document.getElementById("text_only");
                                     var bannerDiv = document.getElementById("banner_only");
                                     var bannerTextDiv = document.getElementById("banner_text");
                                     var bothImg = document.getElementById("both_img");
                                     if(id == "text")
                                     {
-                                        textDiv.className += " w3-show";
-                                        bannerDiv.className = bannerDiv.className.replace(" w3-show", "");
-                                        bannerTextDiv.className = bannerTextDiv.className.replace(" w3-show", "");
-                                        bothImg.className = " w3-hide";
+                                        //alert("text");
+                                        textDiv.className = textDiv.className.replace("hidden", "");
+                                        bannerDiv.className = "hidden";
+                                        bannerTextDiv.className = "hidden";
+                                        bothImg.className = "hidden";
 
                                     }else if(id == "banner"){
-                                        bannerDiv.className += " w3-show";
-                                        textDiv.className = textDiv.className.replace(" w3-show", "");
-                                        bannerTextDiv.className = bannerTextDiv.className.replace(" w3-show", "");
-                                        bothImg.className += " w3-show";
+                                        bannerDiv.className = bannerDiv.className.replace("hidden", "");
+                                        textDiv.className = " hidden";
+                                        bannerTextDiv.className = " hidden";
+                                        bothImg.className = bothImg.className.replace("hidden", "");
+
+
                                     }else if(id == "banner_text"){
-                                        bannerTextDiv.className += " w3-show";
-                                        textDiv.className = textDiv.className.replace(" w3-show", "");
-                                        bannerDiv.className =  bannerDiv.className.replace(" w3-show", "");
-                                        bothImg.className += " w3-show";
+                                        bannerTextDiv.className = bannerTextDiv.className.replace("hidden", "");
+                                        textDiv.className = " hidden";
+                                        bannerDiv.className = " hidden";
+                                        bothImg.className = bothImg.className.replace("hidden", "");
                                     }
 
 
@@ -189,11 +190,14 @@
 
                             </script>
 
-                            <button type="submit" name="submit" class="btn btn-gradient-primary mr-2">Next</button>
-                            <button class="btn btn-light">Cancel</button>
+                            <button type="submit" name="submit" class="btn btn-success">Next</button>
                         </form>
                     </div>
                 </div>
+
             </div>
+
         </div>
+    </div>
+</div>
 

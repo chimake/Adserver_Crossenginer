@@ -44,11 +44,16 @@
 <!-- Sign in Start -->
 <section class="sign-in-page bg-white">
     <div class="container-fluid p-0">
-        <div class="row no-gutters">
+        <div class="row no-gutters" style="padding: 50px;">
             <div class="col-sm-6 align-self-center">
                 <div class="sign-in-from">
-                    <h1 class="mb-0">Sign in</h1>
-                    <p>Enter your email address and password to access admin panel.</p>
+                    <div class="text-center" style="margin-bottom: 15px;">
+                        <h2 class="mb-0">++Ads</h2>
+                    </div>
+                    <span class="text-center">
+                        <h1 class="mb-0">Sign in</h1>
+                        <p>Enter your email address and password to access admin panel.</p>
+                    </span>
                     <div class="text-danger">
                         <?php
                         echo validation_errors().'<br>';
@@ -88,26 +93,9 @@
                     </form>
                 </div>
             </div>
-            <div class="col-sm-6 text-center">
-                <div class="sign-in-detail text-white" style="background: url(<?=base_url("assets/media/images/login/2.jpg") ?>) no-repeat 0 0; background-size: cover;">
-                    <a class="sign-in-logo mb-5" href="#"><img src="images/logo-white.png" class="img-fluid" alt="logo"></a>
-                    <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1" data-margin="0">
-                        <div class="item">
-                            <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">
-                            <h4 class="mb-1 text-white">Manage your orders</h4>
-                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                        </div>
-                        <div class="item">
-                            <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">
-                            <h4 class="mb-1 text-white">Manage your orders</h4>
-                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                        </div>
-                        <div class="item">
-                            <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">
-                            <h4 class="mb-1 text-white">Manage your orders</h4>
-                            <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                        </div>
-                    </div>
+            <div class="col-md-6 text-center hidden-sm hidden-xs">
+                <div class="sign-in-detail text-white d-none d-lg-block d-xl-block" style="background: url(<?=base_url("assets/media/images/flyerrrrrr_curve.png") ?>) no-repeat 0 0; background-size: cover;">
+
                 </div>
             </div>
         </div>

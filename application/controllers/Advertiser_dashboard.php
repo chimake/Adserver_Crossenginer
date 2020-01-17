@@ -62,6 +62,13 @@ $data['no_reg'] = $this->advertiser_model->get_no_affilate_reg("advertiser");
 $data["count_cpa"] = $this->advertiser_model->count_advertisers_cpa();
 $data["blocked_campaigns_list"] = $this->advertiser_model->get_all_blocked_campaigns();
 $data["incomplete_campaign_list"] = $this->advertiser_model->get_all_incomplete_campaigns();
+$data['campaign_percentage_change'] = $this->advertiser_model->get_campaign_percentage_change();
+$data['active_campaign_percentage_change'] = $this->advertiser_model->get_active_campaign_percentage_change();
+$data['inactive_campaign_percentage_change'] = $this->advertiser_model->get_inactive_campaign_percentage_change();
+    $data['lastest_clicks'] = $this->advertiser_model->get_latest_campaign_click();
+//var_dump($data['campaign_percentage_change']);
+//die;
+
 
 //get country details by user's country
 
@@ -70,12 +77,20 @@ $data['general_details'] = $this->advertiser_model->get_general_details();
 
     $this->load->view('/common/advertiser_header_view',$data);
       $this->load->view('/common/advertiser_top_tiles',$data);
-//    $this->load->view('/user/advertiser/dashboard_view',$data);
-     //$this->load->view('/common/users_footer_view',$data);
+   //$this->load->view('/user/advertiser/dashboard_view',$data);
+     $this->load->view('/common/users_footer_view',$data);
 
 
 }
 
+
+public function count_latest()
+{
+    $user_id = $_SESSION['id'];
+    $click_count = $this->advertiser_model->get_latest_campaign_click();
+    return $click_count;
+
+}
 public function settings()
 {
 
@@ -859,7 +874,7 @@ public function payments($offset=0)
     $limit = 8;
     $user = $_SESSION['id'];
 
-    $data['payments']= $this->advertiser_model->get_payments_advertiser_id($user,$limit,$offset);
+    $data['payments']= $this->advertiser_model->get_payments_advertiser_id($limit,$offset);
 //    var_dump($data['payments']);
 //    die;
 
@@ -1249,6 +1264,8 @@ if('success' == $tranx->data->status || $reference == $tranx->data->reference ||
 
 public function advertiser_online_coupon_payment()
 {
+//    var_dump($_SESSION['trans_details']['amount']);
+//    die;
     $amount = $_SESSION['trans_details']['amount'];
     $currency = $_SESSION['trans_details']['currency_code'];
 
@@ -1275,7 +1292,7 @@ public function advertiser_online_coupon_payment()
 
     $user=$this->advertiser_model->get_advertiser_by_id($_SESSION['id']);
     $previous_bal = $user['account_bal'];
-    $amount = implode(" ",$amount);
+    $amount = intval($amount);
 //    var_dump($amount);
 //    die;
     $new_bal = $amount + $previous_bal;

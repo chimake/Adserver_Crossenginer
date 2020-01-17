@@ -1,35 +1,51 @@
-<footer class="footer">
-    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Built <?= date('Y');?> </span>
+<footer class="bg-white iq-footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                Copyright <?= date('Y');?> <a href="#">+Life</a> All Rights Reserved.
+            </div>
+        </div>
     </div>
 </footer>
+<!-- Footer END -->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="<?= base_url('assets/js/jquery.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/popper.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/bootstrap.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/jquery.appear.js'); ?>"></script>
+<script src="<?= base_url('assets/js/countdown.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/waypoints.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/jquery.counterup.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/wow.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/apexcharts.js'); ?>"></script>
+<script src="<?= base_url('assets/js/slick.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/select2.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/owl.carousel.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/jquery.magnific-popup.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/smooth-scrollbar.js'); ?>"></script>
+<script src="<?= base_url('assets/js/lottie.js'); ?>"></script>
+<script src="<?= base_url('assets/js/chart-custom.js'); ?>"></script>
+<script src="<?= base_url('assets/js/custom.js'); ?>"></script>
 
-</div>
-</div>
+<script>
+    $("#latest").click(function (e) {
 
-<script src="<?php echo base_url('assets/js/vendor.bundle.base.js'); ?>"></script>
-<!-- endinject -->
-<!-- Plugin js for this page -->
-<script src="<?php echo base_url('assets/chart.js/Chart.min.js'); ?>"></script>
-<!-- End plugin js for this page -->
-<!-- inject:js -->
-<script src="<?php echo base_url('assets/js/off-canvas.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/hoverable-collapse.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/misc.js'); ?>"></script>
-<!-- endinject -->
-<!-- Custom js for this page -->
-<script src="assets/js/dashboard.js"></script>
-<script src="assets/js/todolist.js"></script>
-</body>
-<footer class="w3-container w3-blue w3-center w3-padding-xxlarge w3-margin-top">
- © Custch <?php
-if (date('y') == 19)
-{
-echo "20".date('y');
-}else{
-echo "2018 - 20".date('y');
-}
-?>
-
-</footer>
+        var formActionURL = <?= site_url('advertiser_dashboard/count_latest');?>
+        console.log("postData = " + JSON.stringify(postData));
+        console.log("formActionURL = " + formActionURL);
+        $.ajax({
+            url: formActionURL,
+            type: "GET",
+            data: postData,
+        }).done(function (data) {
+            $('#chatbox').html(data);
+            alert("success");
+        }).fail(function () {
+            alert("error");
+        }).always(function () {
+            $("#submitmsg").val('submit');
+        });
+    });
+</script>
 

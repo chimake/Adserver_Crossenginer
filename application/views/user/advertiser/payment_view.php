@@ -1,55 +1,63 @@
-<div class="main-panel">
-    <div class="content-wrapper">
-        <div class="page-header">
-            <h3 class="page-title">
-                <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                  <i class="mdi mdi-home"></i>
-                </span> <?php echo $title; ?> </h3>
-
-            <span class="float-right page-title">
-                <a href="<?= site_url('advertiser_dashboard/add_payment') ?>" class="btn btn-block btn-lg btn-gradient-success mt-4">Fund Account</a>
-            </span>
-        </div>
-
+<div id="content-page" class="content-page">
+    <div class="container-fluid">
         <div class="row">
-            <?php
-            if(!empty($payments))
-            {
-                    ?>
-                    <div class="col-4 grid-margin">
-                        <div class="card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title"><?= ($payments->method == "online_gateway" ? "Online Gateway" : 'Coupon') ?></h4>
-                                    <ul>
-                                        <li><b>Status:</b> <?=ucfirst($payments->status)?></li>
-                                        <li><b>Amount:</b> <?=$payments->amount?></li>
-                                        <li><b>Payment Date:</b> <?=$payments->trans_date?></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-            <?php }else{ ?>
-                <div class="col-12 grid-margin">
-                    <div class="card">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">No payment available yet </h4>
-                            </div>
+            <div class="col-sm-12 col-lg-12">
+                <div class="iq-card">
+                    <div class="iq-card-header d-flex justify-content-between">
+                        <div class="iq-header-title">
+                            <h4 class="card-title">Payment List</h4>
                         </div>
                     </div>
                 </div>
-            <?php  } ?>
-            <?= $pagination ?>
+            </div>
         </div>
+        <div class="row">
+            <?php
+
+            if(!empty($payments))
+            {
+            foreach ($payments as $payment)
+            {
+
+
+            ?>
+            <div class="col-sm-4 col-lg-4">
+                <div class="iq-card">
+                    <div class="iq-card-header d-flex justify-content-between">
+                        <div class="iq-header-title">
+                            <h4 class="card-title"><?= ($payment['method'] == "online_gateway" ? "Online Gateway" : 'Coupon') ?></h4>
+                        </div>
+                    </div>
+                    <div class="iq-card-body">
 
 
 
 
+                                            <ul>
+                                                <li><b>Status:</b> <?=ucfirst($payment['status'])?></li>
+                                                <li><b>Amount:</b> <?=$payment['amount']?></li>
+                                                <li><b>Payment Date:</b> <?=$payment['trans_date']?></li>
+                                            </ul>
+                    </div>
+                </div>
+            </div>
 
 
+                        <?php }}else{ ?>
+                            <div class="col-12 grid-margin">
+                                <div class="card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">No payment available yet </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php  } ?>
+                        <?= $pagination ?>
+
+
+</div>
 
 
 

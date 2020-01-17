@@ -109,7 +109,7 @@
             </div>
             <div class="col-sm-6 text-center">
                 <div class="sign-in-detail text-white" style="background: url(<?=base_url("assets/media/images/login/2.jpg") ?>) no-repeat 0 0; background-size: cover;">
-                    <a class="sign-in-logo mb-5" href="#"><img src="images/logo-white.png" class="img-fluid" alt="logo"></a>
+                    <a class="sign-in-logo mb-5" href="#"><img src="<?=base_url("assets/media/images/logo-white.png") ?>" class="img-fluid" alt="logo"></a>
                     <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1" data-margin="0">
                         <div class="item">
                             <img src="<?=base_url("assets/media/images/login/1.png") ?>" class="img-fluid mb-4" alt="logo">

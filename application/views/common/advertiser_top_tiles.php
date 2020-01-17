@@ -1,43 +1,84 @@
-<div class="main-panel">
-    <div class="content-wrapper">
-        <div class="page-header">
-            <h3 class="page-title">
-                <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                  <i class="mdi mdi-home"></i>
-                </span> <?php echo $title; ?> </h3>
+<div id="content-page" class="content-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="iq-card overflow-hidden" style="position: relative;">
+                    <div class="iq-card-body pb-0">
+                        <span class="text-center line-height-6">Total Campaigns</span>
+                        <div class="clearfix"></div>
+                        <div class="text-center">
+                            <h4 class="mb-0"><span class="counter"><?= $count_campaigns ?></span></h4>
+                            <p class="mb-0 text-secondary line-height"><i
+                                        class="<?= ($campaign_percentage_change > 0) ? 'ri-arrow-up-line text-success mr-1' : 'ri-arrow-down-line text-danger mr-1'?>"></i><span
+                                        class="<?= ($campaign_percentage_change > 0) ? 'text-success' : 'text-danger'?>"><?= $campaign_percentage_change?> %</span> <?= ($campaign_percentage_change > 0) ? 'Increase' : 'Decrease'?></p>
+                        </div>
+                    </div>
+                    <span style="min-height: 80px;"></span>
+
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="iq-card overflow-hidden" style="position: relative;">
+                    <div class="iq-card-body pb-0">
+                        <span class="text-center line-height-6">Active Campaigns</span>
+                        <div class="clearfix"></div>
+                        <div class="text-center">
+                            <h4 class="mb-0"><span class="counter"><?= $active_campaigns ?></span></h4>
+                            <p class="mb-0 text-secondary line-height"><i
+                                        class="<?= ($active_campaign_percentage_change > 0) ? 'ri-arrow-up-line text-success mr-1' : 'ri-arrow-down-line text-danger mr-1'?>"></i><span
+                                        class="<?= ($active_campaign_percentage_change > 0) ? 'text-success' : 'text-danger'?>"><?= $active_campaign_percentage_change ?>%</span> <?= ($active_campaign_percentage_change > 0) ? 'Increase' : 'Decrease'?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="iq-card overflow-hidden" style="position: relative;">
+                    <div class="iq-card-body pb-0">
+                        <span class="text-center line-height-6">Inactive Campaigns</span>
+                        <div class="clearfix"></div>
+                        <div class="text-center">
+                            <h4 class="mb-0"><span class="counter"><?= $inactive_campaigns ?></span></h4>
+                            <p class="mb-0 text-secondary line-height" style="margin-bottom:20px;"><i
+                                        class="<?= ($inactive_campaign_percentage_change > 0) ? 'ri-arrow-up-line text-success mr-1' : 'ri-arrow-down-line text-danger mr-1'?>"></i><span
+                                        class="<?= ($inactive_campaign_percentage_change > 0) ? 'text-success' : 'text-danger'?>"><?= $inactive_campaign_percentage_change ?>%</span> <?= ($inactive_campaign_percentage_change > 0) ? 'Increase' : 'Decrease'?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--            <div class="col-lg-12">-->
+<!--                <div class="iq-card overflow-hidden" style="position: relative;">-->
+<!--                    <div class="iq-card-header d-flex justify-content-between">-->
+<!--                        <div class="iq-header-title">-->
+<!--                            <h4 class="card-title" id="title">Click Trend </h4>-->
+<!--                        </div>-->
+<!--                        -->
+<!--                    </div>-->
+<!--                    <div class="iq-card-body">-->
+<!--                        <div class="d-flex justify-content-around">-->
+<!--                            <div class="price-week-box mr-5">-->
+<!--                                <span>Current Week</span>-->
+<!--                                <h2><span class="counter">180</span> <i-->
+<!--                                            class="ri-funds-line text-success font-size-18"></i></h2>-->
+<!--                            </div>-->
+<!--                            <div class="price-week-box">-->
+<!--                                <span>Previous Week</span>-->
+<!--                                <h2><span class="counter">52</span><i-->
+<!--                                            class="ri-funds-line text-danger font-size-18"></i></h2>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div id="chart-5" style="min-height: 200px;">-->
+<!---->
+<!--                    </div>-->
+<!---->
+<!--                </div>-->
+<!--            </div>-->
+
         </div>
 
-        <div class="row">
-            <div class="col-md-4 stretch-card grid-margin">
-                <div class="card bg-gradient-danger card-img-holder text-white">
-                    <div class="card-body">
-                        <img src="<?= base_url('assets/media/images/dashboard/circle.svg'); ?>" class="card-img-absolute" alt="circle-image" />
-                        <h4 class="font-weight-normal mb-3">Total Campaigns <i class="mdi mdi-chart-line mdi-24px float-right"></i>
-                        </h4>
-                        <h2 class="mb-5"><?= $count_campaigns ?></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 stretch-card grid-margin">
-                <div class="card bg-gradient-info card-img-holder text-white">
-                    <div class="card-body">
-                        <img src="<?= base_url('assets/media/images/dashboard/circle.svg'); ?>" class="card-img-absolute" alt="circle-image" />
-                        <h4 class="font-weight-normal mb-3">Active Campaigns <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
-                        </h4>
-                        <h2 class="mb-5"><?= $active_campaigns ?></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 stretch-card grid-margin">
-                <div class="card bg-gradient-success card-img-holder text-white">
-                    <div class="card-body">
-                        <img src="<?= base_url('assets/media/images/dashboard/circle.svg'); ?>" class="card-img-absolute" alt="circle-image" />
-                        <h4 class="font-weight-normal mb-3">Inactive Campaigns <i class="mdi mdi-diamond mdi-24px float-right"></i>
-                        </h4>
-                        <h2 class="mb-5"><?= $inactive_campaigns ?></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+</div>
+
 
 
