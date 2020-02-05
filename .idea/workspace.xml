@@ -2,14 +2,118 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b816df83-1ebb-4b2e-968c-c60a36255e80" name="Default Changelist" comment="Admin ui fix">
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/.idea/pluslife-webCopy.iml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/asfalt.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/background.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/bg-01.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/binding_dark.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/cream_pixels.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/grey.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/kindajean.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/linedpaper.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/norwegian_rose.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/ripples.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/skelatal_weave.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/subtle_carbon.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/bg/subtle_white_feathers.png" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/media/01.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/media/02.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/media/03.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/media/04.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/media/05.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/media/06.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/media/07.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/media/call-01.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/media/call-02.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/media/family.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/media/friends.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/parallax-2.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/svg/excel.svg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/svg/happy.svg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/svg/pdf.svg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/svg/powerpoint.svg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/svg/typing-01.svg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/svg/typing-01.svg.readme" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/svg/typing-02.svg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/svg/typing-02.svg.readme" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/svg/word.svg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/tick/tick-delivered.svg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/tick/tick-read.svg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/tick/tick-send.svg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/undraw_online_chat_d7ek.svg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/100/face-01.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/250/01.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/250/02.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/250/03.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/250/04.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/250/05.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/500/01.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/500/02.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/500/03.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/500/04.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/500/05.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/500/06.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/500/07.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/500/08.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/images/user/500/09.jpg" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/scripts/app.js" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/scripts/init.js" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/app.css" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/fonts/MaterialDesign/css/materialdesignicons.min.css" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/fonts/MaterialDesign/fonts/materialdesignicons-webfont2f9b.eot" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/fonts/MaterialDesign/fonts/materialdesignicons-webfont2f9b.ttf" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/fonts/MaterialDesign/fonts/materialdesignicons-webfont2f9b.woff" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/fonts/MaterialDesign/fonts/materialdesignicons-webfont2f9b.woff2" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/fonts/MaterialDesign/fonts/materialdesignicons-webfontd41d.eot" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/theme/default.css" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/vendors/OwlCarousel2/owl.carousel.css" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/vendors/OwlCarousel2/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/vendors/OwlCarousel2/owl.video.play.html" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/vendors/bootstrap/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/vendors/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/vendors/jquery/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/vendors/material-floating-button/dist/mfb.min.js" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/vendors/perfect-scrollbar/perfect-scrollbar.css" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/styles/vendors/perfect-scrollbar/perfect-scrollbar.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eswissfinance.comli.com/.idea/eswissfinance.comli.com.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eswissfinance.comli.com/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eswissfinance.comli.com/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eswissfinance.comli.com/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eswissfinance.comli.com/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat-app/.idea/chat-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat-app/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat-app/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat-app/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat-app/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../etrust/portal/app/control_panel/file.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../etrust/portal/app/control_panel/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pluslife_chatap/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pluslife_chatap/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pluslife_chatap/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pluslife_chatap/.idea/pluslife_chatap.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pluslife_chatap/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pluslife_chatapp/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pluslife_chatapp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pluslife_chatapp/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pluslife_chatapp/.idea/pluslife_chatapp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pluslife_chatapp/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pluslife_chatapp/public/index.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../quicpick/form_process.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../quicpick/our_team.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../westernfield/portal/app/control_panel/file.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/chatapp/public/scripts/main.js" beforeDir="false" afterPath="$USER_HOME$/Desktop/chatapp/public/scripts/main.js" afterDir="false" />
+      <change beforePath="$USER_HOME$/Documents/pluslife-webCopy/.firebaserc" beforeDir="false" afterPath="$USER_HOME$/Documents/pluslife-webCopy/.firebaserc" afterDir="false" />
+      <change beforePath="$USER_HOME$/Documents/pluslife-webCopy/.gitignore" beforeDir="false" afterPath="$USER_HOME$/Documents/pluslife-webCopy/.gitignore" afterDir="false" />
+      <change beforePath="$USER_HOME$/Documents/pluslife-webCopy/public/index.html" beforeDir="false" afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/index.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Documents/pluslife-webCopy/public/scripts/main.js" beforeDir="false" afterPath="$USER_HOME$/Documents/pluslife-webCopy/public/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/public/forget_password_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/public/forget_password_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-app/js/chat_realtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-app/js/chat_realtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-app/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-app/js/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-app/php/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-app/php/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pluslife_chatap/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pluslife_chatap/js/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pluslife_chatap/php/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/../pluslife_chatap/php/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pluslife_chatapp/public/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pluslife_chatapp/public/scripts/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,101 +135,99 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ad_server@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ad_server@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ad_server@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="ad_server: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ad_server@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="ad_server: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="coupons: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-2036674922">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.34" value="2" />
           <entry key="project.open.time.35" value="3" />
-          <entry key="project.open.time.36" value="4" />
-          <entry key="project.open.time.37" value="3" />
-          <entry key="project.open.time.38" value="3" />
-          <entry key="project.open.time.39" value="4" />
-          <entry key="project.open.time.40" value="2" />
-          <entry key="project.open.time.41" value="3" />
-          <entry key="project.open.time.42" value="3" />
+          <entry key="project.open.time.36" value="6" />
+          <entry key="project.open.time.37" value="7" />
+          <entry key="project.open.time.38" value="6" />
+          <entry key="project.open.time.39" value="5" />
+          <entry key="project.open.time.40" value="5" />
+          <entry key="project.open.time.41" value="5" />
+          <entry key="project.open.time.42" value="5" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.44" value="1" />
-          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.46" value="2" />
+          <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.50" value="3" />
-          <entry key="project.opened" value="37" />
+          <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.opened" value="60" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="coupons" value="1" />
-          <entry key="css" value="4" />
-          <entry key="gallery" value="1" />
-          <entry key="html" value="25" />
+          <entry key="css" value="17" />
+          <entry key="firebaserc" value="2" />
+          <entry key="gallery" value="2" />
+          <entry key="gitignore" value="6" />
+          <entry key="html" value="70" />
           <entry key="ibank" value="1" />
-          <entry key="js" value="5" />
-          <entry key="login" value="1" />
-          <entry key="php" value="198" />
-          <entry key="services" value="1" />
-          <entry key="sql" value="1" />
+          <entry key="js" value="50" />
+          <entry key="json" value="15" />
+          <entry key="log" value="1" />
+          <entry key="login" value="2" />
+          <entry key="md" value="1" />
+          <entry key="php" value="280" />
+          <entry key="services" value="2" />
+          <entry key="sql" value="5" />
+          <entry key="ts" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="4" />
+          <entry key="CSS" value="17" />
           <entry key="Database Element" value="1" />
-          <entry key="HTML" value="25" />
-          <entry key="JavaScript" value="5" />
-          <entry key="PHP" value="198" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Scratch" value="1" />
+          <entry key="HTML" value="69" />
+          <entry key="JSON" value="15" />
+          <entry key="JavaScript" value="50" />
+          <entry key="Log" value="1" />
+          <entry key="Markdown" value="1" />
+          <entry key="PHP" value="277" />
+          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="SQL" value="4" />
+          <entry key="Scratch" value="5" />
+          <entry key="TypeScript" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="3" />
-          <entry key="gallery" value="29" />
-          <entry key="html" value="453" />
-          <entry key="js" value="211" />
+          <entry key="css" value="27" />
+          <entry key="gallery" value="33" />
+          <entry key="gitignore" value="77" />
+          <entry key="html" value="6326" />
+          <entry key="js" value="5178" />
+          <entry key="json" value="6" />
           <entry key="login" value="28" />
-          <entry key="php" value="13068" />
-          <entry key="services" value="39" />
+          <entry key="php" value="18733" />
+          <entry key="services" value="43" />
           <entry key="txt" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="3" />
-          <entry key="HTML" value="554" />
-          <entry key="JavaScript" value="211" />
-          <entry key="PHP" value="12960" />
-          <entry key="PLAIN_TEXT" value="119" />
-          <entry key="SQL" value="7" />
+          <entry key="CSS" value="27" />
+          <entry key="HTML" value="6485" />
+          <entry key="JSON" value="6" />
+          <entry key="JavaScript" value="5117" />
+          <entry key="PHP" value="18623" />
+          <entry key="PLAIN_TEXT" value="204" />
+          <entry key="SQL" value="8" />
+          <entry key="Scratch" value="4" />
         </counts>
       </usages-collector>
     </session>
@@ -138,8 +240,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="992" column="63" selection-start-line="992" selection-start-column="40" selection-end-line="992" selection-end-column="63" />
+            <state relative-caret-position="15">
+              <caret line="573" selection-start-line="573" selection-end-line="573" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -151,64 +253,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/common/advertiser_header_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-182">
-              <caret line="64" column="115" selection-start-line="64" selection-start-column="115" selection-end-line="64" selection-end-column="115" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/add_campaign_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/application/config/config.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/common/advertiser_top_tiles.php">
+        <entry file="file://$PROJECT_DIR$/application/views/public/forget_password_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Advertiser_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="217" selection-start-line="217" selection-end-line="217" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/payment_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/add_coupon_pay_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/add_online_payment_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="164">
+              <caret line="158" column="72" lean-forward="true" selection-start-line="158" selection-start-column="72" selection-end-line="158" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -216,61 +269,90 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/public/login_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1033">
-              <caret line="96" column="82" selection-start-line="96" selection-start-column="82" selection-end-line="96" selection-end-column="82" />
+            <state>
+              <caret selection-end-line="130" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.min.css">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="46" />
+            <state relative-caret-position="174">
+              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/public/register_view.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../BitcointTradeInvest-master/includes/signup.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-135" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../BitcointTradeInvest-master/user_login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-270" />
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>What is the minimum amount required to open an account?</find>
-      <find>FAQ</find>
-      <find>Meet Our Top Team Members</find>
-      <find>token-sale</find>
-      <find>advertiser</find>
-      <find>campaign</find>
-      <find>powered</find>
-      <find>banner</find>
-      <find>banner.</find>
-      <find>customer_desk@etrustbankplc.com</find>
-      <find>team</find>
-      <find>e-</find>
-      <find>a comp</find>
-      <find>count_advertisers_campaigns</find>
-      <find>Monthly sales trend</find>
-      <find>count_advertiser_active_campaigns</find>
-      <find>series</find>
-      <find>$data['today_clicks'] = $this-&gt;advertiser_model-&gt;get_campaign_clicks($_SESSION['id'],strtotime(date(&quot;y-m-d&quot;)));</find>
-      <find>get_campaign_clicks</find>
-      <find>two</find>
-      <find>typeContainer</find>
-      <find>text_only</find>
-      <find>banner_only</find>
-      <find>banner_text</find>
-      <find>coupon_payment</find>
-      <find>get_payments_advertiser_id</find>
-      <find>payments</find>
-      <find>add_payment</find>
-      <find>both_img</find>
-      <find>search</find>
+      <find>redirectHome</find>
+      <find>transfer</find>
+      <find>transferForm</find>
+      <find>authenticationModalCenter</find>
+      <find>saveMessage</find>
+      <find>../../assets</find>
+      <find>theme</find>
+      <find>izito</find>
+      <find>iconbox-light-mode</find>
+      <find>atte</find>
+      <find>binar</find>
+      <find>displayChats</find>
+      <find>fetchChats</find>
+      <find>msgBtn</find>
+      <find>time</find>
+      <find>send</find>
+      <find>timeSince</find>
+      <find>message</find>
+      <find>id=&quot;message&quot;</find>
+      <find>classList</find>
+      <find>scroll</find>
+      <find>messageListElement</find>
+      <find>displayMessage</find>
+      <find>scrollBottom</find>
+      <find>chatstyle-01</find>
+      <find>scrollB</find>
+      <find>scrollTop</find>
+      <find>view_campaign_details</find>
+      <find>get_campaign_by_ref_id</find>
+      <find>add_campaign</find>
     </findStrings>
+    <replaceStrings>
+      <replace>css</replace>
+      <replace>image</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
@@ -279,57 +361,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/views/admin/first_view.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/header_view.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/site_settings_view.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/add_coupon_view.php" />
-        <option value="$PROJECT_DIR$/application/config/constants.php" />
-        <option value="$PROJECT_DIR$/application/models/User_model.php" />
-        <option value="$PROJECT_DIR$/application/views/common/header_view.php" />
-        <option value="$PROJECT_DIR$/application/views/user/advertiser/details_view.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/edit_coupon_view.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/coupons_view.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/payments_view.php" />
-        <option value="$PROJECT_DIR$/application/models/Admin_model.php" />
-        <option value="$PROJECT_DIR$/../admin_skin/index.html" />
-        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Install.php" />
-        <option value="$PROJECT_DIR$/../westernfield/portal/app/plugin/dbconfig.php" />
+        <option value="$PROJECT_DIR$/../pluslife-web/public/styles/app.css" />
+        <option value="$PROJECT_DIR$/../pluslife-web/public/styles/theme/default.css" />
+        <option value="$PROJECT_DIR$/../pluslife-web/public/index_dy.html" />
+        <option value="$PROJECT_DIR$/../chat-app/php/config.php" />
+        <option value="$PROJECT_DIR$/../chat-app/index.html" />
+        <option value="$PROJECT_DIR$/../etrust/portal/app/login.php" />
+        <option value="$PROJECT_DIR$/../etrust/portal/app/signup.php" />
+        <option value="$PROJECT_DIR$/../pluslife_chatap/js/config.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.php" />
         <option value="$PROJECT_DIR$/../westernfield/portal/app/plugin/controls.php" />
-        <option value="$PROJECT_DIR$/../westernfield/portal/app/login.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Db_Alter.php" />
-        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/index.html" />
-        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/css/style.css" />
-        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/contact.html" />
-        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/about.html" />
-        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/services" />
-        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/login" />
-        <option value="$PROJECT_DIR$/../eswissfinance.comli.com/gallery" />
-        <option value="$USER_HOME$/Documents/binarypro/binaryfxpro.com/plans.html" />
-        <option value="$USER_HOME$/Documents/binarypro/binaryfxpro.com/process.php" />
+        <option value="$PROJECT_DIR$/../westernfield/portal/app/control_panel/file.php" />
+        <option value="$PROJECT_DIR$/../etrust/index.html" />
+        <option value="$PROJECT_DIR$/../etrust/css/style.css" />
+        <option value="$PROJECT_DIR$/../etrust/about.html" />
+        <option value="$PROJECT_DIR$/../etrust/contact.html" />
+        <option value="$PROJECT_DIR$/../etrust/gallery" />
+        <option value="$PROJECT_DIR$/../etrust/services" />
+        <option value="$PROJECT_DIR$/../etrust/portal/app/plugin/dbconfig.php" />
+        <option value="$PROJECT_DIR$/../etrust/portal/app/control_panel/file.php" />
+        <option value="$PROJECT_DIR$/../chat-app/js/chat_realtime.js" />
+        <option value="$PROJECT_DIR$/../chat-app/js/config.js" />
+        <option value="$USER_HOME$/Documents/pluslife-web/public/index_diy.html" />
+        <option value="$USER_HOME$/Documents/pluslife-web/public/manifest.json" />
+        <option value="$USER_HOME$/Documents/pluslife-web/functions/package.json" />
+        <option value="$USER_HOME$/Documents/fling/www.cetaceanstechlab.com/theme/flingo/tf-demo/dark-default.html" />
+        <option value="$PROJECT_DIR$/../chat-app/index_dy.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.html" />
+        <option value="$USER_HOME$/Documents/pluslife-webCopy/public/scripts/init.js" />
+        <option value="$USER_HOME$/Documents/pluslife-webCopy/public/index.html" />
+        <option value="$USER_HOME$/Documents/pluslife-webCopy/functions/package-lock.json" />
+        <option value="$PROJECT_DIR$/../westernfield/portal/app/control_panel/index.php" />
+        <option value="$PROJECT_DIR$/../etrust/portal/app/transactionhis.php" />
+        <option value="$PROJECT_DIR$/../etrust/portal/app/control_panel/index.php" />
+        <option value="$PROJECT_DIR$/../etrust/portal/app/plugin/controls.php" />
+        <option value="$USER_HOME$/Documents/pluslife-webCopy/.gitignore" />
+        <option value="$USER_HOME$/Documents/pluslife-webCopy/public/scripts/main.js" />
+        <option value="$USER_HOME$/Desktop/chatapp/.gitignore" />
+        <option value="$USER_HOME$/Desktop/chatapp/public/styles/theme/default.css" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.php" />
+        <option value="$USER_HOME$/Desktop/chatapp/public/scripts/app.js" />
+        <option value="$USER_HOME$/Desktop/chatapp/public/index.html" />
         <option value="$USER_HOME$/Documents/binarypro/binaryfxpro.com/index.html" />
-        <option value="$USER_HOME$/Documents/binarypro/binaryfxpro.com/assets/js/custom.js" />
-        <option value="$USER_HOME$/Documents/admin_dash/iqonic.design/themes/sofbox-admin/html/sign-in.html" />
-        <option value="$PROJECT_DIR$/application/controllers/Page.php" />
-        <option value="$PROJECT_DIR$/application/views/public/next_reg_view.php" />
-        <option value="$PROJECT_DIR$/application/views/public/register_view.php" />
-        <option value="$USER_HOME$/Documents/admin_dash/iqonic.design/themes/sofbox-admin/html/index.html" />
-        <option value="$PROJECT_DIR$/assets/js/custom.js" />
-        <option value="$PROJECT_DIR$/application/views/common/users_footer_view.php" />
+        <option value="$PROJECT_DIR$/../pluslife_chatapp/public/scripts/main.js" />
+        <option value="$USER_HOME$/Desktop/chatapp/public/scripts/main.js" />
+        <option value="$PROJECT_DIR$/application/views/user/advertiser/details_view.php" />
         <option value="$PROJECT_DIR$/application/views/user/advertiser/campaigns_view.php" />
-        <option value="$PROJECT_DIR$/application/views/user/advertiser/add_campaign_view.php" />
-        <option value="$PROJECT_DIR$/application/views/user/advertiser/campaign_target_view.php" />
-        <option value="$PROJECT_DIR$/application/views/user/advertiser/campaign_budget_view.php" />
-        <option value="$PROJECT_DIR$/application/views/user/advertiser/select_payment_option.php" />
-        <option value="$PROJECT_DIR$/application/views/user/advertiser/add_coupon_pay_view.php" />
-        <option value="$PROJECT_DIR$/application/views/user/advertiser/pre_pay_view.php" />
-        <option value="$PROJECT_DIR$/application/models/Advertiser_model.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/campaign_details_view.php" />
         <option value="$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php" />
-        <option value="$PROJECT_DIR$/application/views/user/advertiser/payment_view.php" />
-        <option value="$PROJECT_DIR$/application/views/user/advertiser/add_online_payment_view.php" />
-        <option value="$PROJECT_DIR$/application/views/public/login_view.php" />
-        <option value="$PROJECT_DIR$/application/views/common/advertiser_header_view.php" />
-        <option value="$PROJECT_DIR$/application/views/common/advertiser_top_tiles.php" />
+        <option value="$PROJECT_DIR$/../BitcointTradeInvest-master/Monday16_07_2018.sql" />
+        <option value="$PROJECT_DIR$/application/views/public/forget_password_view.php" />
       </list>
     </option>
   </component>
@@ -340,18 +422,24 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$USER_HOME$/Documents/pluslife-webCopy/functions/node_modules" />
     <handled-path value="$PROJECT_DIR$/../admin_skin/node_modules" />
+    <handled-path value="$PROJECT_DIR$/../pluslife/functions/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$USER_HOME$/Desktop/chatapp/functions/package.json" />
+      <path value="$USER_HOME$/Documents/pluslife-webCopy/functions/package.json" />
       <path value="$PROJECT_DIR$/../admin_skin/package.json" />
+      <path value="$PROJECT_DIR$/../pluslife/functions/package.json" />
+      <path value="$PROJECT_DIR$/../pluslife_chatapp/functions/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="47" />
-    <option name="width" value="1336" />
-    <option name="height" value="676" />
+    <option name="width" value="1326" />
+    <option name="height" value="678" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -361,7 +449,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -369,22 +456,27 @@
               <item name="ad_network_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="ad_network_server" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
             <path>
-              <item name="ad_network_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ad_network_server" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="ad_network_server" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/chatapp" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="ad_network_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ad_network_server" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="ad_network_server" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/chatapp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="ad_network_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ad_network_server" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="ad_network_server" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/chatapp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="scripts" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -394,18 +486,24 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="ch_admin&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eswissfinance.comli.com" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/chatapp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/application/controllers" />
-      <recent name="$PROJECT_DIR$/application/views/user/advertiser" />
-      <recent name="$PROJECT_DIR$/application/views/admin" />
+      <recent name="$USER_HOME$/Documents/pluslife-webCopy/public/styles" />
+      <recent name="$USER_HOME$/Documents/pluslife-webCopy/public/images" />
+      <recent name="$USER_HOME$/Documents/pluslife-webCopy/public/scripts" />
+      <recent name="$USER_HOME$/Documents/pluslife-web/public/styles" />
+      <recent name="$USER_HOME$/Documents/pluslife-web/public/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -419,6 +517,17 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="chat-app" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/../chat-app" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.chat-app" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -466,7 +575,30 @@
       <workItem from="1579172785449" duration="431000" />
       <workItem from="1579173807328" duration="19893000" />
       <workItem from="1579216940297" duration="7894000" />
-      <workItem from="1579251144631" duration="21001000" />
+      <workItem from="1579251144631" duration="21811000" />
+      <workItem from="1579291723568" duration="9691000" />
+      <workItem from="1579337362067" duration="18654000" />
+      <workItem from="1579382753546" duration="17000000" />
+      <workItem from="1579421184973" duration="6725000" />
+      <workItem from="1579474413194" duration="21760000" />
+      <workItem from="1579548590993" duration="2178000" />
+      <workItem from="1579595722846" duration="22509000" />
+      <workItem from="1579693716956" duration="823000" />
+      <workItem from="1579769919616" duration="10639000" />
+      <workItem from="1579804849493" duration="30190000" />
+      <workItem from="1579899376451" duration="9219000" />
+      <workItem from="1580050400374" duration="11996000" />
+      <workItem from="1580127835193" duration="587000" />
+      <workItem from="1580155697501" duration="4529000" />
+      <workItem from="1580215238462" duration="33712000" />
+      <workItem from="1580289647549" duration="22457000" />
+      <workItem from="1580360789127" duration="19296000" />
+      <workItem from="1580393103629" duration="15482000" />
+      <workItem from="1580428729702" duration="591000" />
+      <workItem from="1580506413523" duration="32196000" />
+      <workItem from="1580839667381" duration="2230000" />
+      <workItem from="1580845487194" duration="11196000" />
+      <workItem from="1580921942366" duration="3680000" />
     </task>
     <task id="LOCAL-00001" summary="Admin ui fix">
       <created>1577608118343</created>
@@ -570,9 +702,9 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209475000" />
+    <option name="totallyTimeSpent" value="517625000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -585,9 +717,9 @@
     <frame x="0" y="24" width="1342" height="720" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46206897" visible="true" weight="0.30417958" />
-      <window_info id="Structure" order="1" sideWeight="0.537931" side_tool="true" visible="true" weight="0.30417958" />
-      <window_info id="Favorites" order="2" side_tool="true" weight="0.32972136" />
+      <window_info id="Structure" order="0" sideWeight="0.55" side_tool="true" weight="0.3490712" />
+      <window_info id="Favorites" order="1" side_tool="true" weight="0.32972136" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.45" weight="0.35526314" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -596,20 +728,20 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32931036" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="8" sideWeight="0.499226" weight="0.32931036" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32931036" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32931036" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50077397" side_tool="true" weight="0.32586208" />
+      <window_info anchor="bottom" id="Database Console" order="11" weight="0.32931036" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.499226" weight="0.3034483" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.32972136" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4827586" weight="0.2639319" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.51724136" side_tool="true" visible="true" weight="0.2639319" />
-      <window_info id="Favorites" order="2" side_tool="true" weight="0.32972136" />
+      <window_info id="Structure" order="0" sideWeight="0.55" side_tool="true" weight="0.3490712" />
+      <window_info id="Favorites" order="1" side_tool="true" weight="0.32972136" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.45" visible="true" weight="0.35526314" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -618,10 +750,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32931036" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="8" sideWeight="0.499226" weight="0.32931036" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32931036" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50077397" side_tool="true" weight="0.32586208" />
+      <window_info anchor="bottom" id="Database Console" order="11" weight="0.32931036" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.499226" weight="0.3034483" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -646,374 +779,325 @@
           <line>412</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/views/user/advertiser/add_campaign_view.php</url>
-          <line>12</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://cdd8b12d-1425-47f7-940b-65849751c6fa/schema/ad_server/table/coupons">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+    <entry file="file://$USER_HOME$/Desktop/chatapp/public/styles/app.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/chatapp/public/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/chatapp/public/styles/theme/default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret column="283176" selection-start-column="283176" selection-end-column="283176" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <filtering enabled="true" />
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Admin_model.php">
+    <entry file="file://$USER_HOME$/Desktop/chatapp/public/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="387" column="87" lean-forward="true" selection-start-line="387" selection-start-column="13" selection-end-line="387" selection-end-column="87" />
+        <state relative-caret-position="179">
+          <caret line="267" column="44" lean-forward="true" selection-start-line="267" selection-start-column="28" selection-end-line="267" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../admin_skin/index.html">
+    <entry file="file://$USER_HOME$/Desktop/chatapp/functions/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8205">
-          <caret line="547" column="77" selection-start-line="547" selection-start-column="77" selection-end-line="547" selection-end-column="77" />
+        <state relative-caret-position="315">
+          <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12600">
-          <caret line="840" column="16" selection-start-line="840" selection-start-column="16" selection-end-line="840" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Publisher_dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Install.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../westernfield/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../westernfield/header.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../westernfield/portal/app/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../westernfield/portal/app/plugin/controls.php">
+    <entry file="file://$USER_HOME$/Documents/pluslife-webCopy/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../westernfield/portal/app/plugin/dbconfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Db_Alter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42600">
-          <caret line="2840" selection-start-line="2840" selection-end-line="2840" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="75" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="113" column="176" selection-start-line="113" selection-start-column="176" selection-end-line="113" selection-end-column="176" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5145">
-          <caret line="343" column="34" selection-start-line="343" selection-start-column="34" selection-end-line="343" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/gallery">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/services">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/login">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eswissfinance.comli.com/ibank">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/binarypro/binaryfxpro.com/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2460">
-          <caret line="176" column="91" selection-start-line="176" selection-start-column="91" selection-end-line="176" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/binarypro/binaryfxpro.com/plans.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="110" column="51" selection-start-line="110" selection-start-column="51" selection-end-line="110" selection-end-column="51" />
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Documents/binarypro/binaryfxpro.com/process.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/binaryfxpro/assets/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/binarypro/binaryfxpro.com/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2160">
+          <caret line="60" column="28" lean-forward="true" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Documents/binarypro/binaryfxpro.com/assets/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="322" column="5" lean-forward="true" selection-start-line="322" selection-start-column="5" selection-end-line="322" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/admin_dash/iqonic.design/themes/sofbox-admin/html/sign-in.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/public/register_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1665">
-          <caret line="111" column="120" selection-start-line="111" selection-start-column="68" selection-end-line="111" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/admin_dash/iqonic.design/themes/sofbox-admin/html/sign-up.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/public/next_reg_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2325">
-          <caret line="155" selection-start-line="155" selection-end-line="155" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/admin_dash/iqonic.design/themes/sofbox-admin/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="1078" column="42" selection-start-line="1031" selection-start-column="6" selection-end-line="1078" selection-end-column="42" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12225">
-          <caret line="820" selection-start-line="820" selection-end-line="820" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/chart-custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/choose_campaign_type_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="90" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/common/footer_view.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/common/users_footer_view.php">
+    <entry file="file://$USER_HOME$/Documents/binaryfxpro/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="33" column="75" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="75" />
+        <state relative-caret-position="-7278" />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="5048" column="13" selection-start-line="5048" selection-start-column="13" selection-end-line="5048" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/campaigns_view.php">
+    <entry file="file://$USER_HOME$/Desktop/chatapp/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        <state relative-caret-position="105">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/campaign_target_view.php">
+    <entry file="file://$PROJECT_DIR$/../pluslife_chatap/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="116" column="73" selection-start-line="116" selection-start-column="73" selection-end-line="116" selection-end-column="73" />
+        <state relative-caret-position="465">
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/add_payment_view.php">
+    <entry file="file://$PROJECT_DIR$/../pluslife_chatap/js/chat_realtime.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="61" selection-end-line="66" />
+        <state relative-caret-position="7995">
+          <caret line="533" column="4" selection-start-line="533" selection-start-column="4" selection-end-line="543" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/select_payment_option.php">
+    <entry file="file://$PROJECT_DIR$/../pluslife_chatap/php/chat_realtime.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="86" selection-end-line="54" />
+        <state relative-caret-position="510">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/pre_pay_view.php">
+    <entry file="file://$PROJECT_DIR$/../pluslife_chatap/js/config.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pluslife_chatapp/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="40" column="322" selection-start-line="40" selection-start-column="290" selection-end-line="40" selection-end-column="322" />
-          <folding>
-            <element signature="n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="2400">
+          <caret line="160" column="107" selection-start-line="160" selection-start-column="95" selection-end-line="160" selection-end-column="107" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/campaign_budget_view.php">
+    <entry file="file://$USER_HOME$/Desktop/chatapp/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="84" selection-end-line="120" />
+        <state relative-caret-position="4215">
+          <caret line="281" column="72" selection-start-line="281" selection-start-column="60" selection-end-line="281" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pluslife_chatapp/public/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7980">
+          <caret line="532" column="6" selection-start-line="532" selection-start-column="6" selection-end-line="532" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/plusLifeWebChat/public/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9420">
+          <caret line="628" selection-start-line="628" selection-end-line="669" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/chatapp/public/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="661" column="19" selection-start-line="661" selection-start-column="19" selection-end-line="661" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/payment_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Advertiser_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="217" selection-start-line="217" selection-end-line="217" />
+        <state relative-caret-position="189">
+          <caret line="390" column="54" lean-forward="true" selection-start-line="390" selection-start-column="54" selection-end-line="390" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/payment_view.php">
+    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/details_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
+        <state relative-caret-position="1497">
+          <caret line="191" column="135" selection-start-line="191" selection-start-column="135" selection-end-line="191" selection-end-column="135" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php">
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="992" column="63" selection-start-line="992" selection-start-column="40" selection-end-line="992" selection-end-column="63" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1593" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/add_campaign_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        <state relative-caret-position="240">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/add_coupon_pay_view.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="54" />
+        <state relative-caret-position="10770">
+          <caret line="718" column="62" selection-start-line="718" selection-start-column="40" selection-end-line="718" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/campaigns_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Admin_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7095">
+          <caret line="473" column="38" selection-start-line="473" selection-start-column="16" selection-end-line="473" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/campaigns_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/campaign_details_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BitcointTradeInvest-master/includes/signup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BitcointTradeInvest-master/Monday16_07_2018.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BitcointTradeInvest-master/bti_database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Advertiser_dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/advertiser/add_online_payment_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/public/login_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1033">
-          <caret line="96" column="82" selection-start-line="96" selection-start-column="82" selection-end-line="96" selection-end-column="82" />
+          <caret line="573" selection-start-line="573" selection-end-line="573" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/common/advertiser_header_view.php">
+    <entry file="file://$PROJECT_DIR$/../BitcointTradeInvest-master/signup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-182">
-          <caret line="64" column="115" selection-start-line="64" selection-start-column="115" selection-end-line="64" selection-end-column="115" />
+        <state relative-caret-position="-720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BitcointTradeInvest-master/user_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BitcointTradeInvest-master/user_dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9810" />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/common/advertiser_top_tiles.php">
+    <entry file="file://$PROJECT_DIR$/../BitcointTradeInvest-master/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+        <state relative-caret-position="1530">
+          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BitcointTradeInvest-master/includes/functions.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BitcointTradeInvest-master/includes/dbconfig.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/public/register_view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/public/login_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="130" />
+          <folding>
+            <element signature="n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/public/forget_password_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="158" column="72" lean-forward="true" selection-start-line="158" selection-start-column="72" selection-end-line="158" selection-end-column="72" />
         </state>
       </provider>
     </entry>

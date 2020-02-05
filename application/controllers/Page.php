@@ -91,11 +91,11 @@ if ($this->form_validation->run() == FALSE)
       $data['keywords'] = $this->keywords;
       $data['description'] = $this->description;
 
-                 $this->load->view('common/header_view',$data);
-                $this->load->view('/common/desktop_nav_view',$data);
+                 //$this->load->view('common/header_view',$data);
+                //$this->load->view('/common/desktop_nav_view',$data);
 
              $this->load->view('public/forget_password_view',$data);
-            $this->load->view('common/footer_view',$data);
+            //$this->load->view('common/footer_view',$data);
 
        
 

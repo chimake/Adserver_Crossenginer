@@ -571,6 +571,8 @@ $this->form_validation->set_rules('campaign_type','Campaign Type','required',arr
 
  $this->load->library('upload', $config);
  $this->upload->do_upload('banner');
+
+
 if(!$this->form_validation->run())
 {
  $data['error'] =  $this->upload->display_errors();

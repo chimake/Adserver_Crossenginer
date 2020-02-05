@@ -1,119 +1,160 @@
-<div class="w3-container w3-twothird">
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                  <i class="mdi mdi-home"></i>
+                </span> <?php echo $title; ?> </h3>
+        </div>
 
-	<br>
-	<?php
-if(isset($_SESSION['action_status_report']))
-{
-	echo $_SESSION['action_status_report'];
-}
+        <div class="row">
+            <?php
+            if(isset($_SESSION['action_status_report'])) {
+                ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= $_SESSION['action_status_report'] ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <?php
+            }
+            ?>
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Campaign Overview</h4>
+                        <div class="btn-group float-right">
+                            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Actions</button>
+                            <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 44px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                <a href="<?=site_url('admin/advertiser_profile_details/'.$campaign['user_id']) ?>" class="dropdown-item">View Advertiser Details</a>
+                                <a href="http://<?=$campaign['dest_link'] ?>" class="dropdown-item">Go to Landing Page</a>
+                                <?php
+                                    if($campaign['approval'] == "true")
+                                    {
+                                        if($campaign['status'] == "active")
+                                        {?>
+                                <a href="<?= site_url("admin/campaign_action/pause/".$campaign['ref_id']) ?>" class="dropdown-item">Pause</a>
+                                <?php }else{?>
+                                <a href="<?= site_url("admin/campaign_action/start/".$campaign['ref_id']) ?>" class="dropdown-item">Play</a>
+                                <?php }} ?>
 
+                                <?php
+                                if(strtolower($campaign['approval']) == "pending" || strtolower($campaign['approval']) == "false")
+                                {?>
+                                        <a href="<?= site_url("admin/campaign_action/approve/".$campaign['ref_id']) ?>" class="dropdown-item">Approve</a>
+                                    <?php }?>
+                                <a href="<?= site_url("admin/campaign_action/disapprove/".$campaign['ref_id'])?>" class="dropdown-item">Disapprove</a>
+                            </div>
+                        </div>
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th> Title </th>
+                                <th> Type </th>
+                                <th> Category </th>
+                                <th> Budget </th>
+                                <th> Balance </th>
+                                <th> Clicks </th>
+                                <th> Status </th>
+                                <th> Start Time </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <?php
+                                    $startTime = $campaign['start_time'];
+                                    $startTimeConvert = date('Y-m-d H:i:s', $startTime);
+                                ?>
+                                <td>
+                                    <?= $campaign['name'] ?>
+                                </td>
+                                <td>
+                                    <?= ucfirst($campaign['type']) ?>
+                                </td>
+                                <td>
+                                    <?= ucfirst($campaign['category']) ?>
+                                </td>
+                                <td>
+                                    NGN <?= $campaign['budget'] ?>
+                                </td>
+                                <td>
+                                    NGN <?= $campaign['balance'] ?>
+                                </td>
+                                <td>
+                                    <?= $campaign['clicks'] ?>
+                                </td>
+                                <td>
+                                    <?= $campaign['status'] ?>
+                                </td>
+                                <td>
+                                    <?= $startTimeConvert ?>
+                                </td>
 
-	?>
-<div class="w3-half">
-<table class="w3-striped w3-small">
+                            </tr>
 
-<a  href="<?=site_url('admin/advertiser_profile_details/'.$campaign['user_id']) ?>" class="w3-btn w3-indigo w3-margin">View Advertiser Details</a><br>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<a  href="http://<?=$campaign['dest_link'] ?>" class="w3-btn w3-indigo w3-margin">Go to Landing PAge</a><br>
-	<?php
-foreach ($campaign as $key => $value) {
-echo "<tr>";
-echo "<td>".$key."</td>";
-echo "<td>".$value."</td>";
-echo "</td>";
-}
-?>
-	
-	
-</table>
-</div>
-<div class="w3-half  w3-center">
-        <span class="w3-text-blue-gray w3-serif w3-xxlarge w3-margin">Look</span><br>
+        <div class="row">
 
-	<?php
-if($campaign['type'] =="text")
-{
-  echo "<div class='w3-border w3-border-blue'>";
-echo "<span class='w3-text-blue'><b>".$campaign['text_title']."</b></span><br>";
-echo "<span class='w3-small'>".$campaign['text_content']."</span><br>";
-echo "<span class='w3-text-blue'><b>".$campaign['disp_link']."</b></span><br>";
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Campaign Preview</h4>
+                        <?php if($campaign['type'] =="text"){ ?>
+                            <div class="d-flex mt-5 align-items-top">
+                                <div class="mb-0 flex-grow">
+                                    <h5 class="mr-2 mb-2"><?= $campaign['text_title'] ?></h5>
+                                    <p class="mb-0 font-weight-light"> <?= $campaign['text_content'] ?></p>
+                                </div>
+                            </div>
+                        <code><?= $campaign['disp_link'] ?></code>
+                        <?php
+                        }elseif ($campaign['type'] =="banner") {
+                            if ($campaign['img_link']){
+                            ?>
+                        <div class="row mt-3">
+                            <div class="col-12 pr-1">
+                                <img src="<?= base_url('assets/campaigns/'.$campaign['img_link']) ?>" class="mw-100 w-100 rounded" alt="image">
+                            </div>
+                        </div>
+                        <?php }else{ ?>
+                                <div class="d-flex mt-5 align-items-top">
+                                    <div class="mb-0 flex-grow">
+                                        <h5 class="mr-2 mb-2">No Image Found</h5>
+                                    </div>
+                                </div>
 
-  echo "</div>";
-
-}elseif ($campaign['type'] =="banner") {
-   //echo "<div class='w3-container'><b>250px X 350px</b></div>";
-    echo "<div class='w3-center'>";
-echo "<img class='w3-card' style='max-width:100%;max-height:100%' src='".base_url('assets/campaigns/'.$campaign['img_link'])."'/>";
-  echo "</div>";
-}elseif ($campaign['type'] =="banner_text") {
-  
-    echo "<div style='max-width:300px;' class='w3-center w3-card'>";
-echo "<img class='' style='max-width:100%;' src='".base_url('assets/campaigns/'.$campaign['img_link'])."'/>";
-echo "<center><div style='width:200px;' class='w3-margin w3-center'>".$campaign['text_title']."</div>";
-    echo "</center></div>";
-}elseif ($campaign['type'] =="recommendation") {
-  /*
-    echo "<div style='max-width:300px;' class='w3-center w3-card'>";
-echo "<img class='' style='max-width:100%;' src='".base_url('assets/campaigns/'.$campaign['img_link'])."'/>";
-echo "<center><div style='width:200px;' class='w3-margin w3-center'>".$campaign['text_title']."</div>";
-    echo "</center></div>";
-*/
-
-
-echo "<div class='w3-container w3-row w3-border w3-margin-bottom w3-padding w3-center' ><div class='w3-col s4 m12 w3-padding'><img class='w3-image w3-margin-top' src='".base_url('assets/campaigns/'.$campaign['img_link'])."'/></div><div id='text' class='w3-col s8 m12 w3-padding-bottom' style='text-align:justify;'><span class='w3-large' id='text'><b>".$campaign['text_title']."</b></span></div></div>";
-
-
-}
-
-
-	
-
-		 ?>
-
-</div>
-<!--
-
---pending = paid need approval
---approved = paid and aproved =active
---disapproved = campaign disapproved = 
-inactive
-
-
-
-
-
-
-	--->
-<div class="w3-container w3-margin">
-
-<?php 
-if($campaign['approval'] == "true")
-{
-
-if($campaign['status'] == "active")
-	{
-echo '<a href="'.site_url("admin/campaign_action/pause/".$campaign['ref_id']).'" class="w3-btn w3-yellow">Pause</a>';
-
-	}else{
-echo '<a href="'.site_url("admin/campaign_action/start/".$campaign['ref_id']).'" class="w3-btn w3-green">Start</a>';
-
-	}
-
-}
-?>
-
-<?php
-if (strtolower($campaign['approval']) == "pending" || strtolower($campaign['approval']) == "false")
-{
-
-echo '<a href="'.site_url("admin/campaign_action/approve/".$campaign['ref_id']).'" class="w3-btn w3-green w3-margin">Approve</a>';
-
-
-}
-
-
-echo '<a href="'.site_url("admin/campaign_action/disapprove/".$campaign['ref_id']).'" class="w3-btn w3-red w3-margin">Disapprove</a>';
-
-?>
-	</div>
-</div>
+                        <?php }}elseif ($campaign['type'] =="banner_text") { ?>
+                        <div class="row mt-3">
+                            <div class="col-12 pr-1">
+                                <img src="<?= base_url('assets/campaigns/'.$campaign['img_link']) ?>" class="mw-100 w-100 rounded" alt="image">
+                            </div>
+                        </div>
+                        <div class="d-flex mt-5 align-items-top">
+                            <div class="mb-0 flex-grow">
+                                <h5 class="mr-2 mb-2"><?= $campaign['text_title'] ?></h5>
+                            </div>
+                        </div>
+                        <?php }elseif ($campaign['type'] =="recommendation") { ?>
+                        <div class="row mt-3">
+                            <div class="col-12 pr-1">
+                                <img src="<?= base_url('assets/campaigns/'.$campaign['img_link']) ?>" class="mw-100 w-100 rounded" alt="image">
+                            </div>
+                        </div>
+                        <div class="d-flex mt-5 align-items-top">
+                            <div class="mb-0 flex-grow">
+                                <h5 class="mr-2 mb-2"><?= $campaign['text_title'] ?></h5>
+                                <p class="mb-0 font-weight-light"> <?= $campaign['text_content'] ?></p>
+                            </div>
+                        </div>
+                        <?php  } ?>
+                    </div>
+                </div>
+            </div>
+        </div>

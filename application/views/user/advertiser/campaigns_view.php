@@ -28,9 +28,9 @@
                                     ?>
                                 <tr>
                                     <td>
-                                        <?= $campaign_val['text_title']; ?>
+                                        <?= ucfirst($campaign_val['name']); ?>
                                     </td>
-                                    <td> <?= $campaign_val['type']; ?></td>
+                                    <td> <?= ucfirst($campaign_val['type']); ?></td>
                                     <td>
                                         <?php
                                         if ($campaign_val['status'] == 'complete'){
